@@ -1,0 +1,118 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--   <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>-->
+        <item name="android:windowBackground">@color/bg_main</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+    <!-- Dialog样式 android:Theme.Dialog这个不添加Dialog会有阴影-->
+    <style name="dialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 切记一定要设置为透明状态，不然有阴影 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 背景是否模糊显示 -->
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <!--高度为1dp的灰色线-->
+    <style name="iv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/gray</item>
+    </style>
+
+    <!--宽度为1dp的灰色线-->
+    <style name="iv_height">
+        <item name="android:layout_margin">11dp</item>
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gray</item>
+    </style>
+
+
+    <!--+++++++++++++++++++++++++++++++++++  mainActivity ++++++++++++++++++++++++++++++++++++++++++++ -->
+    <style name="main_layout">
+        <item name="android:paddingLeft">22dp</item>
+        <item name="android:paddingRight">22dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <!--+++++++++++++++++++++++++++++++++++  图标布局 ++++++++++++++++++++++++++++++++++++++++++++ -->
+    <style name="iv_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="iv_vertical">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="iv_iv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="iv_tv">
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+
+    <!--+++++++++++++++++++++++++++++++++++  Title标题 ++++++++++++++++++++++++++++++++++++++++++++ -->
+    <style name="tt_iv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginLeft">22dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:background">@drawable/title_im</item>
+    </style>
+
+    <style name="tt_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginLeft">22dp</item>
+        <item name="android:layout_marginBottom">11dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">23sp</item>
+    </style>
+
+
+    <!--+++++++++++++++++++++++++++++++++++  UserMsgActivity ++++++++++++++++++++++++++++++++++++++++++++ -->
+    <style name="usermsg_rl">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:paddingLeft">22dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="usermsg_tv">
+
+    </style>
+
+
+</resources>

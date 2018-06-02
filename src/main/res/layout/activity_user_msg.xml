@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tt_height">
+
+        <ImageView
+            android:id="@+id/back_serall"
+            style="@style/tt_iv" />
+
+        <TextView
+            style="@style/tt_tv"
+            android:layout_toRightOf="@id/back_serall"
+            android:text="账户资料" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/usermsg_rl"
+        android:layout_weight="2">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/usermsg_rl"
+        android:layout_marginTop="11dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <ImageView style="@style/iv" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+    </RelativeLayout>
+
+    <ImageView style="@style/iv" />
+
+</LinearLayout>

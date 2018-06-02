@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tt_height">
+
+            <ImageView
+                android:id="@+id/back_serall"
+                style="@style/tt_iv" />
+
+            <TextView
+                style="@style/tt_tv"
+                android:layout_toRightOf="@id/back_serall"
+                android:text="服务" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/serall_tvh"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/login_marginlr"
+            android:text="基础服务"
+            android:textColor="@color/black"
+            android:textSize="@dimen/serall_tvsize" />
+
+        <LinearLayout
+            style="@style/iv_horizontal"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/serall_marginbottom">
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="优唐官网" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="园区咨讯" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="园区活动" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="园区公告" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/serall_tvh"
+            android:layout_marginTop="@dimen/serall_tvtop"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/login_marginlr"
+            android:text="企业服务"
+            android:textColor="@color/black"
+            android:textSize="@dimen/serall_tvsize" />
+
+        <LinearLayout
+            style="@style/iv_horizontal"
+            android:background="@color/white">
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="企业入驻" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="扩租申请" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="智能人事" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="访客管理" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/iv_horizontal"
+            android:background="@color/white"
+            android:paddingTop="@dimen/serall_margin">
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="场地预定" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="企业信息化" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="企业租赁" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="需求发布" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/iv_horizontal"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/serall_marginbottom"
+            android:paddingTop="@dimen/serall_margin">
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="创业咨询" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="财务咨询" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="税务咨询" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="法务咨询" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/serall_tvh"
+            android:layout_marginTop="@dimen/serall_tvtop"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/login_marginlr"
+            android:text="业主服务"
+            android:textColor="@color/black"
+            android:textSize="@dimen/serall_tvsize" />
+
+
+        <LinearLayout
+            style="@style/iv_horizontal"
+            android:background="@color/white">
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="生活缴费" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="装修申请" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="物业报修" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="合同查询" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/iv_horizontal"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/serall_marginbottom"
+            android:paddingTop="@dimen/serall_margin">
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="投诉建议" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

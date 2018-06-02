@@ -1,0 +1,27 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--++++++++++++ loginActivity +++++++++++-->
+    <dimen name="login_logo">111dp</dimen>
+    <dimen name="login_marginlr">22dp</dimen>
+    <!--++++++++++++ mainActivity +++++++++++-->
+    <dimen name="main_RI">33dp</dimen>
+    <dimen name="main_open">66dp</dimen>
+    <dimen name="main_iv">55dp</dimen>
+    <dimen name="open">222dp</dimen>
+    <!--++++++++++++ SerallActivity +++++++++++-->
+    <dimen name="serall_tvsize">20sp</dimen>
+    <dimen name="serall_tvh">58dp</dimen>
+    <dimen name="serall_tvtop">11dp</dimen>
+    <dimen name="serall_margin">13dp</dimen>
+    <dimen name="serall_marginbottom">22dp</dimen>
+    <!--++++++++++++ TITLE标题 +++++++++++-->
+    <dimen name="tt_height">77dp</dimen>
+    <!--++++++++++++ UserActivity +++++++++++-->
+    <dimen name="user_tvl">20sp</dimen>
+    <dimen name="user_padding">18dp</dimen>
+
+
+</resources>

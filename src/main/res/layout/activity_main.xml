@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/main_layout"
+        android:layout_weight="1"
+        android:paddingBottom="11dp">
+
+        <com.bs.utown.view.RoundImageView
+            android:id="@+id/main_head"
+            android:layout_width="@dimen/main_RI"
+            android:layout_height="@dimen/main_RI"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="优唐智慧园"
+            android:textColor="@color/black"
+            android:textSize="22dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_weight="2"
+        android:background="@color/gray_shallow"
+        android:padding="11dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/main_layout"
+        android:layout_height="33dp"
+        android:layout_marginTop="11dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/speaker" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="公告：测试xxxxxxxxxxx测试yyyyyyyyy测试zzzzzzzz"
+            android:textColor="@color/blueSky" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:text="更多"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+    <ImageView
+        style="@style/iv"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp" />
+
+
+    <LinearLayout
+        style="@style/main_layout"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/iv_horizontal">
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="企业入驻" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="园区资讯" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="园区活动" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="园区资源" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/iv_horizontal">
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="生活缴费" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="设备租赁" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="场地预定" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    android:id="@+id/main_serall"
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
+                    android:text="所有服务" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <ImageView
+            style="@style/iv"
+            android:layout_marginBottom="22dp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        style="@style/main_layout"
+        android:layout_weight="2"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="交流圈"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/main_open"
+            android:layout_width="@dimen/main_open"
+            android:layout_height="@dimen/main_open"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/open_bg"
+            android:gravity="center"
+            android:text="开门"
+            android:textColor="@drawable/open_tv" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
