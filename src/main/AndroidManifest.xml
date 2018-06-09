@@ -75,6 +75,14 @@
         <activity android:name=".SerAllActivity" />
         <activity android:name=".user.UserActivity" />
         <activity android:name=".user.UserMsgActivity"></activity>
+
+
+        <!--微信登录配置-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true" />
+
     </application>
 
 </manifest>

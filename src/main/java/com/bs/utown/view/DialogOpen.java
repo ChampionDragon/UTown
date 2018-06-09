@@ -2,6 +2,7 @@ package com.bs.utown.view;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
@@ -14,7 +15,6 @@ import com.bs.utown.R;
 import com.bs.utown.listener.DiadisListener;
 import com.bs.utown.util.CreateCodeUtil;
 import com.bs.utown.util.DPUtil;
-import com.bs.utown.util.Logs;
 
 /**
  * Description: 开门的弹框
@@ -55,18 +55,17 @@ public class DialogOpen {
             codeIv.setImageBitmap(getBitamap(code));
         }
 
-        view.findViewById(R.id.open_iv).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listener.dismiss();
-            }
-        });
-        dialog.setCancelable(false);
+        dialog.setCancelable(true);
         dialog.setContentView(view, new LinearLayout.LayoutParams(
                 dm.widthPixels * 4 / 5,//LinearLayout.LayoutParams.MATCH_PARENT
                 dm.heightPixels * 3 / 5));
-        Logs.v(dm.widthPixels + "   " + dm.heightPixels);
         dialog.show();
+        dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                listener.dismiss();
+            }
+        });
     }
 
     /*生成二维码的bitmap*/

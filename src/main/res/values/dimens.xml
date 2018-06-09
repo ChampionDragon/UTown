@@ -11,6 +11,7 @@
     <dimen name="main_open">66dp</dimen>
     <dimen name="main_iv">55dp</dimen>
     <dimen name="open">222dp</dimen>
+    <dimen name="code">55dp</dimen>
     <!--++++++++++++ SerallActivity +++++++++++-->
     <dimen name="serall_tvsize">20sp</dimen>
     <dimen name="serall_tvh">58dp</dimen>
@@ -22,6 +23,24 @@
     <!--++++++++++++ UserActivity +++++++++++-->
     <dimen name="user_tvl">20sp</dimen>
     <dimen name="user_padding">18dp</dimen>
+    <dimen name="usermsg_tvr">33dp</dimen>
+
+
+    <!-- ++++++++++++++++++++++++++++++++++++++  pickerView  ++++++++++++++++++++++++++++++++++++++++++++-->
+    <!-- 顶部按钮栏高度 -->
+    <dimen name="pickerview_topbar_height">44dp</dimen>
+    <!-- 顶部按钮paddingLeft -->
+    <dimen name="pickerview_topbar_paddingleft">10dp</dimen>
+    <!-- 顶部按钮paddingRight -->
+    <dimen name="pickerview_topbar_paddingright">30dp</dimen>
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="pickerview_topbar_btn_textsize">20sp</dimen>
+    <!--中间文字的大小-->
+    <dimen name="pickerview_topbar_title_textsize">21sp</dimen>
+    <!-- 选项文字大小 需要配合 bools.xml 的 pickerview_customTextSize 为 false 才有效果-->
+    <dimen name="pickerview_textsize">20sp</dimen>
+    <!-- 此值为false pickerview_textsize才会有效果-->
+    <bool name="pickerview_customTextSize">false</bool>
 
 
 </resources>

@@ -1,16 +1,21 @@
 package com.bs.utown.user;
 
 import android.app.Dialog;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
 import com.bs.utown.R;
 import com.bs.utown.account.LoginActivity;
 import com.bs.utown.base.BaseActivity;
+import com.bs.utown.bean.UserInfo;
 import com.bs.utown.constant.SpKey;
+import com.bs.utown.util.ObjectSave;
 import com.bs.utown.util.SmallUtil;
 import com.bs.utown.view.DialogCustomUtil;
 import com.bs.utown.view.RoundImageView;
+
+import java.io.File;
 
 /**
  * Description: 个人中心
@@ -27,6 +32,19 @@ public class UserActivity extends BaseActivity implements View.OnClickListener {
         baseapp.addActivity(this);
         setContentView(R.layout.activity_user);
         initView();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        /*初始化头像*/
+        UserInfo userInfo = ObjectSave.getUserInfo();
+        String headPath = userInfo.getHeadpath();
+        if (headPath != null && !headPath.isEmpty()) {
+            File filehead = new File(headPath);
+            Uri uri = Uri.fromFile(filehead);
+            head.setImageURI(uri);
+        }
     }
 
     private void initView() {

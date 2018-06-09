@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/usermsgactivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
@@ -9,45 +10,177 @@
         android:layout_height="@dimen/tt_height">
 
         <ImageView
-            android:id="@+id/back_serall"
+            android:id="@+id/back_usermsg"
             style="@style/tt_iv" />
 
         <TextView
             style="@style/tt_tv"
-            android:layout_toRightOf="@id/back_serall"
+            android:layout_toRightOf="@id/back_usermsg"
             android:text="账户资料" />
 
     </RelativeLayout>
 
+
     <RelativeLayout
-        style="@style/usermsg_rl"
-        android:layout_weight="2">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/usermsg_tv"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:text="头像" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            style="@style/usermsg_iv"
+            android:layout_centerVertical="true" />
+
+        <com.bs.utown.view.RoundImageView
+            android:id="@+id/usermsg_head"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/usermsg_tvr"
+            android:src="@mipmap/ic_launcher" />
+
 
     </RelativeLayout>
 
-    <RelativeLayout
+
+    <LinearLayout
         style="@style/usermsg_rl"
         android:layout_marginTop="11dp"
         android:layout_weight="1">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="姓名"
-            android:textColor="@color/black" />
+            style="@style/usermsg_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="姓名" />
+
+        <EditText
+            android:id="@+id/usermsg_name"
+            style="@style/usermsg_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/usermsg_tvr"
+            android:background="@null"
+            android:hint="姓名"
+            android:text="刘子尧" />
+
+    </LinearLayout>
+
+    <ImageView style="@style/iv" />
+
+    <LinearLayout
+        style="@style/usermsg_rl"
+        android:layout_weight="1">
+
+        <TextView
+            style="@style/usermsg_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="UID" />
+
+        <EditText
+            android:id="@+id/usermsg_uid"
+            style="@style/usermsg_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/usermsg_tvr"
+            android:background="@null"
+            android:hint="UID"
+            android:text="xxxxxxx" />
+
+
+    </LinearLayout>
+
+    <ImageView style="@style/iv" />
+
+    <RelativeLayout
+        style="@style/usermsg_rl"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/usermsg_code"
+            style="@style/usermsg_tv"
+            android:text="二维码名片" />
+
+
+        <ImageView
+            style="@style/usermsg_iv"
+            android:layout_alignBottom="@id/usermsg_code" />
 
     </RelativeLayout>
 
     <ImageView style="@style/iv" />
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/white">
+        android:id="@+id/usermsg_gender_rl"
+        style="@style/usermsg_rl"
+        android:layout_weight="1">
+
+        <TextView
+            style="@style/usermsg_tv"
+            android:text="性别" />
+
+        <TextView
+            android:id="@+id/usermsg_gender"
+            style="@style/usermsg_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/usermsg_tvr"
+            android:text="男" />
+
+        <ImageView
+            style="@style/usermsg_iv"
+            android:layout_alignBottom="@id/usermsg_gender" />
 
     </RelativeLayout>
 
     <ImageView style="@style/iv" />
+
+    <RelativeLayout
+        android:id="@+id/usermsg_birthday_rl"
+        style="@style/usermsg_rl"
+        android:layout_weight="1">
+
+        <TextView
+            style="@style/usermsg_tv"
+            android:text="生日" />
+
+        <TextView
+            android:id="@+id/usermsg_birthday"
+            style="@style/usermsg_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/usermsg_tvr"
+            android:text="xxxx/xx/x" />
+
+        <ImageView
+            style="@style/usermsg_iv"
+            android:layout_alignBottom="@id/usermsg_birthday" />
+
+    </RelativeLayout>
+
+    <ImageView style="@style/iv" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+        <Button
+            android:id="@+id/usermsg_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+            android:background="@drawable/login_btn_bg"
+            android:text="保存"
+            android:textColor="@drawable/login_btn_text"
+            android:textSize="20sp" />
+    </LinearLayout>
+
 
 </LinearLayout>

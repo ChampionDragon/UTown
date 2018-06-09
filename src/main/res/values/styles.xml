@@ -110,9 +110,24 @@
         <item name="android:paddingLeft">22dp</item>
         <item name="android:gravity">center_vertical</item>
     </style>
-    <style name="usermsg_tv">
 
+    <style name="usermsg_tv">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="usermsg_iv">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">@mipmap/arrow</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
 
+    <!-- popwindow的样式 -->
+    <style name="PopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
 </resources>

@@ -1,12 +1,15 @@
 package com.bs.utown;
 
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.bs.utown.base.BaseActivity;
+import com.bs.utown.bean.UserInfo;
 import com.bs.utown.listener.DiadisListener;
 import com.bs.utown.user.UserActivity;
+import com.bs.utown.util.ObjectSave;
 import com.bs.utown.util.SmallUtil;
 import com.bs.utown.util.ToastUtil;
 import com.bs.utown.view.DialogOpen;
@@ -28,6 +31,17 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         baseapp.addActivity(this);
         setContentView(R.layout.activity_main);
         initView();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+              /*初始化头像*/
+        UserInfo userInfo = ObjectSave.getUserInfo();
+        String headPath = userInfo.getHeadpath();
+        if (headPath != null && !headPath.isEmpty()) {
+            head.setImageBitmap(BitmapFactory.decodeFile(headPath));
+        }
     }
 
     private void initView() {
