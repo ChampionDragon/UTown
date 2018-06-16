@@ -47,7 +47,6 @@ public class WXEntryActivity extends AppCompatActivity implements IWXAPIEventHan
         api = WXAPIFactory.createWXAPI(this, Constant.APP_ID_WX, true);
         //将应用的appid注册到微信
         api.registerApp(Constant.APP_ID_WX);
-        Logs.d("------------------------------------");
         //注意：
         //第三方开发者如果使用透明界面来实现WXEntryActivity，需要判断handleIntent的返回值，如果返回值为false，
         // 则说明入参不合法未被SDK处理，应finish当前透明界面，避免外部通过传递非法参数的Intent导致停留在透明界面，引起用户的疑惑
@@ -78,13 +77,13 @@ public class WXEntryActivity extends AppCompatActivity implements IWXAPIEventHan
 
     @Override
     public void onReq(BaseReq baseReq) {
-        Logs.d(tag + "74   baseReq:" + JSON.toJSONString(baseReq));
+        Logs.d(tag + "80   baseReq:" + JSON.toJSONString(baseReq));
     }
 
     @Override
     public void onResp(BaseResp baseResp) {
-        Logs.w(tag + "78  " + JSON.toJSONString(baseResp));
-        Logs.i(tag + "79  " + baseResp.errStr + "," + baseResp.openId + "," + baseResp.transaction + "," + baseResp.errCode);
+        Logs.w(tag + "85  " + JSON.toJSONString(baseResp));
+        Logs.i(tag + "86  " + baseResp.errStr + "," + baseResp.openId + "," + baseResp.transaction + "," + baseResp.errCode);
 
         String code = ((SendAuth.Resp) baseResp).code;
         String result = "";
@@ -102,7 +101,7 @@ public class WXEntryActivity extends AppCompatActivity implements IWXAPIEventHan
                         .execute(new StringCallback() {
                             @Override
                             public void onError(okhttp3.Call call, Exception e, int id) {
-                                Logs.e(tag + "113 请求错误.." + e+"  "+id+" \n "+call);
+                                Logs.e(tag + "113 请求错误.." + e + "  " + id + " \n " + call);
                             }
 
                             @Override

@@ -108,7 +108,7 @@ public class UserMsgActivity extends BaseActivity implements View.OnClickListene
         birthday = (TextView) findViewById(R.id.usermsg_birthday);
         findViewById(R.id.usermsg_gender_rl).setOnClickListener(this);
         findViewById(R.id.usermsg_birthday_rl).setOnClickListener(this);
-        findViewById(R.id.usermsg_code).setOnClickListener(this);
+        findViewById(R.id.usermsg_code_rl).setOnClickListener(this);
         name = (EditText) findViewById(R.id.usermsg_name);
         uid = (EditText) findViewById(R.id.usermsg_uid);
     }
@@ -159,7 +159,7 @@ public class UserMsgActivity extends BaseActivity implements View.OnClickListene
             case R.id.usermsg_gender_rl:
                 popWindow(popupGender);
                 break;
-            case R.id.usermsg_code:
+            case R.id.usermsg_code_rl:
                 OpenDialog();
                 break;
             case R.id.usermsg_birthday_rl:

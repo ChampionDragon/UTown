@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tt_height">
+
+        <ImageView
+            android:id="@+id/back_resnmeeting"
+            style="@style/tt_iv" />
+
+        <TextView
+            style="@style/tt_tv"
+            android:layout_toRightOf="@id/back_resnmeeting"
+            android:text="会议室预定" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/resnmeeting_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/bg_main"
+        android:dividerHeight="11dp" />
+
+
+</LinearLayout>

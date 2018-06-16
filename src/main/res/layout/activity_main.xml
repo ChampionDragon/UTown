@@ -161,7 +161,8 @@
                     android:text="设备租赁" />
             </LinearLayout>
 
-            <LinearLayout style="@style/iv_vertical">
+            <LinearLayout style="@style/iv_vertical"
+                android:id="@+id/main_resnsite">
 
                 <ImageView
                     style="@style/iv_iv"

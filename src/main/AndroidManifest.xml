@@ -29,8 +29,6 @@
     <!-- 文件写入创建删除 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_LOGS" /> <!-- 读系统日志 -->
     <!-- 照片权限 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -44,11 +42,8 @@
     <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- 手电筒 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <!-- 收到消息时，让处理器不要睡眠。 -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
 
     <application
@@ -74,15 +69,21 @@
         <activity android:name=".account.RegisterActivity" />
         <activity android:name=".SerAllActivity" />
         <activity android:name=".user.UserActivity" />
-        <activity android:name=".user.UserMsgActivity"></activity>
+        <activity android:name=".user.UserMsgActivity" />
 
-
-        <!--微信登录配置-->
+        <!-- 微信登录配置 -->
         <activity
             android:name=".wxapi.WXEntryActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true" />
-
+        <activity android:name=".user.UserApplyActivity" />
+        <activity android:name=".user.UserActActivity" />
+        <activity android:name=".sercompany.ResnsiteActivity" />
+        <activity android:name=".sercompany.ResnmeetingActivity" />
+        <activity android:name=".sercompany.ResndetailActivity" />
+        <activity android:name=".sercompany.ResntimeActivity" />
+        <activity android:name=".sercompany.ResnsuccessActivity" />
+        <activity android:name=".user.UserResnActivity"></activity>
     </application>
 
 </manifest>

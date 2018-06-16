@@ -3,15 +3,14 @@ package com.bs.utown;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.bs.utown.base.BaseActivity;
 import com.bs.utown.bean.UserInfo;
 import com.bs.utown.listener.DiadisListener;
+import com.bs.utown.sercompany.ResnsiteActivity;
 import com.bs.utown.user.UserActivity;
 import com.bs.utown.util.ObjectSave;
 import com.bs.utown.util.SmallUtil;
-import com.bs.utown.util.ToastUtil;
 import com.bs.utown.view.DialogOpen;
 import com.bs.utown.view.RoundImageView;
 
@@ -21,7 +20,6 @@ import com.bs.utown.view.RoundImageView;
  * created at 2018/5/31
  **/
 public class MainActivity extends BaseActivity implements View.OnClickListener {
-    private ImageView serall;
     private DialogOpen diaOpen;//开门的弹框
     private RoundImageView head;
 
@@ -47,6 +45,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private void initView() {
         findViewById(R.id.main_serall).setOnClickListener(this);
         findViewById(R.id.main_open).setOnClickListener(this);
+        findViewById(R.id.main_resnsite).setOnClickListener(this);
         head= (RoundImageView) findViewById(R.id.main_head);
         head.setOnClickListener(this);
     }
@@ -57,6 +56,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.main_serall:
                 SmallUtil.getActivity(MainActivity.this, SerAllActivity.class);
+                break;
+            case R.id.main_resnsite:
+                SmallUtil.getActivity(MainActivity.this, ResnsiteActivity.class);
                 break;
             case R.id.main_open:
                 OpenDialog();
@@ -77,7 +79,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             diaOpen = new DialogOpen(this, new DiadisListener() {
                 @Override
                 public void dismiss() {
-                    ToastUtil.showShort("关闭开门对话框");
+//                    ToastUtil.showShort("关闭开门对话框");
                     closeDialog();
                 }
             });

@@ -155,6 +155,7 @@
             <LinearLayout style="@style/iv_vertical">
 
                 <ImageView
+                    android:id="@+id/serall_resnsite"
                     style="@style/iv_iv"
                     android:background="@mipmap/ic_launcher" />
 

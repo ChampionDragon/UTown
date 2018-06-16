@@ -12,7 +12,7 @@ import com.bs.utown.base.BaseActivity;
 import com.bs.utown.constant.Constant;
 import com.bs.utown.util.HttpByGet;
 import com.bs.utown.util.ToastUtil;
-import com.bs.utown.view.DialogNotileUtil;
+import com.bs.utown.view.DialogNoticeUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -116,10 +116,10 @@ public class PwdActivity extends BaseActivity implements View.OnClickListener {
                     baseapp.TemfinishAllActivity();
                     break;
                 case RESETPWD_FAIL:
-                    DialogNotileUtil.show(PwdActivity.this, "修改密码失败");
+                    DialogNoticeUtil.show(PwdActivity.this, "修改密码失败");
                     break;
                 case RESULT_ERROR:
-                    DialogNotileUtil.show(PwdActivity.this, "访问后台失败");
+                    DialogNoticeUtil.show(PwdActivity.this, "访问后台失败");
                     break;
             }
         }

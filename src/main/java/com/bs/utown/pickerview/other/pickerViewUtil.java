@@ -109,7 +109,7 @@ public class pickerViewUtil<T> {
         wv_option.setCurrentItem(0);
 
         /*设置字体大小*/
-        wv_option.setTextSize(21);
+        wv_option.setTextSize(25);
 
         /*确认*/
         tv_confirm.setOnClickListener(new View.OnClickListener() {

@@ -30,16 +30,17 @@ public class Constant {
 
 
     /* 时间格式 */
-    public final static String cformatDay = "yyyy年MM月dd日";
-    public final static String cformatD = "M月d日";
+    public final static String cformatymd = "yyyy年MM月dd日";
+    public final static String cformatmd = "M月d日";
     public final static String cformatsecond = "yyyy年MM月dd日HH时mm分ss秒";
-    public final static String formatminute = "HH:mm";
+    public final static String formathm = "HH:mm";
     public final static String formatsecond = "yyyy-MM-dd HH:mm:ss";
     public final static String formatlogin = "yyyy/MM/dd HH:mm";//登录记录的格式
-    public final static String formatnotify = "yyyy/MM/dd HH:mm:ss";//通知记录的格式
-    public final static String formatbusinesstime = "yyyy/MM/dd";//通知记录的格式
-    public final static int Day = 24 * 60 * 60 * 1000;
-
+    public final static String formatnotify = "yyyy/MM/dd HH:mm:ss";//预定时间的格式
+    public final static String formatbusinesstime = "yyyy/MM/dd";//
+    public final static String formatresn = "M月d日 E";//选择日期格式
+    public final static long Day = 24 * 60 * 60 * 1000;
+    public final static long halfHour = 30 * 60 * 1000;
 
 
 
@@ -54,6 +55,12 @@ public class Constant {
      * 微信AppSecret值
      */
     public static final String APP_SECRET_WX = "831ec926826acb588984ef1071ab902e";
+
+
+    /* +++++++++++++++++++++++ 图片地址 ++++++++++++++++++++++++++++++*/
+    public static final String url_1 = "http://img0.imgtn.bdimg.com/it/u=425164315,2803969613&fm=27&gp=0.jpg";
+    public static final String url_2 = "http://img4.imgtn.bdimg.com/it/u=3996175993,1337165617&fm=27&gp=0.jpg";
+    public static final String url_3 = "http://img4.imgtn.bdimg.com/it/u=3831423996,1610400728&fm=27&gp=0.jpg";
 
 
 }

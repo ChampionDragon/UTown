@@ -101,6 +101,7 @@
     <ImageView style="@style/iv" />
 
     <RelativeLayout
+        android:id="@+id/usermsg_code_rl"
         style="@style/usermsg_rl"
         android:layout_weight="1">
 
@@ -171,6 +172,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3">
+
         <Button
             android:id="@+id/usermsg_save"
             android:layout_width="match_parent"

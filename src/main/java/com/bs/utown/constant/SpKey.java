@@ -16,4 +16,19 @@ public class SpKey {
     public static final String isLogin = "Login";
     public static final String preVer = "preVer";
     public static final String UserName = "username";//用户名关系到相关数据的读取
+
+
+   /*+++++++++++++++++++++++++++++  有关Intent的key   +++++++++++++++++++++++++++++*/
+   public static final String resnBean = "resnBean";
+   public static final String resnTime = "resnTime";
+
+
+
+
+
+
+
+
+
+
 }

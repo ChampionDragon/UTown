@@ -15,7 +15,7 @@ import com.bs.utown.constant.Constant;
 import com.bs.utown.util.HttpByGet;
 import com.bs.utown.util.Logs;
 import com.bs.utown.util.ToastUtil;
-import com.bs.utown.view.DialogNotileUtil;
+import com.bs.utown.view.DialogNoticeUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -70,10 +70,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     finish();
                     break;
                 case REGISTER_ERROR:
-                    DialogNotileUtil.show(RegisterActivity.this, registerError);
+                    DialogNoticeUtil.show(RegisterActivity.this, registerError);
                     break;
                 case REGISTER_FAIL:
-                    DialogNotileUtil.show(RegisterActivity.this, "用户注册失败");
+                    DialogNoticeUtil.show(RegisterActivity.this, "用户注册失败");
                     break;
                 case CODE:
                     ToastUtil.showLong("发送验证码成功");
@@ -82,19 +82,19 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     codeCheck = true;
                     timeCount.cancel();
                     codeGet.setText("获取验证码");
-                    DialogNotileUtil.show(RegisterActivity.this, codeError);
+                    DialogNoticeUtil.show(RegisterActivity.this, codeError);
                     break;
                 case CODE_FAIL:
                     codeCheck = true;
                     timeCount.cancel();
                     codeGet.setText("获取验证码");
-                    DialogNotileUtil.show(RegisterActivity.this, codeError + "\n发送验证码失败");
+                    DialogNoticeUtil.show(RegisterActivity.this, codeError + "\n发送验证码失败");
                     break;
                 case RESULT_ERROR:
                     codeCheck = true;
                     timeCount.cancel();
                     codeGet.setText("获取验证码");
-                    DialogNotileUtil.show(RegisterActivity.this, "访问后台失败");
+                    DialogNoticeUtil.show(RegisterActivity.this, "访问后台失败");
                     break;
             }
         }
@@ -168,7 +168,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         }
 
 //        if(!codeResult.equals(code_et.getText().toString())){
-//            DialogNotileUtil.show(this,"验证码错误");
+//            DialogNoticeUtil.show(this,"验证码错误");
 //            return;
 //        }
         executor.submit(registerRunnable);

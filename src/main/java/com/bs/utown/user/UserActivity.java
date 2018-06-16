@@ -52,13 +52,21 @@ public class UserActivity extends BaseActivity implements View.OnClickListener {
         head.setOnClickListener(this);
         findViewById(R.id.user_back).setOnClickListener(this);
         findViewById(R.id.user_out).setOnClickListener(this);
+        findViewById(R.id.user_apply).setOnClickListener(this);
+        findViewById(R.id.user_act).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.user_riv:
-                SmallUtil.getActivity(UserActivity.this,UserMsgActivity.class);
+                SmallUtil.getActivity(UserActivity.this, UserMsgActivity.class);
+                break;
+            case R.id.user_act:
+                SmallUtil.getActivity(UserActivity.this, UserActActivity.class);
+                break;
+            case R.id.user_apply:
+                SmallUtil.getActivity(UserActivity.this, UserApplyActivity.class);
                 break;
             case R.id.user_back:
                 baseapp.finishActivity();

@@ -58,11 +58,11 @@ public class DialogCode {
 //            }
 //        });
         dialog.setContentView(view, new LinearLayout.LayoutParams(
-                dm.widthPixels * 4 / 5,//LinearLayout.LayoutParams.MATCH_PARENT
+                dm.widthPixels * 5 / 6,//LinearLayout.LayoutParams.MATCH_PARENT
                 dm.heightPixels * 3 / 5));
         dialog.show();
 
-        dialog.setCancelable(true);//点击空白处令弹框小时
+        dialog.setCancelable(true);//点击空白处令弹框消失
         dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {

@@ -22,7 +22,7 @@ import com.bs.utown.util.Logs;
 import com.bs.utown.util.NetConnectUtil;
 import com.bs.utown.util.SmallUtil;
 import com.bs.utown.util.ToastUtil;
-import com.bs.utown.view.DialogNotileUtil;
+import com.bs.utown.view.DialogNoticeUtil;
 import com.bs.utown.wxapi.WXEntryActivity;
 import com.tencent.mm.opensdk.modelmsg.SendAuth;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
@@ -68,10 +68,16 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
         boolean netConnect = NetConnectUtil.NetConnect(this);
         if (!netConnect) {
-            DialogNotileUtil.show(this, "请先将网络打开");
+            DialogNoticeUtil.show(this, "请先将网络打开");
         }
 
+        Test();
+
         initView();
+    }
+
+    /*测试*/
+    private void Test() {
     }
 
     private void initView() {
@@ -81,6 +87,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         findViewById(R.id.login_register).setOnClickListener(this);
         findViewById(R.id.login_resetpwd).setOnClickListener(this);
         findViewById(R.id.login_weixin).setOnClickListener(this);
+        findViewById(R.id.login_guide).setOnClickListener(this);
     }
 
 
@@ -98,6 +105,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 break;
             case R.id.login_weixin:
                 wxLogin();
+                break;
+            case R.id.login_guide:
+                SmallUtil.getActivity(LoginActivity.this, MainActivity.class);
+//            spUser.putBoolean(SpKey.isLogin, true);
+//            spUser.putString(SpKey.UserName, phone.getText().toString());//系统保留用户名
+//            managerDb.addOrUpdateLogin(phone.getText().toString(), TimeUtil.long2time(System.currentTimeMillis(), Constant.formatlogin));
+                finish();
                 break;
         }
     }
@@ -166,10 +180,10 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     finish();
                     break;
                 case LOGIN_FAIL:
-                    DialogNotileUtil.show(LoginActivity.this, "登录失败\n" + "密码错误或账号不存在");
+                    DialogNoticeUtil.show(LoginActivity.this, "登录失败\n" + "密码错误或账号不存在");
                     break;
                 case RESULT_ERROR:
-                    DialogNotileUtil.show(LoginActivity.this, "访问后台失败");
+                    DialogNoticeUtil.show(LoginActivity.this, "访问后台失败");
                     break;
             }
         }
@@ -187,13 +201,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 .execute(new StringCallback() {
                     @Override
                     public void onError(okhttp3.Call call, Exception e, int id) {
-                        Logs.e(tag + "141获取错误 " + e + "  " + id + "  " + call);
+                        Logs.e(tag + "190获取错误 " + e + "  " + id + "  " + call);
                     }
 
                     @Override
                     public void onResponse(String response, int id) {
-                        Logs.i(tag + "144 " + response + "  " + id);
-                        DialogNotileUtil.show(LoginActivity.this, response);
+                        Logs.v(tag + "195 个人信息 " + response + "  " + id);
+                        DialogNoticeUtil.show(LoginActivity.this, response);
                     }
                 });
     }

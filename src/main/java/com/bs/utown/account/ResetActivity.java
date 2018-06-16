@@ -16,7 +16,7 @@ import com.bs.utown.util.HttpByGet;
 import com.bs.utown.util.Logs;
 import com.bs.utown.util.SmallUtil;
 import com.bs.utown.util.ToastUtil;
-import com.bs.utown.view.DialogNotileUtil;
+import com.bs.utown.view.DialogNoticeUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -46,19 +46,19 @@ public class ResetActivity extends BaseActivity implements View.OnClickListener 
                     codeCheck = true;
                     timeCount.cancel();
                     codeGet.setText("获取验证码");
-                    DialogNotileUtil.show(ResetActivity.this, codeError);
+                    DialogNoticeUtil.show(ResetActivity.this, codeError);
                     break;
                 case CODE_FAIL:
                     codeCheck = true;
                     timeCount.cancel();
                     codeGet.setText("获取验证码");
-                    DialogNotileUtil.show(ResetActivity.this, "发送验证码失败");
+                    DialogNoticeUtil.show(ResetActivity.this, "发送验证码失败");
                     break;
                 case RESULT_ERROR:
                     codeCheck = true;
                     timeCount.cancel();
                     codeGet.setText("获取验证码");
-                    DialogNotileUtil.show(ResetActivity.this, "访问后台失败");
+                    DialogNoticeUtil.show(ResetActivity.this, "访问后台失败");
                     break;
             }
         }
@@ -122,7 +122,7 @@ public class ResetActivity extends BaseActivity implements View.OnClickListener 
         }
 
         if (!codeResult.equals(code.getText().toString())) {
-            DialogNotileUtil.show(this, "验证码错误");
+            DialogNoticeUtil.show(this, "验证码错误");
         } else {
             Bundle bundle=new Bundle();
             bundle.putString("phone",phoneStr);

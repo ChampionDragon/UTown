@@ -10,6 +10,7 @@
     <!-- 标准颜色 -->
     <color name="myshadow">#b3b3b3</color>
     <color name="black">#000000</color>
+    <color name="tv">#6E7382</color>
     <color name="white">#ffffff</color>
     <color name="purple">#800073</color>
     <color name="gold">#ffd700</color>
@@ -19,6 +20,7 @@
     <color name="red">#ff0000</color>
     <color name="red_deep">#8B1A1A</color>
     <color name="green">#32cd32</color>
+    <color name="green_dark">#008B8B</color>
     <color name="green_deep">#006000</color>
     <color name="green_shallow">#ADFF2F</color>
     <color name="yellow">#ffff00</color>
@@ -28,6 +30,7 @@
     <color name="gray">#707070</color>
     <color name="gray_shallow">#bfbfbf</color>
     <color name="transparent">#00ff0000</color>
+    <color name="line">#A0AABE</color>
     <!-- 项目主要背景颜色 -->
     <color name="bg_main">#e3e3e3</color>
 

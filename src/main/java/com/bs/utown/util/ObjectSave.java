@@ -114,4 +114,24 @@ public class ObjectSave {
         info = userInfo;
         SaveObject("userinfo.dat", info);
     }
+
+    /**
+     * 保留车辆信息
+     */
+    public static void SaveCar(){
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
