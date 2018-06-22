@@ -21,8 +21,13 @@ import java.util.ArrayList;
 
 import static com.bs.utown.constant.SpKey.resnBean;
 
+/**
+ * Description: 预定详情
+ * AUTHOR: Champion Dragon
+ * created at 2018/6/20
+ **/
 public class ResndetailActivity extends BaseActivity implements View.OnClickListener {
-    private TextView name, equipment, place, price, time, notice;
+    private TextView name, equipment, place, price, time, notice, area, num;
     private ImageView iv;
     private String tag = "ResndetailActivity";
     public static final int Resntime = 5;
@@ -38,6 +43,8 @@ public class ResndetailActivity extends BaseActivity implements View.OnClickList
     }
 
     private void initView() {
+        num = (TextView) findViewById(R.id.resndetail_num);
+        area = (TextView) findViewById(R.id.resndetail_area);
         name = (TextView) findViewById(R.id.resndetail_name);
         equipment = (TextView) findViewById(R.id.resndetail_equipment);
         place = (TextView) findViewById(R.id.resndetail_place);
@@ -61,6 +68,8 @@ public class ResndetailActivity extends BaseActivity implements View.OnClickList
             equipment.setText(bean.getEquipment());
             place.setText(bean.getPlace());
             price.setText(bean.getPrice());
+            num.setText(bean.getNum());
+            area.setText(bean.getArea());
             Picasso.with(this).load(bean.getUrl()).placeholder(R.mipmap.logo).error(R.mipmap.logo).into(iv);
         }
     }
@@ -118,4 +127,6 @@ public class ResndetailActivity extends BaseActivity implements View.OnClickList
                 break;
         }
     }
+
+
 }

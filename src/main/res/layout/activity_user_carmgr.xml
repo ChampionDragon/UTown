@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/usermsgactivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tt_height">
+
+        <ImageView
+            android:id="@+id/back_usercarmgr"
+            style="@style/tt_iv" />
+
+        <TextView
+            style="@style/tt_tv"
+            android:layout_toRightOf="@id/back_usercarmgr"
+            android:text="车辆管理" />
+
+        <TextView
+            android:id="@+id/usercarmgr_add"
+            style="@style/tt_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22dp"
+            android:text="添加车辆"
+            android:textColor="@drawable/login_text_color"
+            android:textSize="@dimen/user_tvl" />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/usercarmgr_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/bg_main"
+            android:dividerHeight="11dp"
+            android:padding="22dp" />
+
+        <LinearLayout
+            android:id="@+id/usercarmgr_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="您尚未添加车辆"
+                android:textColor="@color/tv"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/usercarmgr_add_btn"
+                android:layout_width="188dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/btn_back_bg"
+                android:padding="22dp"
+                android:text="添加车辆"
+                android:textColor="@drawable/btn_back_tv"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

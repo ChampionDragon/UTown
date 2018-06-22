@@ -53,7 +53,7 @@ public class ResnmeetingActivity extends BaseActivity implements View.OnClickLis
             ResnBean resnBean = list.get(position);
             Bundle bundle = new Bundle();
             bundle.putSerializable(SpKey.resnBean, resnBean);
-            SmallUtil.getActivity(ResnmeetingActivity.this, ResndetailActivity.class,bundle);
+            SmallUtil.getActivity(ResnmeetingActivity.this, ResndetailActivity.class, bundle);
         }
     };
 
@@ -66,6 +66,8 @@ public class ResnmeetingActivity extends BaseActivity implements View.OnClickLis
             ResnBean resnBean = new ResnBean();
             String moneyStr = getString(R.string.price, money[new Random().nextInt(3)]);
             resnBean.setPrice(moneyStr);
+            resnBean.setArea("XX平方米");
+            resnBean.setNum("YY人");
             resnBean.setName("会议室_" + i);
             resnBean.setPlace(i + "栋X楼YYY");
             resnBean.setUrl(url[new Random().nextInt(3)]);

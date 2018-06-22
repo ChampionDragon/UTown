@@ -21,6 +21,7 @@ public class SpKey {
    /*+++++++++++++++++++++++++++++  有关Intent的key   +++++++++++++++++++++++++++++*/
    public static final String resnBean = "resnBean";
    public static final String resnTime = "resnTime";
+   public static final String carAdd = "carAdd";
 
 
 

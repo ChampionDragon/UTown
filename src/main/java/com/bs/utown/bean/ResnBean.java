@@ -9,10 +9,39 @@ import java.io.Serializable;
  **/
 
 public class ResnBean implements Serializable{
-    String name;
-    String price;
-    String equipment;
-    String place;
+    private String name;
+    private String price;
+    private String equipment;
+    private String place;
+    private String time;
+    private String url;
+    private String num;
+    private String area;
+
+    public String getNum() {
+        return num;
+    }
+
+    public void setNum(String num) {
+        this.num = num;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
 
     public String getUrl() {
         return url;
@@ -22,7 +51,6 @@ public class ResnBean implements Serializable{
         this.url = url;
     }
 
-    String url;
 
     public String getName() {
         return name;

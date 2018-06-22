@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp">
+
+        <ImageView
+            android:id="@+id/back_caradd"
+            style="@style/tt_iv" />
+
+        <TextView
+            style="@style/tt_tv"
+            android:layout_toRightOf="@id/back_caradd"
+            android:text="添加车辆" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/car_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="18dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="车牌号码"
+            android:textSize="22sp" />
+
+        <com.bs.utown.gridpasswordview.GridPasswordView
+            android:id="@+id/car_gpvPlateNumber"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="11dp"
+            app:gpvPasswordLength="8" />
+
+    </LinearLayout>
+
+    <ImageView style="@style/iv" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="11dp"
+        android:paddingLeft="11dp"
+        android:paddingTop="11dp">
+
+        <CheckBox
+            android:id="@+id/car_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/usermsg_tv"
+            android:layout_marginLeft="11dp"
+            android:text="无车牌" />
+
+    </LinearLayout>
+
+    <ImageView style="@style/iv" />
+
+    <RelativeLayout
+        android:id="@+id/car_name_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:paddingBottom="11dp"
+        android:paddingLeft="18dp"
+        android:paddingTop="11dp">
+
+        <TextView
+            android:id="@+id/car_name_tv"
+            style="@style/usermsg_tv"
+            android:layout_centerVertical="true"
+            android:text="车型" />
+
+        <ImageView style="@style/usermsg_iv" />
+
+    </RelativeLayout>
+
+    <ImageView style="@style/iv" />
+
+    <RelativeLayout
+        android:id="@+id/car_color_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:paddingLeft="18dp"
+        android:paddingTop="11dp">
+
+        <TextView
+            android:id="@+id/car_color_tv"
+            style="@style/usermsg_tv"
+            android:layout_centerVertical="true"
+            android:text="颜色" />
+
+        <ImageView style="@style/usermsg_iv" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/car_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/btn_bg"
+            android:text="确定"
+            android:textColor="@drawable/btn_tv"
+            android:textSize="18sp" />
+
+
+        <com.bs.utown.view.XKeyboardView
+            android:id="@+id/car_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="#d1d5db"
+            android:keyBackground="@drawable/selector_key_background"
+            android:keyPreviewHeight="43dp"
+            android:keyPreviewLayout="@layout/key_preview_layout"
+            android:keyPreviewOffset="-43dp"
+            android:keyTextColor="#333333"
+            android:keyTextSize="16dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:shadowColor="#00000000"
+            android:shadowRadius="0.0"
+            android:visibility="gone"
+            app:deleteBackground="@drawable/selector_key_backspace_background"
+            app:deleteDrawable="@mipmap/sym_keyboard_delete" />
+
+    </FrameLayout>
+</LinearLayout>

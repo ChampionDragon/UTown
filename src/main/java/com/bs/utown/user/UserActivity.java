@@ -54,6 +54,8 @@ public class UserActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.user_out).setOnClickListener(this);
         findViewById(R.id.user_apply).setOnClickListener(this);
         findViewById(R.id.user_act).setOnClickListener(this);
+        findViewById(R.id.user_reservation).setOnClickListener(this);
+        findViewById(R.id.user_car).setOnClickListener(this);
     }
 
     @Override
@@ -62,11 +64,17 @@ public class UserActivity extends BaseActivity implements View.OnClickListener {
             case R.id.user_riv:
                 SmallUtil.getActivity(UserActivity.this, UserMsgActivity.class);
                 break;
+            case R.id.user_car:
+                SmallUtil.getActivity(UserActivity.this, UserCarmgrActivity.class);
+                break;
             case R.id.user_act:
                 SmallUtil.getActivity(UserActivity.this, UserActActivity.class);
                 break;
             case R.id.user_apply:
                 SmallUtil.getActivity(UserActivity.this, UserApplyActivity.class);
+                break;
+            case R.id.user_reservation:
+                SmallUtil.getActivity(UserActivity.this, UserResnActivity.class);
                 break;
             case R.id.user_back:
                 baseapp.finishActivity();

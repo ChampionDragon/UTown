@@ -46,5 +46,8 @@
     <!--覆盖颜色-->
     <color name="bgColor_overlay">#60000000</color>
 
-
+    <!-- 自定义键盘背景色 -->
+    <color name="btn_color_white_normal">#FFFFFF</color>
+    <color name="btn_color_white_pressed">#e5e5e5</color>
+    <color name="btn_color_white_disable">#CCCCCC</color>
 </resources>

@@ -1,0 +1,265 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tt_height">
+
+            <ImageView
+                android:id="@+id/back_userresndetail"
+                style="@style/tt_iv" />
+
+            <TextView
+                style="@style/tt_tv"
+                android:layout_toRightOf="@id/back_userresndetail"
+                android:text="预定详情" />
+
+            <ImageView
+                android:id="@+id/userresndetail_modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="15dp"
+                android:background="@mipmap/modify" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            android:background="@color/gray_shallow"
+            android:padding="11dp">
+
+            <ImageView
+                android:id="@+id/userresndetail_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@mipmap/logo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="22dp"
+            android:paddingTop="22dp">
+
+            <TextView
+                android:id="@+id/userresndetail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="会议室"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+
+            <LinearLayout style="@style/resn_l">
+
+                <TextView
+                    style="@style/resn_tv"
+                    android:text="配置设备：" />
+
+                <TextView
+                    android:id="@+id/userresndetail_equipment"
+                    style="@style/resn_tv"
+                    android:text="投影仪" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/resn_l">
+
+                <TextView
+                    style="@style/resn_tv"
+                    android:text="地点：" />
+
+                <TextView
+                    android:id="@+id/userresndetail_place"
+                    style="@style/resn_tv"
+                    android:text="x栋x楼xxx" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/resn_l">
+
+                <TextView
+                    style="@style/resn_tv"
+                    android:text="面积：" />
+
+                <TextView
+                    android:id="@+id/userresndetail_area"
+                    style="@style/resn_tv"
+                    android:text="xx" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/resn_l">
+
+                <TextView
+                    style="@style/resn_tv"
+                    android:text="可容纳人数：" />
+
+                <TextView
+                    android:id="@+id/userresndetail_num"
+                    style="@style/resn_tv"
+                    android:text="xx" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/resn_l"
+                android:layout_marginBottom="22dp">
+
+                <TextView
+                    style="@style/resn_tv"
+                    android:text="价格：" />
+
+                <TextView
+                    android:id="@+id/userresndetail_price"
+                    style="@style/resn_tv"
+                    android:text="xx" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/userresndetail_time"
+            style="@style/usermsg_rl"
+            android:layout_marginTop="11dp"
+            android:layout_weight="1"
+            android:padding="11dp">
+
+            <TextView
+                style="@style/usermsg_tv"
+                android:layout_centerVertical="true"
+                android:text="使用时间" />
+
+            <TextView
+                android:id="@+id/userresndetail_time_tv"
+                style="@style/usermsg_tv"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/usermsg_tvr"
+                android:hint="使用时间"
+                android:textSize="15dp" />
+
+            <ImageView style="@style/usermsg_iv" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/userresndetail_person"
+            style="@style/usermsg_rl"
+            android:layout_marginTop="11dp"
+            android:layout_weight="1"
+            android:padding="11dp">
+
+            <TextView
+                style="@style/usermsg_tv"
+                android:layout_centerVertical="true"
+                android:text="参与人员" />
+
+
+            <ImageView style="@style/usermsg_iv" />
+
+        </RelativeLayout>
+
+        <ImageView style="@style/iv" />
+
+        <RelativeLayout
+            android:id="@+id/userresndetail_notice"
+            style="@style/usermsg_rl"
+            android:layout_weight="1"
+            android:padding="11dp">
+
+            <TextView
+                style="@style/usermsg_tv"
+                android:layout_centerVertical="true"
+                android:text="通知时间" />
+
+            <TextView
+                android:id="@+id/userresndetail_notice_tv"
+                style="@style/usermsg_tv"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/usermsg_tvr"
+                android:hint="通知时间"
+                android:textSize="15dp" />
+
+
+            <ImageView style="@style/usermsg_iv" />
+
+        </RelativeLayout>
+
+        <ImageView style="@style/iv" />
+
+        <RelativeLayout
+            android:id="@+id/userresndetail_method"
+            style="@style/usermsg_rl"
+            android:layout_weight="1"
+            android:padding="11dp">
+
+            <TextView
+                style="@style/usermsg_tv"
+                android:layout_centerVertical="true"
+                android:text="通知方式" />
+
+
+            <CheckBox
+                android:id="@+id/userresndetail_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/checkbox_bg"
+                android:button="@null"
+                android:padding="8dp"
+                android:text="短信"
+                android:textColor="@drawable/checkbox_tv"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/userresndetail_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="11dp"
+                android:layout_toLeftOf="@id/userresndetail_msg"
+                android:background="@drawable/checkbox_bg"
+                android:button="@null"
+                android:padding="8dp"
+                android:text="应用内"
+                android:textColor="@drawable/checkbox_tv"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/userresndetail_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginTop="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:text="确定"
+            android:textColor="@drawable/btn_tv"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+</ScrollView>

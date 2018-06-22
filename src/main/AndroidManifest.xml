@@ -83,7 +83,10 @@
         <activity android:name=".sercompany.ResndetailActivity" />
         <activity android:name=".sercompany.ResntimeActivity" />
         <activity android:name=".sercompany.ResnsuccessActivity" />
-        <activity android:name=".user.UserResnActivity"></activity>
+        <activity android:name=".user.UserResnActivity" />
+        <activity android:name=".user.UserResndetailActivity" />
+        <activity android:name=".user.UserCarmgrActivity" />
+        <activity android:name=".user.UserCaraddActivity"></activity>
     </application>
 
 </manifest>

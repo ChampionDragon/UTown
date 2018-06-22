@@ -5,6 +5,8 @@ import android.view.View;
 
 import com.bs.utown.R;
 import com.bs.utown.base.BaseActivity;
+import com.bs.utown.user.UserResnActivity;
+import com.bs.utown.util.SmallUtil;
 
 /**
  * Description: 预定成功
@@ -22,6 +24,13 @@ public class ResnsuccessActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 baseapp.TemfinishAllActivity();
+            }
+        });
+        findViewById(R.id.resnsuccess_resn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                baseapp.TemfinishAllActivity();
+                SmallUtil.getActivity(ResnsuccessActivity.this, UserResnActivity.class);
             }
         });
 

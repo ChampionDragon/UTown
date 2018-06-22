@@ -49,7 +49,7 @@
             android:textSize="18sp" />
 
         <Button
-            android:textColor="@drawable/btn_tv"
+            android:textColor="@drawable/btn_back_tv"
             android:id="@+id/resnsuccess_back"
             android:layout_width="188dp"
             android:layout_height="wrap_content"

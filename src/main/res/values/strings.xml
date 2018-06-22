@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">优唐</string>
     <string name="price">￥%s/小时</string>
+    <string name="plate">提示：第一位是各省的缩写,第二位是代表城市字母。传统汽车只需用字母或数字填写3-7位,新能源汽车需要填写3-8位,按返回键可令键盘消失。</string>
 
 
     <!--  pickerView   -->
