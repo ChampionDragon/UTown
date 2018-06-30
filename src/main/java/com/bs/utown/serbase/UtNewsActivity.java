@@ -1,4 +1,4 @@
-package com.bs.utown.user;
+package com.bs.utown.serbase;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -10,27 +10,21 @@ import android.view.View;
 
 import com.bs.utown.R;
 import com.bs.utown.base.BaseActivity;
-import com.bs.utown.fragment.ActFragment;
+import com.bs.utown.fragment.UtNewsFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Description: 活动管理
- * AUTHOR: Champion Dragon
- * created at 2018/6/11
- **/
-public class UserActActivity extends BaseActivity implements View.OnClickListener {
-
+public class UtNewsActivity extends BaseActivity {
     private TabLayout tabLayout;
     private ViewPager vp;
     private List<Fragment> fragments = new ArrayList<>();
-    private String[] tabs = {"已报名", "过往活动"};
+    private String[] tabs = {"园区动态", "行业动态", "企业动态"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_act);
+        setContentView(R.layout.activity_ut_news);
         baseapp.addActivity(this);
         initView();
         initTab();
@@ -39,8 +33,9 @@ public class UserActActivity extends BaseActivity implements View.OnClickListene
     private void initTab() {
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
 
-        fragments.add(new ActFragment());
-        fragments.add(new ActFragment());
+        fragments.add(new UtNewsFragment());
+        fragments.add(new UtNewsFragment());
+        fragments.add(new UtNewsFragment());
         vp.setAdapter(new TabAdapter(getSupportFragmentManager()));
 
         tabLayout.addOnTabSelectedListener(tabSelect);
@@ -48,21 +43,15 @@ public class UserActActivity extends BaseActivity implements View.OnClickListene
     }
 
     private void initView() {
-        findViewById(R.id.back_useract).setOnClickListener(this);
-        tabLayout = (TabLayout) findViewById(R.id.useract_tab);
-        vp = (ViewPager) findViewById(R.id.useract_vp);
-    }
-
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.back_useract:
+        findViewById(R.id.back_utnews).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 baseapp.finishActivity();
-                break;
-        }
+            }
+        });
+        tabLayout = (TabLayout) findViewById(R.id.utnews_tab);
+        vp = (ViewPager) findViewById(R.id.utnews_vp);
     }
-
 
     /*TabLayout改变状态的监听器*/
     TabLayout.OnTabSelectedListener tabSelect = new TabLayout.OnTabSelectedListener() {
@@ -70,19 +59,16 @@ public class UserActActivity extends BaseActivity implements View.OnClickListene
         public void onTabSelected(TabLayout.Tab tab) {
             vp.setCurrentItem(tab.getPosition());
 //            Logs.v("滑动选择：" + tab.getPosition());
-            fragments.get(tab.getPosition()).onResume();//滑动时刷新数据
+//            fragments.get(tab.getPosition()).onResume();//滑动时刷新数据
         }
 
         @Override
         public void onTabUnselected(TabLayout.Tab tab) {
-
         }
 
         @Override
         public void onTabReselected(TabLayout.Tab tab) {
-
         }
-
     };
 
 
@@ -109,4 +95,6 @@ public class UserActActivity extends BaseActivity implements View.OnClickListene
             return tabs[position];
         }
     }
+
+
 }

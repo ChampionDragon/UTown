@@ -41,7 +41,7 @@
     <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- 手电筒 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- 收到消息时，让处理器不要睡眠。 -->
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
@@ -86,7 +86,15 @@
         <activity android:name=".user.UserResnActivity" />
         <activity android:name=".user.UserResndetailActivity" />
         <activity android:name=".user.UserCarmgrActivity" />
-        <activity android:name=".user.UserCaraddActivity"></activity>
+        <activity android:name=".user.UserCaraddActivity" />
+        <activity android:name=".WebviewActivity" />
+        <activity android:name=".serbase.UtActActivity" />
+        <activity android:name=".serbase.UtNewsActivity" />
+        <activity android:name=".serbase.UtActdtlActivity" />
+        <activity android:name=".serbase.UtNoticeActivity" />
+        <activity android:name=".sercompany.AdmissionCompActivity" />
+        <activity android:name=".sercompany.AdmissionApplyActivity" />
+        <activity android:name=".sercompany.AdmissionLicenseActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/usermsgactivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tt_height">
+
+        <ImageView
+            android:id="@+id/back_webview"
+            style="@style/tt_iv" />
+
+        <TextView
+            android:id="@+id/webview_tv"
+            style="@style/tt_tv"
+            android:layout_toRightOf="@id/back_webview"
+            android:text="标题" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/webview_pb"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_alignParentBottom="true"
+        android:progressDrawable="@drawable/webview_pb"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

@@ -57,10 +57,12 @@ public class Constant {
     public static final String APP_SECRET_WX = "831ec926826acb588984ef1071ab902e";
 
 
-    /* +++++++++++++++++++++++ 图片地址 ++++++++++++++++++++++++++++++*/
+    /* +++++++++++++++++++++++ 地址 ++++++++++++++++++++++++++++++*/
     public static final String url_1 = "http://img0.imgtn.bdimg.com/it/u=425164315,2803969613&fm=27&gp=0.jpg";
     public static final String url_2 = "http://img4.imgtn.bdimg.com/it/u=3996175993,1337165617&fm=27&gp=0.jpg";
     public static final String url_3 = "http://img4.imgtn.bdimg.com/it/u=3831423996,1610400728&fm=27&gp=0.jpg";
+    public final static String urlBaiSheng = "http://www.bisensa.com/";
+    public static final String url_admission = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530092016299&di=b13e4933d33bfad3ea63e26899ca8e1e&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D2237573153%2C1502960089%26fm%3D214%26gp%3D0.jpg";
 
 
 }

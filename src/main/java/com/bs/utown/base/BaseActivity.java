@@ -28,5 +28,4 @@ public class BaseActivity extends AppCompatActivity {
         spUser = SpUtil.getInstance(SpKey.SP_user, MODE_PRIVATE);
 //        managerDb=baseapp.managerDb;
     }
-
 }

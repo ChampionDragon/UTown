@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tt_height">
+
+        <ImageView
+            android:id="@+id/back_utact"
+            style="@style/tt_iv" />
+
+        <TextView
+            style="@style/tt_tv"
+            android:layout_toRightOf="@id/back_utact"
+            android:text="园区活动" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/utact_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/gray_shallow"
+        android:dividerHeight="2dp" />
+
+</LinearLayout>

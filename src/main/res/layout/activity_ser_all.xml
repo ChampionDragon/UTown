@@ -44,6 +44,7 @@
             <LinearLayout style="@style/iv_vertical">
 
                 <ImageView
+                    android:id="@+id/serall_officialweb"
                     style="@style/iv_iv"
                     android:background="@mipmap/ic_launcher" />
 

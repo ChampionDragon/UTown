@@ -36,6 +36,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * Description: 账户资料
+ * AUTHOR: Champion Dragon
+ * created at 2018/6/27
+ **/
 public class UserMsgActivity extends BaseActivity implements View.OnClickListener {
     private RoundImageView head;
     private TextView gender, birthday;

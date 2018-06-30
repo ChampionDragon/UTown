@@ -1,15 +1,13 @@
 package com.bs.utown.bean;
 
-import java.io.Serializable;
-
 /**
- * Description: 活动的bean类
+ * Description: 园区资讯的bean类
  * AUTHOR: Champion Dragon
- * created at 2018/6/12
+ * created at 2018/6/26
  **/
 
-public class ActBean implements Serializable{
-    String url,name,place,time;
+public class NewsBean {
+    String url, name, time;
 
     public String getUrl() {
         return url;
@@ -25,14 +23,6 @@ public class ActBean implements Serializable{
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getPlace() {
-        return place;
-    }
-
-    public void setPlace(String place) {
-        this.place = place;
     }
 
     public String getTime() {

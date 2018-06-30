@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tt_height">
+
+        <ImageView
+            android:id="@+id/back_admissionapply"
+            style="@style/tt_iv" />
+
+        <TextView
+            style="@style/tt_tv"
+            android:layout_toRightOf="@id/back_admissionapply"
+            android:text="申请入住" />
+
+        <ImageView
+            android:id="@+id/admissionapply_explanation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="11dp"
+            android:layout_marginRight="22dp"
+            android:src="@mipmap/explanation" />
+
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/admissionapply_name"
+        style="@style/admissionapply_tv"
+        android:hint="企业名称" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="9dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <TextView
+            android:textSize="16sp"
+            android:id="@+id/admissionapply_timetv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:hint="入住时间"
+            android:paddingLeft="11dp" />
+
+        <ImageView
+            android:id="@+id/admissionapply_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="11dp"
+            android:layout_marginRight="22dp"
+            android:src="@mipmap/calendar" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/admissionapply_user"
+        style="@style/admissionapply_tv"
+        android:layout_marginTop="9dp"
+        android:hint="姓名" />
+
+    <EditText
+        android:id="@+id/admissionapply_phone"
+        style="@style/admissionapply_tv"
+        android:layout_marginTop="9dp"
+        android:hint="电话" />
+
+    <EditText
+        android:id="@+id/admissionapply_email"
+        style="@style/admissionapply_tv"
+        android:layout_marginTop="9dp"
+        android:hint="邮箱" />
+
+    <TextView
+        android:id="@+id/admissionapply_type"
+        style="@style/admissionapply_tv"
+        android:layout_marginTop="9dp"
+        android:hint="请选择工位类型" />
+
+    <TextView
+        android:id="@+id/admissionapply_bussiness"
+        style="@style/admissionapply_tv"
+        android:layout_marginTop="9dp"
+        android:hint="请选择主营业务" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <Button
+            android:id="@+id/admissionapply_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="22dp"
+            android:background="@drawable/login_btn_bg"
+            android:text="下一步"
+            android:textColor="@drawable/login_btn_text"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

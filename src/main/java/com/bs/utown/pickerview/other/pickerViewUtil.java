@@ -54,7 +54,6 @@ public class pickerViewUtil<T> {
         pvTime.setTitle(title);
         //时间选择后回调
         pvTime.setOnTimeSelectListener(new TimePickerView.OnTimeSelectListener() {
-
             @Override
             public void onTimeSelect(Date date) {
 //                        tvTime.setText(getTime(date));

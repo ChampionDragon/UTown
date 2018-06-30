@@ -22,6 +22,9 @@ public class SpKey {
    public static final String resnBean = "resnBean";
    public static final String resnTime = "resnTime";
    public static final String carAdd = "carAdd";
+   public static final String webUrl = "webUrl";
+   public static final String webTv = "webTv";
+   public static final String actBean= "actBean";
 
 
 

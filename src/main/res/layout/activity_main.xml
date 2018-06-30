@@ -70,6 +70,7 @@
             android:textColor="@color/blueSky" />
 
         <TextView
+            android:id="@+id/main_more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="11dp"
@@ -95,6 +96,7 @@
             <LinearLayout style="@style/iv_vertical">
 
                 <ImageView
+                    android:id="@+id/main_admissioncomp"
                     style="@style/iv_iv"
                     android:background="@mipmap/ic_launcher" />
 
@@ -106,6 +108,7 @@
             <LinearLayout style="@style/iv_vertical">
 
                 <ImageView
+                    android:id="@+id/main_news"
                     style="@style/iv_iv"
                     android:background="@mipmap/ic_launcher" />
 
@@ -117,6 +120,7 @@
             <LinearLayout style="@style/iv_vertical">
 
                 <ImageView
+                    android:id="@+id/main_act"
                     style="@style/iv_iv"
                     android:background="@mipmap/ic_launcher" />
 

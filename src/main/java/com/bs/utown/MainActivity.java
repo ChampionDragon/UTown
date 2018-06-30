@@ -7,6 +7,10 @@ import android.view.View;
 import com.bs.utown.base.BaseActivity;
 import com.bs.utown.bean.UserInfo;
 import com.bs.utown.listener.DiadisListener;
+import com.bs.utown.serbase.UtActActivity;
+import com.bs.utown.serbase.UtNewsActivity;
+import com.bs.utown.serbase.UtNoticeActivity;
+import com.bs.utown.sercompany.AdmissionCompActivity;
 import com.bs.utown.sercompany.ResnsiteActivity;
 import com.bs.utown.user.UserActivity;
 import com.bs.utown.util.ObjectSave;
@@ -44,9 +48,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private void initView() {
         findViewById(R.id.main_serall).setOnClickListener(this);
+        findViewById(R.id.main_more).setOnClickListener(this);
         findViewById(R.id.main_open).setOnClickListener(this);
         findViewById(R.id.main_resnsite).setOnClickListener(this);
-        head= (RoundImageView) findViewById(R.id.main_head);
+        findViewById(R.id.main_act).setOnClickListener(this);
+        findViewById(R.id.main_news).setOnClickListener(this);
+        findViewById(R.id.main_admissioncomp).setOnClickListener(this);
+        head = (RoundImageView) findViewById(R.id.main_head);
         head.setOnClickListener(this);
     }
 
@@ -56,6 +64,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.main_serall:
                 SmallUtil.getActivity(MainActivity.this, SerAllActivity.class);
+                break;
+            case R.id.main_admissioncomp:
+                SmallUtil.getActivity(MainActivity.this, AdmissionCompActivity.class);
+                break;
+            case R.id.main_more:
+                SmallUtil.getActivity(MainActivity.this, UtNoticeActivity.class);
+                break;
+            case R.id.main_news:
+                SmallUtil.getActivity(MainActivity.this, UtNewsActivity.class);
+                break;
+            case R.id.main_act:
+                SmallUtil.getActivity(MainActivity.this, UtActActivity.class);
                 break;
             case R.id.main_resnsite:
                 SmallUtil.getActivity(MainActivity.this, ResnsiteActivity.class);

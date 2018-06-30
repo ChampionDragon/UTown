@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tt_height">
+
+        <ImageView
+            android:id="@+id/back_admissionlicense"
+            style="@style/tt_iv" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/tt_tv"
+            android:layout_alignBottom="@+id/back_admissionlicense"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/back_admissionlicense"
+            android:layout_toRightOf="@+id/back_admissionlicense"
+            android:text="上传营业执照" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="22dp"
+        android:layout_weight="3"
+        android:background="@color/white"
+        android:padding="33dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="上传营业执照"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/admissionlicense_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="33dp"
+            android:src="@drawable/license" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="22dp"
+        android:text="如没有营业执照，请跳过"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <Button
+            android:id="@+id/admissionlicense_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="22dp"
+            android:background="@drawable/login_btn_bg"
+            android:text="下一步"
+            android:textColor="@drawable/login_btn_text"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

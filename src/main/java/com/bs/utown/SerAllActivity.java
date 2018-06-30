@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.bs.utown.base.BaseActivity;
+import com.bs.utown.constant.Constant;
+import com.bs.utown.constant.SpKey;
+import com.bs.utown.sercompany.ResndetailActivity;
 import com.bs.utown.sercompany.ResnsiteActivity;
 import com.bs.utown.util.SmallUtil;
 
@@ -24,7 +27,8 @@ public class SerAllActivity extends BaseActivity implements View.OnClickListener
 
     private void initView() {
         findViewById(R.id.back_serall).setOnClickListener(this);
-        findViewById(R.id.serall_resnsite).setOnClickListener(this);
+        findViewById(R.id.serall_resnsite).setOnClickListener(this);//预定场地
+        findViewById(R.id.serall_officialweb).setOnClickListener(this);//官网
     }
 
 
@@ -36,6 +40,12 @@ public class SerAllActivity extends BaseActivity implements View.OnClickListener
                 break;
             case R.id.serall_resnsite:
                 SmallUtil.getActivity(SerAllActivity.this, ResnsiteActivity.class);
+                break;
+            case R.id.serall_officialweb:
+                Bundle bundle = new Bundle();
+                bundle.putString(SpKey.webTv,"优唐智慧园");
+                bundle.putString(SpKey.webUrl, Constant.urlBaiSheng);
+                SmallUtil.getActivity(SerAllActivity.this, WebviewActivity.class, bundle);
                 break;
         }
     }

@@ -10,8 +10,6 @@ import com.bs.utown.constant.Constant;
 import com.bs.utown.util.SmallUtil;
 import com.squareup.picasso.Picasso;
 
-import static com.bs.utown.base.BaseApplication.context;
-
 /**
  * Description: 场地预定
  * AUTHOR: Champion Dragon
@@ -34,8 +32,8 @@ public class ResnsiteActivity extends BaseActivity implements View.OnClickListen
         meeting = (ImageView) findViewById(R.id.resnsite_meeting);
         meeting.setOnClickListener(this);
         conference = (ImageView) findViewById(R.id.resnsite_conference);
-        Picasso.with(context).load(Constant.url_1).placeholder(R.mipmap.logo).error(R.mipmap.logo).into(meeting);
-        Picasso.with(context).load(Constant.url_2).placeholder(R.mipmap.logo).error(R.mipmap.logo).into(conference);
+        Picasso.with(this).load(Constant.url_1).placeholder(R.mipmap.logo).error(R.mipmap.logo).into(meeting);
+        Picasso.with(this).load(Constant.url_2).placeholder(R.mipmap.logo).error(R.mipmap.logo).into(conference);
 
     }
 

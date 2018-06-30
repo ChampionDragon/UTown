@@ -137,13 +137,13 @@
     </style>
 
 
-
     <!--+++++++++++++++++++++++++++++++++++  ResndtailActivity  ++++++++++++++++++++++++++++++++++++++++++++ -->
     <style name="resn_l">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_marginTop">11dp</item>
     </style>
+
     <style name="resn_tv">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
@@ -153,7 +153,7 @@
 
 
     <!--++++++++++++++++++  GridPasswordView的样式  +++++++++++++++++++++++-->
-    <style name="GridPasswordView"/>
+    <style name="GridPasswordView" />
 
     <style name="GridPasswordView.TextView">
         <item name="android:layout_width">0dp</item>
@@ -175,7 +175,19 @@
         <item name="android:layout_marginBottom">1dp</item>
     </style>
 
-
+    <!--++++++++++++++++++   AdmissionApplyActivity的样式  +++++++++++++++++++++++-->
+    <style name="admissionapply_tv">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">11dp</item>
+        <item name="android:layout_marginLeft">22dp</item>
+        <item name="android:layout_marginRight">22dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/white</item>
+    </style>
 
 
 </resources>
