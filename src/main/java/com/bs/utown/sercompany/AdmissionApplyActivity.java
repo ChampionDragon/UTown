@@ -3,18 +3,24 @@ package com.bs.utown.sercompany;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bs.utown.R;
 import com.bs.utown.base.BaseActivity;
+import com.bs.utown.bean.AdmissionBean;
 import com.bs.utown.constant.Constant;
+import com.bs.utown.constant.SpKey;
 import com.bs.utown.listener.DiadisListener;
 import com.bs.utown.pickerview.TimePickerView;
 import com.bs.utown.pickerview.other.pickerViewUtil;
 import com.bs.utown.util.SmallUtil;
 import com.bs.utown.util.ToastUtil;
 import com.bs.utown.view.DialogIv;
+import com.bs.utown.view.DialogVp;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -27,6 +33,11 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
     private TextView time, type, bussiness;
     private EditText name, user, phone, email;
     private DialogIv dialogIv;
+    private DialogVp dialogVp;
+    private String[] typeArray = {"移动工位", "固定工位"};
+    private String[] bussinessArray = {"专属办公室", "定制设计运营服务"};
+    private int markType = 0;
+    private int markBussiness = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +58,9 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
         phone = (EditText) findViewById(R.id.admissionapply_phone);
         email = (EditText) findViewById(R.id.admissionapply_email);
         type = (TextView) findViewById(R.id.admissionapply_type);
+        type.setOnClickListener(this);
         bussiness = (TextView) findViewById(R.id.admissionapply_bussiness);
+        bussiness.setOnClickListener(this);
     }
 
     @Override
@@ -65,6 +78,52 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
             case R.id.admissionapply_next:
                 Next();
                 break;
+            case R.id.admissionapply_type:
+                List<Integer> listId = new ArrayList<>();
+                listId.add(R.mipmap.typemobile);
+                listId.add(R.mipmap.typefixed);
+                VpDialog(getIv(listId), markType);
+                break;
+            case R.id.admissionapply_bussiness:
+                List<Integer> list = new ArrayList<>();
+                list.add(R.mipmap.typeexclusive);
+                list.add(R.mipmap.typecustomer);
+                VpDialog(getIv(list), markBussiness);
+                break;
+        }
+    }
+
+    /*创建自定义Imageview集合*/
+    private List<ImageView> getIv(List<Integer> listId) {
+        List<ImageView> list = new ArrayList<>();
+        for (int a = 0; a < listId.size(); a++) {
+            ImageView imageView = new ImageView(this);
+            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setImageResource(listId.get(a));
+            list.add(imageView);
+        }
+        return list;
+    }
+
+
+    //创建
+    private void VpDialog(List<ImageView> list, final int mark) {
+        if (dialogVp != null) {
+
+        } else {
+            dialogVp = new DialogVp(this, list, new DiadisListener() {
+                @Override
+                public void dismiss(Object object) {
+                    if ((int) object != 99) {
+                        if (mark == markBussiness) {
+                            bussiness.setText(bussinessArray[(int) object]);
+                        } else if (mark == markType) {
+                            type.setText(typeArray[(int) object]);
+                        }
+                    }
+                    closeDialog();
+                }
+            });
         }
     }
 
@@ -75,8 +134,9 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
 
         } else {
             dialogIv = new DialogIv(this, R.mipmap.explan, new DiadisListener() {
+
                 @Override
-                public void dismiss() {
+                public void dismiss(Object object) {
                     closeDialog();
                 }
             });
@@ -88,6 +148,10 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
         if (dialogIv != null) {
             dialogIv.closeDia();
             dialogIv = null;
+        }
+        if (dialogVp != null) {
+            dialogVp.closeDia();
+            dialogVp = null;
         }
     }
 
@@ -107,7 +171,19 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
             ToastUtil.showLong("输入的邮箱格式不对");
             return;
         }
-        SmallUtil.getActivity(AdmissionApplyActivity.this,AdmissionLicenseActivity.class);
+
+        AdmissionBean bean = new AdmissionBean();
+        bean.setName(name.getText().toString());
+        bean.setBussiness(bussiness.getText().toString());
+        bean.setEmail(email.getText().toString());
+        bean.setPhone(phone.getText().toString());
+        bean.setTime(time.getText().toString());
+        bean.setType(type.getText().toString());
+        bean.setUser(user.getText().toString());
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(SpKey.admissionBean, bean);
+
+        SmallUtil.getActivity(AdmissionApplyActivity.this, AdmissionLicenseActivity.class,bundle);
     }
 
     /* 验证邮箱*/

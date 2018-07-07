@@ -94,7 +94,10 @@
         <activity android:name=".serbase.UtNoticeActivity" />
         <activity android:name=".sercompany.AdmissionCompActivity" />
         <activity android:name=".sercompany.AdmissionApplyActivity" />
-        <activity android:name=".sercompany.AdmissionLicenseActivity"></activity>
+        <activity android:name=".sercompany.AdmissionLicenseActivity" />
+        <activity android:name=".sercompany.AdmissionSubmitActivity" />
+        <activity android:name=".sercompany.AdmissionSuccessActivity" />
+        <activity android:name=".sercompany.ExpansionActivity"></activity>
     </application>
 
 </manifest>

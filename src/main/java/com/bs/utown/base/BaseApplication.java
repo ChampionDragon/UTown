@@ -7,6 +7,7 @@ import android.net.wifi.WifiManager;
 
 import com.bs.utown.constant.Constant;
 import com.bs.utown.constant.SpKey;
+import com.bs.utown.util.Logs;
 import com.bs.utown.util.SpUtil;
 import com.bs.utown.util.ToastUtil;
 
@@ -162,6 +163,7 @@ public class BaseApplication extends Application {
 
     //添加Activity到临时的堆栈
     public void TemaddActivity(Activity activity) {
+//        Logs.d(activity+" 166");
         activityStackTem.add(activity);
     }
 

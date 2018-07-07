@@ -72,6 +72,8 @@
         android:hint="姓名" />
 
     <EditText
+        android:inputType="phone"
+        android:maxLength="11"
         android:id="@+id/admissionapply_phone"
         style="@style/admissionapply_tv"
         android:layout_marginTop="9dp"

@@ -7,32 +7,28 @@ package com.bs.utown.constant;
  **/
 
 public class SpKey {
-    // sharedpreferences表名
+    /*sharedpreferences表名*/
     public static final String SP_name = "utown";//整个APP其余的SP
     public static final String SP_user = "user";//关于用户的SP
 
-    //欢迎界面的sp
+    /*欢迎界面的sp*/
     public static final String isFirst = "isFirst";
     public static final String isLogin = "Login";
     public static final String preVer = "preVer";
     public static final String UserName = "username";//用户名关系到相关数据的读取
 
-
-   /*+++++++++++++++++++++++++++++  有关Intent的key   +++++++++++++++++++++++++++++*/
-   public static final String resnBean = "resnBean";
-   public static final String resnTime = "resnTime";
-   public static final String carAdd = "carAdd";
-   public static final String webUrl = "webUrl";
-   public static final String webTv = "webTv";
-   public static final String actBean= "actBean";
+    /*其他*/
+    public static final String licensePath = "licensePath";//营业执照路径
 
 
-
-
-
-
-
-
+    /*+++++++++++++++++++++++++++++  有关Intent的key   +++++++++++++++++++++++++++++*/
+    public static final String resnBean = "resnBean";
+    public static final String resnTime = "resnTime";
+    public static final String carAdd = "carAdd";
+    public static final String webUrl = "webUrl";
+    public static final String webTv = "webTv";
+    public static final String actBean = "actBean";
+    public static final String admissionBean = "admissionBean";
 
 
 }

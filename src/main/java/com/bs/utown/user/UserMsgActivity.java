@@ -194,7 +194,7 @@ public class UserMsgActivity extends BaseActivity implements View.OnClickListene
             diaCode = new DialogCode(this, name.getText().toString(), uid.getText().toString(), userInfo.getHeadpath(),
                     TimeUtil.long2time(System.currentTimeMillis(), Constant.formatbusinesstime), new DiadisListener() {
                 @Override
-                public void dismiss() {
+                public void dismiss(Object object) {
                     ToastUtil.showShort("关闭开门对话框");
                     closeDialog();
                 }

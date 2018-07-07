@@ -7,5 +7,5 @@ package com.bs.utown.listener;
  **/
 
 public interface DiadisListener {
-    public void dismiss();
+    public void dismiss(Object object);
 }

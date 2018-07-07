@@ -31,7 +31,7 @@ public class AdmissionCompActivity extends BaseActivity implements View.OnClickL
         findViewById(R.id.back_admissioncomp).setOnClickListener(this);
         apply = (ImageView) findViewById(R.id.admissioncomp_apply);
         apply.setOnClickListener(this);
-        past = (ImageView) findViewById(R.id.admissioncomp_apply);
+        past = (ImageView) findViewById(R.id.admissioncomp_past);
         past.setOnClickListener(this);
         Picasso.with(this).load(Constant.url_admission).placeholder(R.mipmap.logo).error(R.mipmap.logo).into(apply);
         Picasso.with(this).load(Constant.url_1).placeholder(R.mipmap.logo).error(R.mipmap.logo).into(past);

@@ -63,7 +63,7 @@ public class DialogOpen {
         dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
-                listener.dismiss();
+                listener.dismiss(null);
             }
         });
     }

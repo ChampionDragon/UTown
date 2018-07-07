@@ -98,7 +98,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         } else {
             diaOpen = new DialogOpen(this, new DiadisListener() {
                 @Override
-                public void dismiss() {
+                public void dismiss(Object object) {
 //                    ToastUtil.showShort("关闭开门对话框");
                     closeDialog();
                 }
