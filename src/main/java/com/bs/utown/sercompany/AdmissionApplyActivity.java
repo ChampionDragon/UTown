@@ -131,10 +131,8 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
     //创建二维码弹框
     private void OpenDialog() {
         if (dialogIv != null) {
-
         } else {
             dialogIv = new DialogIv(this, R.mipmap.explan, new DiadisListener() {
-
                 @Override
                 public void dismiss(Object object) {
                     closeDialog();
@@ -183,7 +181,7 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
         Bundle bundle = new Bundle();
         bundle.putSerializable(SpKey.admissionBean, bean);
 
-        SmallUtil.getActivity(AdmissionApplyActivity.this, AdmissionLicenseActivity.class,bundle);
+        SmallUtil.getActivity(AdmissionApplyActivity.this, AdmissionLicenseActivity.class, bundle);
     }
 
     /* 验证邮箱*/

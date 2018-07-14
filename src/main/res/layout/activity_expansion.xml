@@ -9,12 +9,12 @@
         android:layout_height="@dimen/tt_height">
 
         <ImageView
-            android:id="@+id/back_admissioncomp"
+            android:id="@+id/back_expansion"
             style="@style/tt_iv" />
 
         <TextView
             style="@style/tt_tv"
-            android:layout_toRightOf="@id/back_admissioncomp"
+            android:layout_toRightOf="@id/back_expansion"
             android:text="扩租申请" />
 
     </RelativeLayout>
@@ -31,7 +31,7 @@
         android:padding="11dp">
 
         <ImageView
-            android:id="@+id/admissioncomp_apply"
+            android:id="@+id/expansion_apply"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
@@ -57,7 +57,7 @@
         android:padding="11dp">
 
         <ImageView
-            android:id="@+id/admissioncomp_past"
+            android:id="@+id/expansion_past"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"

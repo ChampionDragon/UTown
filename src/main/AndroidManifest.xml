@@ -97,7 +97,9 @@
         <activity android:name=".sercompany.AdmissionLicenseActivity" />
         <activity android:name=".sercompany.AdmissionSubmitActivity" />
         <activity android:name=".sercompany.AdmissionSuccessActivity" />
-        <activity android:name=".sercompany.ExpansionActivity"></activity>
+        <activity android:name=".sercompany.ExpansionActivity" />
+        <activity android:name=".sercompany.ExpansionApplyActivity" />
+        <activity android:name=".sercompany.ExpansionSuccessActivity"></activity>
     </application>
 
 </manifest>

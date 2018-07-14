@@ -52,7 +52,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.main_open).setOnClickListener(this);
         findViewById(R.id.main_resnsite).setOnClickListener(this);
         findViewById(R.id.main_act).setOnClickListener(this);
-        findViewById(R.id.main_news).setOnClickListener(this);
+        findViewById(R.id.main_news).setOnClickListener(this);//园区咨讯
         findViewById(R.id.main_admissioncomp).setOnClickListener(this);
         head = (RoundImageView) findViewById(R.id.main_head);
         head.setOnClickListener(this);

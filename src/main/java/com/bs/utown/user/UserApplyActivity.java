@@ -12,6 +12,7 @@ import com.bs.utown.R;
 import com.bs.utown.base.BaseActivity;
 import com.bs.utown.fragment.ApplyAdmissionFragment;
 import com.bs.utown.fragment.ApplyExpansionFragment;
+import com.bs.utown.util.Logs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +48,7 @@ public class UserApplyActivity extends BaseActivity implements View.OnClickListe
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             vp.setCurrentItem(extras.getInt(expansion));
+            Logs.v("num: " + extras.getInt(expansion));
         }
 
         tabLayout.addOnTabSelectedListener(tabSelect);

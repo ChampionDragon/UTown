@@ -22,8 +22,8 @@ public class AdmissionCompActivity extends BaseActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        baseapp.addActivity(this);
         setContentView(R.layout.activity_admission_comp);
+        baseapp.addActivity(this);
         initView();
     }
 
