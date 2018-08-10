@@ -24,6 +24,8 @@
         style="@style/admissionapply_tv"
         android:text="企业名称" />
 
+    <ImageView style="@style/admissionapply_iv" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -38,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:hint="入住时间"
+            android:hint="扩租日期"
             android:paddingLeft="11dp"
             android:textSize="16sp" />
 
@@ -54,11 +56,15 @@
 
     </RelativeLayout>
 
+    <ImageView style="@style/admissionapply_iv" />
+
     <TextView
         android:id="@+id/expansion_user"
         style="@style/admissionapply_tv"
         android:layout_marginTop="9dp"
         android:text="姓名" />
+
+    <ImageView style="@style/admissionapply_iv" />
 
     <TextView
         android:id="@+id/expansion_phone"
@@ -68,11 +74,15 @@
         android:maxLength="11"
         android:text="电话" />
 
+    <ImageView style="@style/admissionapply_iv" />
+
     <TextView
         android:id="@+id/expansion_email"
         style="@style/admissionapply_tv"
         android:layout_marginTop="9dp"
         android:text="邮箱" />
+
+    <ImageView style="@style/admissionapply_iv" />
 
     <TextView
         android:id="@+id/expansion_typearea"
@@ -80,12 +90,16 @@
         android:layout_marginTop="9dp"
         android:text="现工位类型及面积" />
 
+    <ImageView style="@style/admissionapply_iv" />
+
     <EditText
         android:id="@+id/expansion_area"
         style="@style/admissionapply_tv"
         android:layout_marginTop="9dp"
         android:hint="申请扩租面积"
         android:inputType="number" />
+
+    <ImageView style="@style/admissionapply_iv" />
 
 
     <RelativeLayout

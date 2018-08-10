@@ -35,23 +35,24 @@
         style="@style/admissionapply_tv"
         android:hint="企业名称" />
 
+    <ImageView style="@style/admissionapply_iv" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
         android:layout_marginTop="9dp"
-        android:layout_weight="1"
-        android:background="@color/white">
+        android:layout_weight="1">
 
         <TextView
-            android:textSize="16sp"
             android:id="@+id/admissionapply_timetv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:hint="入住时间"
-            android:paddingLeft="11dp" />
+            android:paddingLeft="11dp"
+            android:textSize="16sp" />
 
         <ImageView
             android:id="@+id/admissionapply_time"
@@ -65,19 +66,25 @@
 
     </RelativeLayout>
 
+    <ImageView style="@style/admissionapply_iv" />
+
     <EditText
         android:id="@+id/admissionapply_user"
         style="@style/admissionapply_tv"
         android:layout_marginTop="9dp"
         android:hint="姓名" />
 
+    <ImageView style="@style/admissionapply_iv" />
+
     <EditText
-        android:inputType="phone"
-        android:maxLength="11"
         android:id="@+id/admissionapply_phone"
         style="@style/admissionapply_tv"
         android:layout_marginTop="9dp"
-        android:hint="电话" />
+        android:hint="电话"
+        android:inputType="phone"
+        android:maxLength="11" />
+
+    <ImageView style="@style/admissionapply_iv" />
 
     <EditText
         android:id="@+id/admissionapply_email"
@@ -85,11 +92,15 @@
         android:layout_marginTop="9dp"
         android:hint="邮箱" />
 
+    <ImageView style="@style/admissionapply_iv" />
+
     <TextView
         android:id="@+id/admissionapply_type"
         style="@style/admissionapply_tv"
         android:layout_marginTop="9dp"
         android:hint="请选择工位类型" />
+
+    <ImageView style="@style/admissionapply_iv" />
 
     <TextView
         android:id="@+id/admissionapply_bussiness"
@@ -97,11 +108,33 @@
         android:layout_marginTop="9dp"
         android:hint="请选择主营业务" />
 
+    <ImageView style="@style/admissionapply_iv" />
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="11dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/admissionapply_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/admissionapply_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已阅读协议并同意"
+                android:textColor="@color/red" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/admissionapply_next"

@@ -1,0 +1,80 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tt_height">
+
+            <ImageView
+                android:id="@+id/back_terms"
+                style="@style/tt_iv" />
+
+            <TextView
+                style="@style/tt_tv"
+                android:layout_toRightOf="@id/back_terms"
+                android:text="条款及条件" />
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/terms_tv"
+            android:text="@string/terms" />
+
+        <TextView
+            style="@style/terms_tvbig"
+            android:text="1.本合同" />
+
+        <TextView
+            style="@style/terms_tv"
+            android:text="@string/termsone" />
+
+        <TextView
+            style="@style/terms_tvbig"
+            android:text="2.提供服务" />
+
+        <TextView
+            style="@style/terms_tv"
+            android:text="@string/termstwo" />
+
+        <TextView
+            style="@style/terms_tvbig"
+            android:text="3.办公场所" />
+
+        <TextView
+            style="@style/terms_tv"
+            android:text="@string/termsthree" />
+
+        <TextView
+            style="@style/terms_tvbig"
+            android:text="4.使用" />
+
+        <TextView
+            style="@style/terms_tv"
+            android:text="@string/termsfour" />
+
+        <TextView
+            style="@style/terms_tvbig"
+            android:text="5.优唐的责任" />
+
+        <TextView
+            style="@style/terms_tv"
+            android:text="@string/termsfive" />
+
+        <TextView
+            style="@style/terms_tvbig"
+            android:text="6.费用" />
+
+        <TextView
+            style="@style/terms_tv"
+            android:text="@string/termssix" />
+    </LinearLayout>
+</ScrollView>

@@ -28,7 +28,6 @@ import com.bs.utown.util.Logs;
 import com.bs.utown.util.ObjectSave;
 import com.bs.utown.util.PhotoUtil;
 import com.bs.utown.util.TimeUtil;
-import com.bs.utown.util.ToastUtil;
 import com.bs.utown.view.DialogCode;
 import com.bs.utown.view.RoundImageView;
 
@@ -195,7 +194,6 @@ public class UserMsgActivity extends BaseActivity implements View.OnClickListene
                     TimeUtil.long2time(System.currentTimeMillis(), Constant.formatbusinesstime), new DiadisListener() {
                 @Override
                 public void dismiss(Object object) {
-                    ToastUtil.showShort("关闭开门对话框");
                     closeDialog();
                 }
             });

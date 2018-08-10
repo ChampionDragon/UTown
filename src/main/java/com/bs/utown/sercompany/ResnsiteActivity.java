@@ -34,7 +34,6 @@ public class ResnsiteActivity extends BaseActivity implements View.OnClickListen
         conference = (ImageView) findViewById(R.id.resnsite_conference);
         Picasso.with(this).load(Constant.url_1).placeholder(R.mipmap.logo).error(R.mipmap.logo).into(meeting);
         Picasso.with(this).load(Constant.url_2).placeholder(R.mipmap.logo).error(R.mipmap.logo).into(conference);
-
     }
 
     @Override

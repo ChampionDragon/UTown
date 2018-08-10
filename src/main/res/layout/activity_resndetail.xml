@@ -28,8 +28,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="166dp"
-            android:background="@color/gray_shallow"
-            android:padding="11dp">
+            android:background="@color/gray_shallow">
 
             <ImageView
                 android:id="@+id/resndetail_iv"
@@ -125,35 +124,24 @@
 
         <RelativeLayout
             android:id="@+id/resndetail_time"
-            style="@style/usermsg_rl"
-            android:layout_marginTop="11dp"
-            android:layout_weight="1"
-            android:padding="11dp">
+            style="@style/resn_rl">
 
             <TextView
+                android:id="@+id/resndetail_time_tv"
                 style="@style/usermsg_tv"
                 android:layout_centerVertical="true"
                 android:text="使用时间" />
 
-            <TextView
-                android:textSize="15dp"
-                android:id="@+id/resndetail_time_tv"
-                style="@style/usermsg_tv"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/usermsg_tvr"
-                android:hint="使用时间" />
 
             <ImageView style="@style/usermsg_iv" />
 
         </RelativeLayout>
 
+        <ImageView style="@style/resn_iv" />
+
         <RelativeLayout
             android:id="@+id/resndetail_person"
-            style="@style/usermsg_rl"
-            android:layout_marginTop="11dp"
-            android:layout_weight="1"
-            android:padding="11dp">
+            style="@style/resn_rl">
 
             <TextView
                 style="@style/usermsg_tv"
@@ -165,40 +153,30 @@
 
         </RelativeLayout>
 
-        <ImageView style="@style/iv" />
+        <ImageView style="@style/resn_iv" />
 
         <RelativeLayout
             android:id="@+id/resndetail_notice"
-            style="@style/usermsg_rl"
-            android:layout_weight="1"
-            android:padding="11dp">
+            style="@style/resn_rl">
 
             <TextView
+                android:id="@+id/resndetail_notice_tv"
                 style="@style/usermsg_tv"
                 android:layout_centerVertical="true"
                 android:text="通知时间" />
-
-            <TextView
-                android:textSize="15dp"
-                android:id="@+id/resndetail_notice_tv"
-                style="@style/usermsg_tv"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/usermsg_tvr"
-                android:hint="通知时间" />
 
 
             <ImageView style="@style/usermsg_iv" />
 
         </RelativeLayout>
 
-        <ImageView style="@style/iv" />
+        <ImageView style="@style/resn_iv" />
 
         <RelativeLayout
             android:id="@+id/resndetail_method"
-            style="@style/usermsg_rl"
-            android:layout_weight="1"
-            android:padding="11dp">
+            style="@style/resn_rl"
+            android:layout_marginTop="15dp"
+            android:paddingTop="1dp">
 
             <TextView
                 style="@style/usermsg_tv"
@@ -207,34 +185,35 @@
 
 
             <CheckBox
-                android:textSize="12sp"
-                android:layout_centerVertical="true"
                 android:id="@+id/resndetail_msg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
                 android:background="@drawable/checkbox_bg"
                 android:button="@null"
                 android:padding="8dp"
                 android:text="短信"
-                android:textColor="@drawable/checkbox_tv" />
+                android:textColor="@drawable/checkbox_tv"
+                android:textSize="12sp" />
 
             <CheckBox
-                android:layout_marginRight="11dp"
-                android:textSize="12sp"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@id/resndetail_msg"
                 android:id="@+id/resndetail_app"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="11dp"
+                android:layout_toLeftOf="@id/resndetail_msg"
                 android:background="@drawable/checkbox_bg"
                 android:button="@null"
                 android:padding="8dp"
                 android:text="应用内"
-                android:textColor="@drawable/checkbox_tv" />
+                android:textColor="@drawable/checkbox_tv"
+                android:textSize="12sp" />
 
         </RelativeLayout>
 
+        <ImageView style="@style/resn_iv" />
 
         <Button
             android:id="@+id/resndetail_resn"
@@ -245,9 +224,9 @@
             android:layout_marginRight="22dp"
             android:layout_marginTop="44dp"
             android:layout_weight="1"
-            android:background="@drawable/btn_bg"
+            android:background="@drawable/login_btn_bg"
             android:text="预定"
-            android:textColor="@drawable/btn_tv"
+            android:textColor="@drawable/login_btn_text"
             android:textSize="18sp" />
 
 

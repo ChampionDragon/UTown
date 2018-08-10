@@ -36,7 +36,7 @@
         android:layout_height="99dp"
         android:layout_weight="1"
         android:background="@color/gray_shallow"
-        android:padding="8dp">
+        android:padding="4dp">
 
         <ImageView
             android:id="@+id/utnews_iv"

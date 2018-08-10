@@ -12,6 +12,7 @@ import com.bs.utown.serbase.UtNewsActivity;
 import com.bs.utown.serbase.UtNoticeActivity;
 import com.bs.utown.sercompany.AdmissionCompActivity;
 import com.bs.utown.sercompany.ResnsiteActivity;
+import com.bs.utown.seruser.LifepayActivity;
 import com.bs.utown.user.UserActivity;
 import com.bs.utown.util.ObjectSave;
 import com.bs.utown.util.SmallUtil;
@@ -30,8 +31,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        baseapp.addActivity(this);
         setContentView(R.layout.activity_main);
+        baseapp.addActivity(this);
         initView();
     }
 
@@ -54,6 +55,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.main_act).setOnClickListener(this);
         findViewById(R.id.main_news).setOnClickListener(this);//园区咨讯
         findViewById(R.id.main_admissioncomp).setOnClickListener(this);
+        findViewById(R.id.main_lifepay).setOnClickListener(this);//生活缴费
         head = (RoundImageView) findViewById(R.id.main_head);
         head.setOnClickListener(this);
     }
@@ -64,6 +66,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.main_serall:
                 SmallUtil.getActivity(MainActivity.this, SerAllActivity.class);
+                break;
+            case R.id.main_lifepay:
+                SmallUtil.getActivity(MainActivity.this, LifepayActivity.class);
                 break;
             case R.id.main_admissioncomp:
                 SmallUtil.getActivity(MainActivity.this, AdmissionCompActivity.class);

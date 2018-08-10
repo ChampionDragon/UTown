@@ -9,15 +9,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3">
+        android:layout_weight="4">
 
-        <ImageView
+        <com.bs.utown.view.RoundImageView
             android:layout_width="@dimen/login_logo"
             android:layout_height="@dimen/login_logo"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="33dp"
-            android:background="@mipmap/logo" />
+            android:layout_centerInParent="true"
+            android:src="@mipmap/logo" />
     </RelativeLayout>
 
 
@@ -30,32 +28,42 @@
         android:paddingRight="@dimen/login_marginlr">
 
         <EditText
-            android:text="18296127347"
             android:id="@+id/login_phone"
             android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:background="@drawable/input_bg"
-            android:hint="请输入手机号码"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="手机号"
             android:inputType="number"
             android:maxLength="11"
             android:maxLines="1"
             android:paddingLeft="16dp"
+            android:text="18296127347"
             android:textColor="@color/blueSky"
             android:textSize="16sp" />
 
+        <ImageView
+            style="@style/iv"
+            android:layout_marginBottom="16dp" />
+
         <EditText
-            android:text="12345"
             android:id="@+id/login_pwd"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="11dp"
-            android:background="@drawable/input_bg"
-            android:hint="请输入登录密码"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="密码"
             android:inputType="textPassword"
             android:maxLines="1"
             android:paddingLeft="16dp"
+            android:text="12345"
             android:textColor="@color/blueSky"
             android:textSize="16sp" />
+
+        <ImageView
+            style="@style/iv"
+            android:layout_marginBottom="22dp" />
 
         <Button
             android:id="@+id/login_login"
@@ -67,31 +75,11 @@
             android:textColor="@drawable/login_btn_text"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/login_resetpwd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginTop="15dp"
-            android:text="忘记密码"
-            android:textColor="@drawable/login_text_color"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/login_register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginTop="15dp"
-            android:text="注册"
-            android:textColor="@drawable/login_text_color"
-            android:textSize="16sp" />
-
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="3">
 
             <ImageView
                 android:id="@+id/login_weixin"
@@ -99,19 +87,42 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:background="@mipmap/weixin" />
+
+            <TextView
+                android:id="@+id/login_resetpwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/login_weixin"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:text="忘记密码"
+                android:textColor="@drawable/login_text_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/login_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/login_weixin"
+                android:layout_gravity="right"
+                android:layout_marginTop="11dp"
+                android:text="注册"
+                android:textColor="@drawable/login_text_color"
+                android:textSize="16sp" />
         </RelativeLayout>
 
 
-        <TextView
-            android:id="@+id/login_guide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginBottom="33dp"
-            android:layout_marginTop="15dp"
-            android:text="先逛一逛>>"
-            android:textColor="@drawable/login_text_color"
-            android:textSize="16sp" />
+        <!--        <TextView
+                    android:id="@+id/login_guide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="33dp"
+                    android:layout_marginTop="15dp"
+                    android:text="先逛一逛>>"
+                    android:textColor="@drawable/login_text_color"
+                    android:textSize="16sp" />-->
 
 
     </LinearLayout>

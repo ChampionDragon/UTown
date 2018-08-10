@@ -43,13 +43,13 @@
             android:layout_width="188dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
-            android:background="@drawable/btn_bg"
+            android:background="@drawable/login_btn_bg"
             android:text="我的预定"
-            android:textColor="@drawable/btn_tv"
+            android:textColor="@drawable/login_btn_text"
             android:textSize="18sp" />
 
         <Button
-            android:textColor="@drawable/btn_back_tv"
+            android:textColor="@drawable/login_btn_text"
             android:id="@+id/resnsuccess_back"
             android:layout_width="188dp"
             android:layout_height="wrap_content"

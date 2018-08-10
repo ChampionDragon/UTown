@@ -99,7 +99,11 @@
         <activity android:name=".sercompany.AdmissionSuccessActivity" />
         <activity android:name=".sercompany.ExpansionActivity" />
         <activity android:name=".sercompany.ExpansionApplyActivity" />
-        <activity android:name=".sercompany.ExpansionSuccessActivity"></activity>
+        <activity android:name=".sercompany.ExpansionSuccessActivity" />
+        <activity android:name=".seruser.LifepayActivity" />
+        <activity android:name=".seruser.PayRecordActivity" />
+        <activity android:name=".UtActivity" />
+        <activity android:name=".sercompany.TermsActivity"></activity>
     </application>
 
 </manifest>

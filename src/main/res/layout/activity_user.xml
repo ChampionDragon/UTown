@@ -6,44 +6,40 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/tt_height"
-        android:gravity="bottom"
-        android:padding="@dimen/user_padding">
+        android:layout_height="@dimen/tt_height">
 
-        <TextView
+        <ImageView
             android:id="@+id/user_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="关闭"
-            android:textColor="@drawable/login_text_color"
-            android:textSize="@dimen/user_tvl" />
+            style="@style/tt_iv" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
             android:text="个人中心"
             android:textColor="@color/black"
             android:textSize="25sp" />
 
-        <TextView
+        <ImageView
             android:id="@+id/user_out"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/textView"
-            android:text="退出登录"
-            android:textColor="@drawable/login_text_color"
-            android:textSize="@dimen/user_tvl" />
+            android:layout_marginRight="22dp"
+            android:background="@drawable/next" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
         android:layout_weight="1"
-        android:background="@color/white"
+        android:background="@drawable/user_bg"
         android:gravity="center_vertical">
 
         <com.bs.utown.view.RoundImageView
@@ -161,6 +157,8 @@
             android:text="车辆管理"
             android:textColor="@color/black"
             android:textSize="@dimen/user_tvl" />
+
+        <ImageView style="@style/iv" />
 
     </LinearLayout>
 

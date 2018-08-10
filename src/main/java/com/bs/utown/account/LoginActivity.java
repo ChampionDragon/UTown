@@ -12,8 +12,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 
-import com.bs.utown.MainActivity;
 import com.bs.utown.R;
+import com.bs.utown.UtActivity;
 import com.bs.utown.base.BaseActivity;
 import com.bs.utown.base.BaseApplication;
 import com.bs.utown.constant.Constant;
@@ -87,7 +87,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         findViewById(R.id.login_register).setOnClickListener(this);
         findViewById(R.id.login_resetpwd).setOnClickListener(this);
         findViewById(R.id.login_weixin).setOnClickListener(this);
-        findViewById(R.id.login_guide).setOnClickListener(this);
+//        findViewById(R.id.login_guide).setOnClickListener(this);
     }
 
 
@@ -96,6 +96,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         switch (v.getId()) {
             case R.id.login_login:
                 loginCheck();
+//                SmallUtil.getActivity(LoginActivity.this, UtActivity.class);
                 break;
             case R.id.login_resetpwd:
                 SmallUtil.getActivity(LoginActivity.this, ResetActivity.class);
@@ -106,13 +107,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             case R.id.login_weixin:
                 wxLogin();
                 break;
-            case R.id.login_guide:
-                SmallUtil.getActivity(LoginActivity.this, MainActivity.class);
+//            case R.id.login_guide:
+//                SmallUtil.getActivity(LoginActivity.this, MainActivity.class);
 //            spUser.putBoolean(SpKey.isLogin, true);
 //            spUser.putString(SpKey.UserName, phone.getText().toString());//系统保留用户名
 //            managerDb.addOrUpdateLogin(phone.getText().toString(), TimeUtil.long2time(System.currentTimeMillis(), Constant.formatlogin));
-                finish();
-                break;
+//                finish();
+//                break;
         }
     }
 
@@ -173,7 +174,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             super.handleMessage(msg);
             switch (msg.what) {
                 case LOGIN:
-                    SmallUtil.getActivity(LoginActivity.this, MainActivity.class);
+                    SmallUtil.getActivity(LoginActivity.this, UtActivity.class);
 //            spUser.putBoolean(SpKey.isLogin, true);
 //            spUser.putString(SpKey.UserName, phone.getText().toString());//系统保留用户名
 //            managerDb.addOrUpdateLogin(phone.getText().toString(), TimeUtil.long2time(System.currentTimeMillis(), Constant.formatlogin));

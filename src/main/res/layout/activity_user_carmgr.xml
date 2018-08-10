@@ -62,10 +62,10 @@
                 android:layout_width="188dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:background="@drawable/btn_back_bg"
+                android:background="@drawable/login_btn_bg"
                 android:padding="22dp"
                 android:text="添加车辆"
-                android:textColor="@drawable/btn_back_tv"
+                android:textColor="@drawable/login_btn_text"
                 android:textSize="20sp" />
 
         </LinearLayout>

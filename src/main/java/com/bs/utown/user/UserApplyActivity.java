@@ -5,8 +5,10 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.bs.utown.R;
 import com.bs.utown.base.BaseActivity;
@@ -58,6 +60,11 @@ public class UserApplyActivity extends BaseActivity implements View.OnClickListe
     private void initView() {
         findViewById(R.id.back_userapply).setOnClickListener(this);
         tabLayout = (TabLayout) findViewById(R.id.userapply_tab);
+        //添加tablayout中的竖线
+        LinearLayout linearLayout = (LinearLayout) tabLayout.getChildAt(0);
+        linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
+        linearLayout.setDividerDrawable(ContextCompat.getDrawable(this, R.drawable.tab_divider));
+        linearLayout.setDividerPadding(55);//竖线高度
         vp = (ViewPager) findViewById(R.id.userapply_vp);
     }
 

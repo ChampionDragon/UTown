@@ -5,8 +5,10 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.bs.utown.R;
 import com.bs.utown.base.BaseActivity;
@@ -15,11 +17,13 @@ import com.bs.utown.fragment.UtNewsFragment;
 import java.util.ArrayList;
 import java.util.List;
 
+/*园区资讯*/
 public class UtNewsActivity extends BaseActivity {
     private TabLayout tabLayout;
     private ViewPager vp;
     private List<Fragment> fragments = new ArrayList<>();
     private String[] tabs = {"园区动态", "行业动态", "企业动态"};
+    private LinearLayout linearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,12 @@ public class UtNewsActivity extends BaseActivity {
             }
         });
         tabLayout = (TabLayout) findViewById(R.id.utnews_tab);
+        //添加tablayout中的竖线
+        linearLayout = (LinearLayout) tabLayout.getChildAt(0);
+        linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
+        linearLayout.setDividerDrawable(ContextCompat.getDrawable(this, R.drawable.tab_divider));
+        linearLayout.setDividerPadding(55);//竖线高度
+
         vp = (ViewPager) findViewById(R.id.utnews_vp);
     }
 

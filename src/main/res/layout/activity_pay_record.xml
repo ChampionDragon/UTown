@@ -9,20 +9,13 @@
         android:layout_height="@dimen/tt_height">
 
         <ImageView
-            android:id="@+id/back_userresn"
+            android:id="@+id/back_payrecord"
             style="@style/tt_iv" />
 
         <TextView
             style="@style/tt_tv"
-            android:layout_toRightOf="@id/back_userresn"
-            android:text="我的预定" />
+            android:layout_toRightOf="@id/back_payrecord"
+            android:text="缴费记录" />
 
     </RelativeLayout>
-
-    <ListView
-        android:id="@+id/userresn_lv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:dividerHeight="1dp"
-        android:divider="@color/black" />
 </LinearLayout>

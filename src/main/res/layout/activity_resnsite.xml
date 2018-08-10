@@ -25,12 +25,10 @@
         android:layout_height="0dp"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
-        android:layout_marginTop="22dp"
-        android:layout_weight="2"
-        android:background="@color/gray_shallow"
-        android:padding="11dp">
+        android:layout_marginTop="44dp"
+        android:layout_weight="2">
 
-        <ImageView
+        <com.bs.utown.view.RoundRectImageView
             android:id="@+id/resnsite_meeting"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -40,10 +38,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="22dp"
             android:text="会议室"
-            android:textColor="@color/black"
-            android:textSize="33sp" />
+            android:textColor="@color/white"
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -51,12 +50,10 @@
         android:layout_height="0dp"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
-        android:layout_marginTop="22dp"
-        android:layout_weight="2"
-        android:background="@color/gray_shallow"
-        android:padding="11dp">
+        android:layout_marginTop="44dp"
+        android:layout_weight="2">
 
-        <ImageView
+        <com.bs.utown.view.RoundRectImageView
             android:id="@+id/resnsite_conference"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -66,10 +63,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="22dp"
             android:text="洽谈室"
-            android:textColor="@color/black"
-            android:textSize="33sp" />
+            android:textColor="@color/white"
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <LinearLayout

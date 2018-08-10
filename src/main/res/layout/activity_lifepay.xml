@@ -1,0 +1,259 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tt_height">
+
+        <ImageView
+            android:id="@+id/back_lifepay"
+            style="@style/tt_iv" />
+
+        <TextView
+            style="@style/tt_tv"
+            android:layout_toRightOf="@id/back_lifepay"
+            android:text="生活缴费" />
+
+        <TextView
+            android:id="@+id/lifepay_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="11dp"
+            android:layout_marginRight="22dp"
+            android:text="缴费记录"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lifepay_station"
+        style="@style/usermsg_rl"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/lifepay_stationtv"
+            style="@style/usermsg_tv"
+            android:text="工位费" />
+
+
+        <ImageView
+            style="@style/usermsg_iv"
+            android:layout_alignBottom="@id/lifepay_stationtv"
+            android:layout_marginRight="22dp"
+            android:background="@mipmap/arrowdown" />
+
+    </RelativeLayout>
+
+    <ImageView style="@style/iv" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lifepay_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="35.64"
+                android:textColor="@color/black"
+                android:textSize="44sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:text="元"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout style="@style/lifepay_rl">
+
+            <TextView
+                style="@style/usermsg_tv"
+                android:text="缴费单位" />
+
+            <TextView
+                android:id="@+id/lifepay_company"
+                style="@style/usermsg_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="22dp"
+                android:text="xxxx有限公司" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/lifepay_rl">
+
+            <TextView
+                style="@style/usermsg_tv"
+                android:text="缴费户号" />
+
+            <TextView
+                android:id="@+id/lifepay_num"
+                style="@style/usermsg_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="22dp"
+                android:text="xxxx" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/lifepay_rl">
+
+            <TextView
+                style="@style/usermsg_tv"
+                android:text="户名" />
+
+            <TextView
+                android:id="@+id/lifepay_name"
+                style="@style/usermsg_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="22dp"
+                android:text="xxxx有限公司" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/lifepay_rl">
+
+            <TextView
+                style="@style/usermsg_tv"
+                android:text="缴费截止日期" />
+
+            <TextView
+                android:id="@+id/lifepay_time"
+                style="@style/usermsg_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="22dp"
+                android:text="xxxx/xx/xx xx:xx" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <ImageView style="@style/iv" />
+
+    <RelativeLayout
+        android:id="@+id/lifepay_park"
+        style="@style/usermsg_rl"
+        android:layout_weight="1">
+
+        <TextView
+            style="@style/usermsg_tv"
+            android:text="停车费" />
+
+        <TextView
+            android:id="@+id/lifepay_parktv"
+            style="@style/usermsg_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="59dp"
+            android:text="需缴纳xx.xx元" />
+
+        <ImageView
+            style="@style/usermsg_iv"
+            android:layout_alignBottom="@id/lifepay_parktv"
+            android:layout_marginRight="22dp" />
+
+    </RelativeLayout>
+
+    <ImageView style="@style/iv" />
+
+    <RelativeLayout
+        android:id="@+id/lifepay_electricity"
+        style="@style/usermsg_rl"
+        android:layout_weight="1">
+
+        <TextView
+            style="@style/usermsg_tv"
+            android:text="电费" />
+
+        <TextView
+            android:id="@+id/lifepay_electricitytv"
+            style="@style/usermsg_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="59dp"
+            android:text="无需缴费用" />
+
+        <ImageView
+            style="@style/usermsg_iv"
+            android:layout_alignBottom="@id/lifepay_electricitytv"
+            android:layout_marginRight="22dp" />
+
+    </RelativeLayout>
+
+    <ImageView style="@style/iv" />
+
+    <RelativeLayout
+        android:id="@+id/lifepay_water"
+        style="@style/usermsg_rl"
+        android:layout_weight="1">
+
+        <TextView
+            style="@style/usermsg_tv"
+            android:text="水费" />
+
+        <TextView
+            android:id="@+id/lifepay_watertv"
+            style="@style/usermsg_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="59dp"
+            android:text="无需缴费用" />
+
+        <ImageView
+            style="@style/usermsg_iv"
+            android:layout_alignBottom="@id/lifepay_watertv"
+            android:layout_marginRight="22dp" />
+
+    </RelativeLayout>
+
+    <ImageView style="@style/iv" />
+
+    <RelativeLayout
+        android:id="@+id/lifepay_gas"
+        style="@style/usermsg_rl"
+        android:layout_weight="1">
+
+        <TextView
+            style="@style/usermsg_tv"
+            android:text="燃气费" />
+
+        <TextView
+            android:id="@+id/lifepay_gastv"
+            style="@style/usermsg_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="59dp"
+            android:text="无需缴费用" />
+
+        <ImageView
+            style="@style/usermsg_iv"
+            android:layout_alignBottom="@id/lifepay_gastv"
+            android:layout_marginRight="22dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/lifepay_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="22dp"
+        android:background="@drawable/login_btn_bg"
+        android:text="立即缴费"
+        android:textColor="@drawable/login_btn_text"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

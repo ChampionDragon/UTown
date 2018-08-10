@@ -47,10 +47,9 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/usermsg_tvr"
             android:src="@mipmap/ic_launcher" />
-
-
     </RelativeLayout>
 
+    <ImageView style="@style/iv" />
 
     <LinearLayout
         style="@style/usermsg_rl"

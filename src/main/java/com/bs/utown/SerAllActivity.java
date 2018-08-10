@@ -12,6 +12,7 @@ import com.bs.utown.serbase.UtNoticeActivity;
 import com.bs.utown.sercompany.AdmissionCompActivity;
 import com.bs.utown.sercompany.ExpansionActivity;
 import com.bs.utown.sercompany.ResnsiteActivity;
+import com.bs.utown.seruser.LifepayActivity;
 import com.bs.utown.util.SmallUtil;
 
 /**
@@ -38,6 +39,7 @@ public class SerAllActivity extends BaseActivity implements View.OnClickListener
         findViewById(R.id.serall_admissioncomp).setOnClickListener(this);//企业入驻
         findViewById(R.id.serall_expansion).setOnClickListener(this);//扩租申请
         findViewById(R.id.serall_resnsite).setOnClickListener(this);//预定场地
+        findViewById(R.id.serall_lifepay).setOnClickListener(this);//生活缴费
     }
 
 
@@ -49,6 +51,9 @@ public class SerAllActivity extends BaseActivity implements View.OnClickListener
                 break;
             case R.id.serall_news:
                 SmallUtil.getActivity(SerAllActivity.this, UtNewsActivity.class);
+                break;
+            case R.id.serall_lifepay:
+                SmallUtil.getActivity(SerAllActivity.this, LifepayActivity.class);
                 break;
             case R.id.serall_act:
                 SmallUtil.getActivity(SerAllActivity.this, UtActActivity.class);

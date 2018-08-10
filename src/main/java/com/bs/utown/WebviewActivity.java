@@ -92,7 +92,7 @@ public class WebviewActivity extends BaseActivity {
         webView = (WebView) findViewById(R.id.webview);
         mProgressBar = (ProgressBar) findViewById(R.id.webview_pb);
         Bundle bundle = getIntent().getExtras();
-        if (bundle!= null) {
+        if (bundle != null) {
             tv.setText(bundle.getString(SpKey.webTv));
             urlStr = bundle.getString(SpKey.webUrl);
         }

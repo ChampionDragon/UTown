@@ -1,6 +1,7 @@
 package com.bs.utown.sercompany;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -11,6 +12,7 @@ import com.bs.utown.constant.Constant;
 import com.bs.utown.pickerview.TimePickerView;
 import com.bs.utown.pickerview.other.pickerViewUtil;
 import com.bs.utown.util.SmallUtil;
+import com.bs.utown.util.ToastUtil;
 
 /**
  * Description: 申请扩租
@@ -59,6 +61,14 @@ public class ExpansionApplyActivity extends BaseActivity implements View.OnClick
     }
 
     private void Submit() {
+        if(TextUtils.isEmpty(time.getText().toString())){
+            ToastUtil.showLong("请输入\"扩租日期\"");
+            return;
+        }
+        if(TextUtils.isEmpty(area.getText().toString())){
+            ToastUtil.showLong("请输入\"扩租面积\"");
+            return;
+        }
         SmallUtil.getActivity(ExpansionApplyActivity.this, ExpansionSuccessActivity.class);
     }
 

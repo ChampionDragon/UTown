@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--tablayout每个item的分割线（竖线）-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#80c0c0c0"/>
+    <size android:width="2dp"/>
+</shape>

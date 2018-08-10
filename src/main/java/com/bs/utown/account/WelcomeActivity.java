@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
-import com.bs.utown.MainActivity;
 import com.bs.utown.R;
+import com.bs.utown.UtActivity;
 import com.bs.utown.base.BaseActivity;
 import com.bs.utown.constant.SpKey;
 import com.bs.utown.util.SmallUtil;
@@ -46,7 +46,7 @@ public class WelcomeActivity extends BaseActivity {
             super.handleMessage(msg);
             switch (msg.what) {
                 case MAIN:
-                    SmallUtil.getActivity(WelcomeActivity.this, MainActivity.class);
+                    SmallUtil.getActivity(WelcomeActivity.this, UtActivity.class);
                     finish();
                     break;
                 case LOGIN:

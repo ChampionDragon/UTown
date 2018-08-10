@@ -31,35 +31,49 @@
             style="@style/admissionsubmit_tv"
             android:hint="企业名称" />
 
+        <ImageView style="@style/admissionapply_iv" />
+
         <TextView
             android:id="@+id/admissionsubmit_time"
             style="@style/admissionsubmit_tv"
             android:hint="入驻时间" />
+
+        <ImageView style="@style/admissionapply_iv" />
 
         <TextView
             android:id="@+id/admissionsubmit_user"
             style="@style/admissionsubmit_tv"
             android:hint="姓名" />
 
+        <ImageView style="@style/admissionapply_iv" />
+
         <TextView
             android:id="@+id/admissionsubmit_phone"
             style="@style/admissionsubmit_tv"
             android:hint="电话" />
+
+        <ImageView style="@style/admissionapply_iv" />
 
         <TextView
             android:id="@+id/admissionsubmit_email"
             style="@style/admissionsubmit_tv"
             android:hint="邮箱" />
 
+        <ImageView style="@style/admissionapply_iv" />
+
         <TextView
             android:id="@+id/admissionsubmit_type"
             style="@style/admissionsubmit_tv"
             android:hint="工位类型" />
 
+        <ImageView style="@style/admissionapply_iv" />
+
         <TextView
             android:id="@+id/admissionsubmit_bussiness"
             style="@style/admissionsubmit_tv"
             android:hint="主营服务" />
+
+        <ImageView style="@style/admissionapply_iv" />
 
 
         <RelativeLayout

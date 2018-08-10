@@ -6,7 +6,7 @@
         <!--   <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>-->
-        <item name="android:windowBackground">@color/bg_main</item>
+        <item name="android:windowBackground">@color/white</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 
@@ -30,7 +30,7 @@
     <style name="iv">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
-        <item name="android:background">@color/line</item>
+        <item name="android:background">@color/black</item>
     </style>
 
     <!--宽度为1dp的灰色线-->
@@ -151,6 +151,26 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="resn_rl">
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingLeft">33dp</item>
+        <item name="android:paddingRight">33dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="resn_iv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:layout_marginLeft">33dp</item>
+        <item name="android:layout_marginRight">33dp</item>
+        <item name="android:layout_marginTop">11dp</item>
+    </style>
+
 
     <!--++++++++++++++++++  GridPasswordView的样式  +++++++++++++++++++++++-->
     <style name="GridPasswordView" />
@@ -177,6 +197,7 @@
 
     <!--++++++++++++++++++   AdmissionApplyActivity的样式  +++++++++++++++++++++++-->
     <style name="admissionapply_tv">
+        <item name="android:background">@null</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:gravity">center_vertical</item>
@@ -186,7 +207,14 @@
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="admissionapply_iv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:layout_marginLeft">22dp</item>
+        <item name="android:layout_marginRight">22dp</item>
     </style>
     <!--++++++++++++++++++   AdmissionSubmitActivity的样式  +++++++++++++++++++++++-->
     <style name="admissionsubmit_tv">
@@ -202,5 +230,29 @@
         <item name="android:background">@color/white</item>
     </style>
 
+    <!--+++++++++++++++++++++++++++++++++++  LifepayActivity ++++++++++++++++++++++++++++++++++++++++++++ -->
+    <style name="lifepay_rl">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!--+++++++++++++++++++++++++++++++++++  terms条款及条件 ++++++++++++++++++++++++++++++++++++++++++++ -->
+    <style name="terms_tv">
+        <item name="android:lineSpacingExtra">6dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">18dp</item>
+    </style>
+    <style name="terms_tvbig">
+        <item name="android:lineSpacingExtra">6dp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">18dp</item>
+    </style>
 
 </resources>

@@ -2,6 +2,7 @@ package com.bs.utown.sercompany;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,9 +15,11 @@ import com.bs.utown.constant.SpKey;
 import com.bs.utown.listener.DiadisListener;
 import com.bs.utown.pickerview.TimePickerView;
 import com.bs.utown.pickerview.other.pickerViewUtil;
+import com.bs.utown.util.Logs;
 import com.bs.utown.util.SmallUtil;
 import com.bs.utown.util.ToastUtil;
 import com.bs.utown.view.DialogIv;
+import com.bs.utown.view.DialogNoticeUtil;
 import com.bs.utown.view.DialogVp;
 
 import java.util.ArrayList;
@@ -38,6 +41,7 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
     private String[] bussinessArray = {"专属办公室", "定制设计运营服务"};
     private int markType = 0;
     private int markBussiness = 1;
+    private CheckBox checkBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +53,11 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
 
     private void initView() {
         findViewById(R.id.back_admissionapply).setOnClickListener(this);
+        findViewById(R.id.admissionapply_terms).setOnClickListener(this);
         findViewById(R.id.admissionapply_next).setOnClickListener(this);
         findViewById(R.id.admissionapply_explanation).setOnClickListener(this);
         findViewById(R.id.admissionapply_time).setOnClickListener(this);
+        checkBox = (CheckBox) findViewById(R.id.admissionapply_cb);
         time = (TextView) findViewById(R.id.admissionapply_timetv);
         name = (EditText) findViewById(R.id.admissionapply_name);
         user = (EditText) findViewById(R.id.admissionapply_user);
@@ -75,8 +81,21 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
             case R.id.admissionapply_time:
                 Time();
                 break;
+            case R.id.admissionapply_terms:
+                /*跳转到协议界面*/
+                SmallUtil.getActivity(AdmissionApplyActivity.this,TermsActivity.class);
+//                Bundle bundle = new Bundle();
+//                bundle.putString(SpKey.webTv, "用户协议");
+//                bundle.putString(SpKey.webUrl, Constant.urlTerms);
+//                SmallUtil.getActivity(AdmissionApplyActivity.this, WebviewActivity.class, bundle);
+                break;
             case R.id.admissionapply_next:
-                Next();
+                Logs.d("是否勾选上:" + checkBox.isChecked());
+                if (checkBox.isChecked()) {
+                    Next();
+                } else {
+                    DialogNoticeUtil.show(AdmissionApplyActivity.this, "请先阅读协议并打钩同意");
+                }
                 break;
             case R.id.admissionapply_type:
                 List<Integer> listId = new ArrayList<>();

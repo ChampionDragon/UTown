@@ -9,15 +9,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2">
+        android:layout_weight="3">
 
-        <ImageView
+        <com.bs.utown.view.RoundImageView
             android:layout_width="@dimen/login_logo"
             android:layout_height="@dimen/login_logo"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="33dp"
-            android:background="@mipmap/logo" />
+            android:layout_centerInParent="true"
+            android:src="@mipmap/logo" />
     </RelativeLayout>
 
 
@@ -30,11 +28,11 @@
         android:paddingRight="@dimen/login_marginlr">
 
         <EditText
+            android:background="@null"
             android:id="@+id/reset_phone"
             android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:background="@drawable/input_bg"
-            android:hint="请输入手机号码"
+            android:hint="手机号"
             android:inputType="number"
             android:maxLength="11"
             android:maxLines="1"
@@ -42,19 +40,22 @@
             android:textColor="@color/blueSky"
             android:textSize="16sp" />
 
+        <ImageView
+            style="@style/iv"
+            android:layout_marginBottom="16dp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="11dp"
-            android:background="@drawable/input_bg"
             android:orientation="horizontal">
 
             <EditText
-                android:background="@null"
                 android:id="@+id/reset_code"
                 android:layout_width="0dp"
                 android:layout_height="44dp"
                 android:layout_weight="1"
+                android:background="@null"
                 android:hint="验证码"
                 android:inputType="number"
                 android:maxLength="6"
@@ -76,14 +77,18 @@
 
         </LinearLayout>
 
+        <ImageView
+            style="@style/iv"
+            android:layout_marginBottom="16dp" />
+
 
         <Button
             android:id="@+id/reset_confirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="22dp"
             android:background="@drawable/login_btn_bg"
-            android:text="确认"
+            android:text="下一步"
             android:textColor="@drawable/login_btn_text"
             android:textSize="20sp" />
 

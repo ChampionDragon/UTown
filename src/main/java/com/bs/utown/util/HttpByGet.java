@@ -43,8 +43,8 @@ public class HttpByGet {
 
             int responseCode = connection.getResponseCode();
             String responseMessage = connection.getResponseMessage();
-            Log.i("lcb", "httpbyget34   code: " + responseCode + "     msg:  "
-                    + responseMessage);
+
+            Log.i("lcb", "httpbyget34   code: " + responseCode + "     msg:  " + responseMessage);
 
             in = new InputStreamReader(connection.getInputStream());
             BufferedReader bufferedReader = new BufferedReader(in);

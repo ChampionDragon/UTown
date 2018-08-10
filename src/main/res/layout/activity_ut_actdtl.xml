@@ -22,9 +22,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="166dp"
-        android:background="@color/gray_shallow"
-        android:padding="11dp">
+        android:layout_height="166dp">
 
         <ImageView
             android:id="@+id/utactdtl_iv"
@@ -38,10 +36,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="5"
         android:background="@color/white"
         android:orientation="vertical"
-        android:padding="11dp">
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/utactdtl_nametv"
@@ -58,6 +56,7 @@
         <ImageView style="@style/iv" />
 
         <LinearLayout
+            android:layout_marginTop="11dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -80,6 +79,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginTop="11dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -102,6 +102,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginTop="11dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -124,6 +125,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginTop="11dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -156,7 +158,7 @@
         android:layout_weight="1"
         android:background="@color/white"
         android:gravity="center_vertical"
-        android:padding="11dp"
+        android:paddingLeft="22dp"
         android:text="活动详情"
         android:textColor="@color/black"
         android:textSize="20sp" />

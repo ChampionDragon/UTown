@@ -4,7 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <!--++++++++++++ loginActivity +++++++++++-->
-    <dimen name="login_logo">111dp</dimen>
+    <dimen name="login_logo">133dp</dimen>
     <dimen name="login_marginlr">22dp</dimen>
     <!--++++++++++++ mainActivity +++++++++++-->
     <dimen name="main_RI">33dp</dimen>
@@ -12,6 +12,8 @@
     <dimen name="main_iv">55dp</dimen>
     <dimen name="open">222dp</dimen>
     <dimen name="code">55dp</dimen>
+    <dimen name="oval">88dp</dimen>
+    <dimen name="ovalmargin">44dp</dimen>
     <!--++++++++++++ SerallActivity +++++++++++-->
     <dimen name="serall_tvsize">20sp</dimen>
     <dimen name="serall_tvh">58dp</dimen>

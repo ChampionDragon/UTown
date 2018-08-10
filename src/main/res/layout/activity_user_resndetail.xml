@@ -36,9 +36,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="166dp"
-            android:background="@color/gray_shallow"
-            android:padding="11dp">
+            android:layout_height="166dp">
 
             <ImageView
                 android:id="@+id/userresndetail_iv"
@@ -255,9 +253,9 @@
             android:layout_marginRight="22dp"
             android:layout_marginTop="44dp"
             android:layout_weight="1"
-            android:background="@drawable/btn_bg"
+            android:background="@drawable/login_btn_bg"
             android:text="确定"
-            android:textColor="@drawable/btn_tv"
+            android:textColor="@drawable/login_btn_text"
             android:textSize="18sp" />
 
 

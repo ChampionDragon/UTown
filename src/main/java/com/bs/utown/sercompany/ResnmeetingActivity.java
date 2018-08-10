@@ -11,11 +11,19 @@ import com.bs.utown.base.BaseActivity;
 import com.bs.utown.bean.ResnBean;
 import com.bs.utown.constant.Constant;
 import com.bs.utown.constant.SpKey;
+import com.bs.utown.util.Logs;
 import com.bs.utown.util.SmallUtil;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
+
+import okhttp3.Call;
 
 /**
  * Description: 会议室预定
@@ -23,9 +31,6 @@ import java.util.Random;
  * created at 2018/6/14
  **/
 public class ResnmeetingActivity extends BaseActivity implements View.OnClickListener {
-    private String[] url = {Constant.url_1, Constant.url_2, Constant.url_3};
-    private String[] money = {"11", "18", "27"};
-    private String[] equipment = {"空调", "电脑", "投影仪"};
     private String tag = "ResnmeetingActivity";
     private ListView lv;
     private List<ResnBean> list;
@@ -60,22 +65,77 @@ public class ResnmeetingActivity extends BaseActivity implements View.OnClickLis
 
     /*初始化数据*/
     private void initData() {
+//        executor.submit(dataRunnable);
+
         list = new ArrayList<>();
-        int sum = new Random().nextInt(11);
-        for (int i = 0; i < sum; i++) {
-            ResnBean resnBean = new ResnBean();
-            String moneyStr = getString(R.string.price, money[new Random().nextInt(3)]);
-            resnBean.setPrice(moneyStr);
-            resnBean.setArea("XX平方米");
-            resnBean.setNum("YY人");
-            resnBean.setName("会议室_" + i);
-            resnBean.setPlace(i + "栋X楼YYY");
-            resnBean.setUrl(url[new Random().nextInt(3)]);
-            resnBean.setEquipment(equipment[new Random().nextInt(3)]);
-            list.add(resnBean);
-        }
-        initLv(lv, list);
+
+        OkHttpUtils.get().url(Constant.Utownmeeting).build().execute(new StringCallback() {
+            @Override
+            public void onError(Call call, Exception e, int i) {
+                Logs.w(e + "  " + i);
+            }
+
+            @Override
+            public void onResponse(String s, int i) {
+                try {
+                    JSONArray jsonArray = new JSONArray(s);
+                    for (int k = 0; k < jsonArray.length(); k++) {
+                        JSONObject jsonObject = (JSONObject) jsonArray.get(k);
+                        ResnBean resnBean = parseJson(jsonObject);
+                        list.add(resnBean);
+                        initLv(lv, list);
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Logs.e(e.toString());
+                }
+            }
+        });
     }
+
+    /*解析JsonObject的数据*/
+    private ResnBean parseJson(JSONObject jsonObject) {
+        ResnBean resnBean = new ResnBean();
+        try {
+            resnBean.setArea(jsonObject.getString("area") + "㎡");
+            resnBean.setNum(jsonObject.getString("contain") + "人");
+            resnBean.setName(jsonObject.getString("name"));
+            resnBean.setPlace(jsonObject.getString("position"));
+            resnBean.setUrl("http://www.bsznyun.com" + jsonObject.getString("thumb"));
+            resnBean.setEquipment(jsonObject.getString("equipments"));
+            resnBean.setPrice(jsonObject.getString("price") + "元/小时");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return resnBean;
+    }
+
+
+    /*向后台请求数据*/
+//    Runnable dataRunnable = new Runnable() {
+//        @Override
+//        public void run() {
+//            String result = HttpByGet.executeHttpGet(Constant.Utownmeeting);
+//            Logs.v(result + "    result");
+//            JSONObject jb = null;
+//            try {
+//                jb = new JSONObject(result);
+//            } catch (JSONException e) {
+//                e.printStackTrace();
+//                Logs.e(e.toString());
+//            }
+//            if (result.equals(HttpByGet.error)) {
+//                handler.sendEmptyMessage(ERROR);
+//                return;
+//            } else if (result.equals("fail")) {
+//                handler.sendEmptyMessage(FAIL);
+//            } else {
+//                handler.sendEmptyMessage(SUCCESS);
+//            }
+//        }
+//    };
+
 
     /*初始化listView*/
     private void initLv(ListView lv, List<ResnBean> loginList) {
@@ -98,6 +158,4 @@ public class ResnmeetingActivity extends BaseActivity implements View.OnClickLis
                 break;
         }
     }
-
-
 }
