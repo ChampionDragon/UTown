@@ -133,7 +133,6 @@
         <RelativeLayout
             android:id="@+id/userresndetail_time"
             style="@style/usermsg_rl"
-            android:layout_marginTop="11dp"
             android:layout_weight="1"
             android:padding="11dp">
 
@@ -155,10 +154,11 @@
 
         </RelativeLayout>
 
+        <ImageView style="@style/iv" />
+
         <RelativeLayout
             android:id="@+id/userresndetail_person"
             style="@style/usermsg_rl"
-            android:layout_marginTop="11dp"
             android:layout_weight="1"
             android:padding="11dp">
 
@@ -242,9 +242,9 @@
 
         </RelativeLayout>
 
+        <ImageView style="@style/iv" />
 
         <Button
-            android:visibility="gone"
             android:id="@+id/userresndetail_confirm"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -256,7 +256,8 @@
             android:background="@drawable/login_btn_bg"
             android:text="确定"
             android:textColor="@drawable/login_btn_text"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:visibility="gone" />
 
 
     </LinearLayout>

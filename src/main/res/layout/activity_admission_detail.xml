@@ -16,65 +16,50 @@
             android:layout_height="@dimen/tt_height">
 
             <ImageView
-                android:id="@+id/back_admissionsubmit"
+                android:id="@+id/back_admissiondetail"
                 style="@style/tt_iv" />
 
             <TextView
                 style="@style/tt_tv"
-                android:layout_toRightOf="@id/back_admissionsubmit"
-                android:text="提交申请" />
+                android:layout_toRightOf="@id/back_admissiondetail"
+                android:text="申请详情" />
 
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/admissionsubmit_name"
+            android:id="@+id/admissiondetail_name"
             style="@style/admissionsubmit_tv"
             android:hint="企业名称" />
 
         <ImageView style="@style/admissionapply_iv" />
 
         <TextView
-            android:id="@+id/admissionsubmit_time"
+            android:id="@+id/admissiondetail_time"
             style="@style/admissionsubmit_tv"
             android:hint="入驻时间" />
 
         <ImageView style="@style/admissionapply_iv" />
 
         <TextView
-            android:id="@+id/admissionsubmit_user"
+            android:id="@+id/admissiondetail_user"
             style="@style/admissionsubmit_tv"
             android:hint="姓名" />
 
         <ImageView style="@style/admissionapply_iv" />
 
         <TextView
-            android:id="@+id/admissionsubmit_phone"
+            android:id="@+id/admissiondetail_phone"
             style="@style/admissionsubmit_tv"
             android:hint="电话" />
 
         <ImageView style="@style/admissionapply_iv" />
 
         <TextView
-            android:id="@+id/admissionsubmit_email"
+            android:id="@+id/admissiondetail_email"
             style="@style/admissionsubmit_tv"
             android:hint="邮箱" />
 
         <ImageView style="@style/admissionapply_iv" />
-
-        <!--  <TextView
-              android:id="@+id/admissionsubmit_type"
-              style="@style/admissionsubmit_tv"
-              android:hint="工位类型" />
-
-          <ImageView style="@style/admissionapply_iv" />
-
-          <TextView
-              android:id="@+id/admissionsubmit_bussiness"
-              style="@style/admissionsubmit_tv"
-              android:hint="主营服务" />
-
-          <ImageView style="@style/admissionapply_iv" />-->
-
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -86,7 +71,7 @@
 
 
             <ImageView
-                android:id="@+id/admissionsubmit_iv"
+                android:id="@+id/admissiondetail_iv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="33dp"
@@ -95,12 +80,12 @@
                 android:src="@color/gray_shallow" />
 
             <TextView
-                android:id="@+id/admissionsubmit_tv"
+                android:id="@+id/admissiondetail_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:gravity="center_horizontal"
-                android:text="请于两周内上传营业执照\n（移动工位除外） "
+                android:text="营业执照"
                 android:textSize="18sp" />
 
 
@@ -108,13 +93,13 @@
 
 
         <Button
-            android:id="@+id/admissionsubmit_submit"
+            android:id="@+id/admissiondetail_choice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_margin="22dp"
+            android:layout_margin="44dp"
             android:background="@drawable/login_btn_bg"
-            android:text="确认并提交"
+            android:text="选择工位"
             android:textColor="@drawable/login_btn_text"
             android:textSize="18sp" />
 

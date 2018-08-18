@@ -244,12 +244,12 @@
             android:layout_marginRight="22dp" />
 
     </RelativeLayout>
-
+    <ImageView style="@style/iv" />
     <Button
         android:id="@+id/lifepay_payment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="22dp"
+        android:layout_margin="33dp"
         android:background="@drawable/login_btn_bg"
         android:text="立即缴费"
         android:textColor="@drawable/login_btn_text"

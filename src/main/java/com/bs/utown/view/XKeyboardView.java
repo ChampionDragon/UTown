@@ -138,19 +138,21 @@ public class XKeyboardView extends KeyboardView implements KeyboardView.OnKeyboa
         }
     }
 
+    /*处理按键的点击事件*/
     @Override
     public void onKey(int primaryCode, int[] keyCodes) {
-        // 处理按键的点击事件
         // 点击了删除按键
         if (primaryCode == Keyboard.KEYCODE_DELETE) {
             if (mOnKeyboardListener != null)
                 mOnKeyboardListener.onDeleteKeyEvent();
+        }else if (primaryCode == 66666) {
+            if (mOnKeyboardListener != null)
+                mOnKeyboardListener.hideKeyboard();
         }
-        // 点击了
+        // 点击了其他键直接返回输入的数字
         else {
             if (mOnKeyboardListener != null) {
-                mOnKeyboardListener.onInsertKeyEvent(Character.toString(
-                        (char) primaryCode));
+                mOnKeyboardListener.onInsertKeyEvent(Character.toString((char) primaryCode));
             }
         }
     }
@@ -216,5 +218,9 @@ public class XKeyboardView extends KeyboardView implements KeyboardView.OnKeyboa
          * 点击了删除按键。
          */
         void onDeleteKeyEvent();
+        /**
+         * 隐藏键盘
+         */
+        void hideKeyboard();
     }
 }

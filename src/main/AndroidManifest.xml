@@ -78,11 +78,11 @@
             android:exported="true" />
         <activity android:name=".user.UserApplyActivity" />
         <activity android:name=".user.UserActActivity" />
-        <activity android:name=".sercompany.ResnsiteActivity" />
-        <activity android:name=".sercompany.ResnmeetingActivity" />
-        <activity android:name=".sercompany.ResndetailActivity" />
-        <activity android:name=".sercompany.ResntimeActivity" />
-        <activity android:name=".sercompany.ResnsuccessActivity" />
+        <activity android:name=".sercompany.ReserveActivity" />
+        <activity android:name=".sercompany.ReservemeetingActivity" />
+        <activity android:name=".sercompany.ReservedetailActivity" />
+        <activity android:name=".sercompany.ReservetimeActivity" />
+        <activity android:name=".sercompany.ReservesuccessActivity" />
         <activity android:name=".user.UserResnActivity" />
         <activity android:name=".user.UserResndetailActivity" />
         <activity android:name=".user.UserCarmgrActivity" />
@@ -92,7 +92,7 @@
         <activity android:name=".serbase.UtNewsActivity" />
         <activity android:name=".serbase.UtActdtlActivity" />
         <activity android:name=".serbase.UtNoticeActivity" />
-        <activity android:name=".sercompany.AdmissionCompActivity" />
+        <activity android:name=".sercompany.AdmissionActivity" />
         <activity android:name=".sercompany.AdmissionApplyActivity" />
         <activity android:name=".sercompany.AdmissionLicenseActivity" />
         <activity android:name=".sercompany.AdmissionSubmitActivity" />
@@ -103,7 +103,9 @@
         <activity android:name=".seruser.LifepayActivity" />
         <activity android:name=".seruser.PayRecordActivity" />
         <activity android:name=".UtActivity" />
-        <activity android:name=".sercompany.TermsActivity"></activity>
+        <activity android:name=".sercompany.TermsActivity" />
+        <activity android:name=".sercompany.ReserveconferenceActivity" />
+        <activity android:name=".sercompany.AdmissionDetailActivity"></activity>
     </application>
 
 </manifest>

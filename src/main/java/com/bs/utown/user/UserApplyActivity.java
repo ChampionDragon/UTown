@@ -85,7 +85,7 @@ public class UserApplyActivity extends BaseActivity implements View.OnClickListe
         public void onTabSelected(TabLayout.Tab tab) {
             vp.setCurrentItem(tab.getPosition());
 //            Logs.v("滑动选择：" + tab.getPosition());
-            fragments.get(tab.getPosition()).onResume();//滑动时刷新数据
+//            fragments.get(tab.getPosition()).onResume();//滑动时刷新数据
         }
 
         @Override

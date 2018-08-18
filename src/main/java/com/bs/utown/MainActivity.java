@@ -10,8 +10,8 @@ import com.bs.utown.listener.DiadisListener;
 import com.bs.utown.serbase.UtActActivity;
 import com.bs.utown.serbase.UtNewsActivity;
 import com.bs.utown.serbase.UtNoticeActivity;
-import com.bs.utown.sercompany.AdmissionCompActivity;
-import com.bs.utown.sercompany.ResnsiteActivity;
+import com.bs.utown.sercompany.AdmissionActivity;
+import com.bs.utown.sercompany.ReserveActivity;
 import com.bs.utown.seruser.LifepayActivity;
 import com.bs.utown.user.UserActivity;
 import com.bs.utown.util.ObjectSave;
@@ -71,7 +71,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 SmallUtil.getActivity(MainActivity.this, LifepayActivity.class);
                 break;
             case R.id.main_admissioncomp:
-                SmallUtil.getActivity(MainActivity.this, AdmissionCompActivity.class);
+                SmallUtil.getActivity(MainActivity.this, AdmissionActivity.class);
                 break;
             case R.id.main_more:
                 SmallUtil.getActivity(MainActivity.this, UtNoticeActivity.class);
@@ -83,7 +83,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 SmallUtil.getActivity(MainActivity.this, UtActActivity.class);
                 break;
             case R.id.main_resnsite:
-                SmallUtil.getActivity(MainActivity.this, ResnsiteActivity.class);
+                SmallUtil.getActivity(MainActivity.this, ReserveActivity.class);
                 break;
             case R.id.main_open:
                 OpenDialog();

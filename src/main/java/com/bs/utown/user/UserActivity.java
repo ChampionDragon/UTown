@@ -80,13 +80,14 @@ public class UserActivity extends BaseActivity implements View.OnClickListener {
                 baseapp.finishActivity();
                 break;
             case R.id.user_out:
-                dialog = DialogCustomUtil.create("警告", "您确定要退出",
+                dialog = DialogCustomUtil.create("警告", "您确定要退出？",
                         UserActivity.this, new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 dialog.dismiss();
                                 spUser.putBoolean(SpKey.isLogin, false);
                                 SmallUtil.getActivity(UserActivity.this, LoginActivity.class);
+                                Dataclean();//清除数据
                                 baseapp.finishAllActivity();
                             }
                         });
@@ -94,6 +95,4 @@ public class UserActivity extends BaseActivity implements View.OnClickListener {
                 break;
         }
     }
-
-
 }

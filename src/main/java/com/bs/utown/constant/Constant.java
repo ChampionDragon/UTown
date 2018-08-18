@@ -29,8 +29,12 @@ public class Constant {
     public final static String reset = "http://www.bsznyun.com/interface/forget.php";//修改密码
 
    /* Utown数据*/
-   public final static String Utownoffice = "http://www.bsznyun.com/interface/office.php";//共享办公
-   public final static String Utownmeeting = "http://www.bsznyun.com/interface/room.php";//会议室
+   public final static String Utownoffice = "http://www.bsznyun.com/interface/office_app.php";//共享办公
+   public final static String Utownofficedetail = "http://www.bsznyun.com/interface/office.php";//共享办公详情
+   public final static String Utownmeeting = "http://www.bsznyun.com/interface/meeting_app.php";//会议室
+   public final static String Apply = "http://www.bsznyun.com/index.php";//入驻申请
+   public final static String ApplyInquire = "http://www.bsznyun.com/interface/applylist_app.php";//入驻申请查询
+
 
 
 
@@ -42,7 +46,7 @@ public class Constant {
     public final static String formatsecond = "yyyy-MM-dd HH:mm:ss";
     public final static String formatlogin = "yyyy/MM/dd HH:mm";//登录记录的格式
     public final static String formatnotify = "yyyy/MM/dd HH:mm:ss";//预定时间的格式
-    public final static String formatbusinesstime = "yyyy/MM/dd";//
+    public final static String formatbusinesstime = "yyyy-MM-dd";//
     public final static String formatresn = "M月d日 E";//选择日期格式
     public final static long Day = 24 * 60 * 60 * 1000;
     public final static long halfHour = 30 * 60 * 1000;

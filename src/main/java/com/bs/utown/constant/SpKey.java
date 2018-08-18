@@ -15,7 +15,10 @@ public class SpKey {
     public static final String isFirst = "isFirst";
     public static final String isLogin = "Login";
     public static final String preVer = "preVer";
-    public static final String UserName = "username";//用户名关系到相关数据的读取
+
+    /*用户的一些信息*/
+    public static final String UserName = "username";//用户名
+    public static final String UserPhone = "UserPhone";//用户手机
 
     /*其他*/
     public static final String licensePath = "licensePath";//营业执照路径
@@ -23,6 +26,7 @@ public class SpKey {
 
     /*+++++++++++++++++++++++++++++  有关Intent的key   +++++++++++++++++++++++++++++*/
     public static final String resnBean = "resnBean";
+    public static final String applyBean = "applyBean";
     public static final String resnTime = "resnTime";
     public static final String carAdd = "carAdd";
     public static final String webUrl = "webUrl";

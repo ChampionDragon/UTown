@@ -3,5 +3,5 @@
     android:id="@+id/lv_apply"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:divider="@color/gray_shallow"
+    android:divider="@color/line"
     android:dividerHeight="2dp" />

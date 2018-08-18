@@ -105,10 +105,10 @@ public class UserCaraddActivity extends BaseActivity implements View.OnClickList
 
 
     private void Confirm() {
-        CarBean carBean=new CarBean();
-        if(checkBox.isChecked()){
+        CarBean carBean = new CarBean();
+        if (checkBox.isChecked()) {
             carBean.setPlateNum("无车牌");
-        }else {
+        } else {
             carBean.setPlateNum(plate.getPassWord());
         }
         carBean.setColor(color.getText().toString());
@@ -128,6 +128,14 @@ public class UserCaraddActivity extends BaseActivity implements View.OnClickList
             @Override
             public void onDeleteKeyEvent() {
                 plate.deletePassword();
+            }
+
+            @Override
+            public void hideKeyboard() {
+                        /*隐藏键盘*/
+                if (keyboard.isShown()) {
+                    keyboard.setVisibility(View.GONE);
+                }
             }
         });
         plate.togglePasswordVisibility();

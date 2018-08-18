@@ -9,21 +9,21 @@
         android:layout_height="@dimen/tt_height">
 
         <ImageView
-            android:id="@+id/back_utnotice"
+            android:id="@+id/back_reserveconference"
             style="@style/tt_iv" />
 
         <TextView
             style="@style/tt_tv"
-            android:layout_toRightOf="@id/back_utnotice"
-            android:text="园区公告" />
+            android:layout_toRightOf="@id/back_reserveconference"
+            android:text="洽谈室预定" />
 
     </RelativeLayout>
 
     <ListView
-        android:id="@+id/utnotice_lv"
+        android:id="@+id/resnconference_lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@color/bg_main"
-        android:dividerHeight="1dp" />
+        android:divider="@color/black" />
+
 
 </LinearLayout>

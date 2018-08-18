@@ -13,7 +13,7 @@ import com.bs.utown.base.BaseActivity;
 import com.bs.utown.bean.ResnBean;
 import com.bs.utown.constant.SpKey;
 import com.bs.utown.pickerview.other.pickerViewUtil;
-import com.bs.utown.sercompany.ResntimeActivity;
+import com.bs.utown.sercompany.ReservetimeActivity;
 import com.bs.utown.util.Logs;
 import com.bs.utown.util.ToastUtil;
 import com.squareup.picasso.Picasso;
@@ -95,7 +95,7 @@ public class UserResndetailActivity extends BaseActivity implements View.OnClick
                 break;
             case R.id.userresndetail_time:
                 if (isModify) {
-                    startActivityForResult(new Intent(UserResndetailActivity.this, ResntimeActivity.class), 0);
+                    startActivityForResult(new Intent(UserResndetailActivity.this, ReservetimeActivity.class), 0);
                 } else {
                     modifyNotce();
                 }

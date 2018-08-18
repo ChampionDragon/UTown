@@ -9,9 +9,9 @@ import com.bs.utown.constant.SpKey;
 import com.bs.utown.serbase.UtActActivity;
 import com.bs.utown.serbase.UtNewsActivity;
 import com.bs.utown.serbase.UtNoticeActivity;
-import com.bs.utown.sercompany.AdmissionCompActivity;
+import com.bs.utown.sercompany.AdmissionActivity;
 import com.bs.utown.sercompany.ExpansionActivity;
-import com.bs.utown.sercompany.ResnsiteActivity;
+import com.bs.utown.sercompany.ReserveActivity;
 import com.bs.utown.seruser.LifepayActivity;
 import com.bs.utown.util.SmallUtil;
 
@@ -62,13 +62,13 @@ public class SerAllActivity extends BaseActivity implements View.OnClickListener
                 SmallUtil.getActivity(SerAllActivity.this, UtNoticeActivity.class);
                 break;
             case R.id.serall_admissioncomp:
-                SmallUtil.getActivity(SerAllActivity.this, AdmissionCompActivity.class);
+                SmallUtil.getActivity(SerAllActivity.this, AdmissionActivity.class);
                 break;
             case R.id.serall_expansion:
                 SmallUtil.getActivity(SerAllActivity.this, ExpansionActivity.class);
                 break;
             case R.id.serall_resnsite:
-                SmallUtil.getActivity(SerAllActivity.this, ResnsiteActivity.class);
+                SmallUtil.getActivity(SerAllActivity.this, ReserveActivity.class);
                 break;
             case R.id.serall_officialweb:
                 Bundle bundle = new Bundle();

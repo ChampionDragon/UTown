@@ -63,7 +63,7 @@ public class RoundRectImageView extends ImageView {
      * @param bitmap
      * @param roundPx,一般设置成14
      * @return Bitmap
-     * @author caizhiming
+     * @author Champion Dragon
      */
     private Bitmap getRoundBitmap(Bitmap bitmap, int roundPx) {
         Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),

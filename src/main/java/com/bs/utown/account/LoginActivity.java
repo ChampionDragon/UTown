@@ -17,6 +17,7 @@ import com.bs.utown.UtActivity;
 import com.bs.utown.base.BaseActivity;
 import com.bs.utown.base.BaseApplication;
 import com.bs.utown.constant.Constant;
+import com.bs.utown.constant.SpKey;
 import com.bs.utown.util.HttpByGet;
 import com.bs.utown.util.Logs;
 import com.bs.utown.util.NetConnectUtil;
@@ -175,8 +176,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             switch (msg.what) {
                 case LOGIN:
                     SmallUtil.getActivity(LoginActivity.this, UtActivity.class);
-//            spUser.putBoolean(SpKey.isLogin, true);
-//            spUser.putString(SpKey.UserName, phone.getText().toString());//系统保留用户名
+                    spUser.putBoolean(SpKey.isLogin, true);
+                    spUser.putString(SpKey.UserPhone, phone.getText().toString());//系统保留用户的手机号
 //            managerDb.addOrUpdateLogin(phone.getText().toString(), TimeUtil.long2time(System.currentTimeMillis(), Constant.formatlogin));
                     finish();
                     break;

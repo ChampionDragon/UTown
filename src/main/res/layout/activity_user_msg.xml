@@ -68,8 +68,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/usermsg_tvr"
             android:background="@null"
-            android:hint="姓名"
-            android:text="刘子尧" />
+            android:hint="姓名"/>
 
     </LinearLayout>
 
@@ -91,8 +90,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/usermsg_tvr"
             android:background="@null"
-            android:hint="UID"
-            android:text="xxxxxxx" />
+            android:hint="UID"/>
 
 
     </LinearLayout>
@@ -131,8 +129,7 @@
             android:id="@+id/usermsg_gender"
             style="@style/usermsg_tv"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/usermsg_tvr"
-            android:text="男" />
+            android:layout_marginRight="@dimen/usermsg_tvr" />
 
         <ImageView
             style="@style/usermsg_iv"
@@ -155,8 +152,7 @@
             android:id="@+id/usermsg_birthday"
             style="@style/usermsg_tv"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/usermsg_tvr"
-            android:text="xxxx/xx/x" />
+            android:layout_marginRight="@dimen/usermsg_tvr"/>
 
         <ImageView
             style="@style/usermsg_iv"

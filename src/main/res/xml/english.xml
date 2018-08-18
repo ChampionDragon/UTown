@@ -90,8 +90,10 @@
             android:codes="77"
             android:keyLabel="M" />
         <Key
+            android:codes="66666"
+            android:keyLabel="隐藏" />
+        <Key
             android:codes="-5"
-            android:horizontalGap="10.8181%p"
             android:keyEdgeFlags="right"
             android:keyIcon="@mipmap/sym_keyboard_delete"
             android:keyWidth="18.9092%p" />

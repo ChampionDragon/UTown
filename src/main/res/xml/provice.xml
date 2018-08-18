@@ -34,9 +34,9 @@
             android:keyLabel="沪" />
         <Key
             android:codes="33487"
-            android:keyEdgeFlags="right"
             android:horizontalGap="1%p"
-            android:keyLabel="苏"/>
+            android:keyEdgeFlags="right"
+            android:keyLabel="苏" />
     </Row>
     <Row>
         <Key
@@ -68,7 +68,7 @@
             android:keyLabel="粤" />
         <Key
             android:codes="26690"
-            android:keyLabel="桂"/>
+            android:keyLabel="桂" />
     </Row>
     <Row>
         <Key
@@ -107,8 +107,11 @@
             android:codes="26032"
             android:keyLabel="新" />
         <Key
+            android:codes="66666"
+            android:keyLabel="隐藏" />
+        <Key
             android:codes="-5"
-            android:horizontalGap="70.2727%p"
+            android:horizontalGap="60.2727%p"
             android:keyEdgeFlags="right"
             android:keyIcon="@mipmap/sym_keyboard_delete"
             android:keyWidth="18.9092%p" />

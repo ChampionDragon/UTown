@@ -30,7 +30,7 @@
     <style name="iv">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
-        <item name="android:background">@color/black</item>
+        <item name="android:background">@color/line</item>
     </style>
 
     <!--宽度为1dp的灰色线-->
@@ -119,6 +119,7 @@
     </style>
 
     <style name="usermsg_iv">
+        <item name="android:layout_centerVertical">true</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:background">@mipmap/arrow</item>

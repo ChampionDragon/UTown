@@ -21,7 +21,7 @@ import java.util.List;
  * created at 2018/6/14
  **/
 
-public class ResnAdapter extends BaseAdapter{
+public class ResnAdapter extends BaseAdapter {
     private List<ResnBean> list;
     private Context context;
 
@@ -55,10 +55,10 @@ public class ResnAdapter extends BaseAdapter{
         TextView place = ViewHolderUtil.get(convertView, R.id.resn_place);
         TextView name = ViewHolderUtil.get(convertView, R.id.resn_name);
         ImageView iv = ViewHolderUtil.get(convertView, R.id.resn_iv);
-        TextView equipment=ViewHolderUtil.get(convertView, R.id.resn_equipment);
+        TextView equipment = ViewHolderUtil.get(convertView, R.id.resn_equipment);
 
         ResnBean resnBean = list.get(position);
-        money.setText(resnBean.getPrice());
+        money.setText(resnBean.getPrice() + resnBean.getPriceUnit());
         place.setText(resnBean.getPlace());
         name.setText(resnBean.getName());
         equipment.setText(resnBean.getEquipment());

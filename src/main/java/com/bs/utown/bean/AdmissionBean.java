@@ -9,15 +9,12 @@ import java.io.Serializable;
  **/
 
 public class AdmissionBean implements Serializable {
-    private String name, time, user, phone, email, type, bussiness;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    private String name;
+    private String user;
+    private String phone;
+    private String email;
+    private String type;
+    private String bussiness;
 
     public String getTime() {
         return time;
@@ -25,6 +22,16 @@ public class AdmissionBean implements Serializable {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    private String time;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getUser() {

@@ -42,7 +42,7 @@
             android:id="@+id/ut_code"
             android:layout_width="@dimen/oval"
             android:layout_height="@dimen/oval"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
             android:layout_marginLeft="@dimen/ovalmargin"
             android:background="@drawable/oval"
             android:scaleType="centerInside"
@@ -58,6 +58,16 @@
             android:background="@drawable/oval"
             android:scaleType="centerInside"
             android:src="@mipmap/utserver" />
+
+        <ImageView
+            android:id="@+id/ut_light"
+            android:layout_width="@dimen/oval"
+            android:layout_height="@dimen/oval"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/ovalmargin"
+            android:background="@drawable/oval"
+            android:scaleType="centerInside"
+            android:src="@mipmap/utlight" />
 
     </RelativeLayout>
 

@@ -29,9 +29,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/admissionsuccess_tv"
-        android:layout_margin="66dp"
+        android:layout_margin="55dp"
         android:background="@drawable/login_btn_bg"
-        android:padding="22sp"
+        android:padding="11sp"
         android:text="查看审核状态"
         android:textColor="@drawable/login_btn_text"
         android:textSize="20sp" />

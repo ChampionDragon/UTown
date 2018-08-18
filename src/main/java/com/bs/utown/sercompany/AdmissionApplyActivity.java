@@ -2,7 +2,6 @@ package com.bs.utown.sercompany;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,11 +14,9 @@ import com.bs.utown.constant.SpKey;
 import com.bs.utown.listener.DiadisListener;
 import com.bs.utown.pickerview.TimePickerView;
 import com.bs.utown.pickerview.other.pickerViewUtil;
-import com.bs.utown.util.Logs;
 import com.bs.utown.util.SmallUtil;
 import com.bs.utown.util.ToastUtil;
 import com.bs.utown.view.DialogIv;
-import com.bs.utown.view.DialogNoticeUtil;
 import com.bs.utown.view.DialogVp;
 
 import java.util.ArrayList;
@@ -41,7 +38,7 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
     private String[] bussinessArray = {"专属办公室", "定制设计运营服务"};
     private int markType = 0;
     private int markBussiness = 1;
-    private CheckBox checkBox;
+//    private CheckBox checkBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,16 +54,16 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
         findViewById(R.id.admissionapply_next).setOnClickListener(this);
         findViewById(R.id.admissionapply_explanation).setOnClickListener(this);
         findViewById(R.id.admissionapply_time).setOnClickListener(this);
-        checkBox = (CheckBox) findViewById(R.id.admissionapply_cb);
+//        checkBox = (CheckBox) findViewById(R.id.admissionapply_cb);
         time = (TextView) findViewById(R.id.admissionapply_timetv);
         name = (EditText) findViewById(R.id.admissionapply_name);
         user = (EditText) findViewById(R.id.admissionapply_user);
         phone = (EditText) findViewById(R.id.admissionapply_phone);
         email = (EditText) findViewById(R.id.admissionapply_email);
-        type = (TextView) findViewById(R.id.admissionapply_type);
-        type.setOnClickListener(this);
-        bussiness = (TextView) findViewById(R.id.admissionapply_bussiness);
-        bussiness.setOnClickListener(this);
+//        type = (TextView) findViewById(R.id.admissionapply_type);
+//        type.setOnClickListener(this);
+//        bussiness = (TextView) findViewById(R.id.admissionapply_bussiness);
+//        bussiness.setOnClickListener(this);
     }
 
     @Override
@@ -83,32 +80,35 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
                 break;
             case R.id.admissionapply_terms:
                 /*跳转到协议界面*/
-                SmallUtil.getActivity(AdmissionApplyActivity.this,TermsActivity.class);
+                SmallUtil.getActivity(AdmissionApplyActivity.this, TermsActivity.class);
 //                Bundle bundle = new Bundle();
 //                bundle.putString(SpKey.webTv, "用户协议");
 //                bundle.putString(SpKey.webUrl, Constant.urlTerms);
 //                SmallUtil.getActivity(AdmissionApplyActivity.this, WebviewActivity.class, bundle);
                 break;
             case R.id.admissionapply_next:
-                Logs.d("是否勾选上:" + checkBox.isChecked());
-                if (checkBox.isChecked()) {
-                    Next();
-                } else {
-                    DialogNoticeUtil.show(AdmissionApplyActivity.this, "请先阅读协议并打钩同意");
-                }
+//                Logs.d("是否勾选上:" + checkBox.isChecked());
+//                if (checkBox.isChecked()) {
+//                } else {
+//                    DialogNoticeUtil.show(AdmissionApplyActivity.this, "请先阅读协议并打钩同意");
+//                }
+
+                Next();
+
+
                 break;
-            case R.id.admissionapply_type:
-                List<Integer> listId = new ArrayList<>();
-                listId.add(R.mipmap.typemobile);
-                listId.add(R.mipmap.typefixed);
-                VpDialog(getIv(listId), markType);
-                break;
-            case R.id.admissionapply_bussiness:
-                List<Integer> list = new ArrayList<>();
-                list.add(R.mipmap.typeexclusive);
-                list.add(R.mipmap.typecustomer);
-                VpDialog(getIv(list), markBussiness);
-                break;
+//            case R.id.admissionapply_type:
+//                List<Integer> listId = new ArrayList<>();
+//                listId.add(R.mipmap.typemobile);
+//                listId.add(R.mipmap.typefixed);
+//                VpDialog(getIv(listId), markType);
+//                break;
+//            case R.id.admissionapply_bussiness:
+//                List<Integer> list = new ArrayList<>();
+//                list.add(R.mipmap.typeexclusive);
+//                list.add(R.mipmap.typecustomer);
+//                VpDialog(getIv(list), markBussiness);
+//                break;
         }
     }
 
@@ -191,11 +191,11 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
 
         AdmissionBean bean = new AdmissionBean();
         bean.setName(name.getText().toString());
-        bean.setBussiness(bussiness.getText().toString());
+//        bean.setType(type.getText().toString());
+//        bean.setBussiness(bussiness.getText().toString());
         bean.setEmail(email.getText().toString());
         bean.setPhone(phone.getText().toString());
         bean.setTime(time.getText().toString());
-        bean.setType(type.getText().toString());
         bean.setUser(user.getText().toString());
         Bundle bundle = new Bundle();
         bundle.putSerializable(SpKey.admissionBean, bean);

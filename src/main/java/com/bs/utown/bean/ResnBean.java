@@ -8,15 +8,34 @@ import java.io.Serializable;
  * created at 2018/6/14
  **/
 
-public class ResnBean implements Serializable{
-    private String name;
-    private String price;
-    private String equipment;
-    private String place;
-    private String time;
-    private String url;
-    private String num;
-    private String area;
+public class ResnBean implements Serializable {
+    private String name;//房间名字
+    private String price;//价格
+    private String priceUnit;//价格单位    0:元/月   1:元/年
+    private String equipment;//设备
+    private String place;//地点
+    private String time;//时间
+    private String url;//图片地址
+    private String num;//人数
+
+    public String getNumUnit() {
+        return numUnit;
+    }
+
+    public void setNumUnit(String numUnit) {
+        this.numUnit = numUnit;
+    }
+
+    private String numUnit;//人数         0:可容纳人数 1:剩余工位
+    private String area;//面积
+
+    public String getPriceUnit() {
+        return priceUnit;
+    }
+
+    public void setPriceUnit(String priceUnit) {
+        this.priceUnit = priceUnit;
+    }
 
     public String getNum() {
         return num;

@@ -90,6 +90,11 @@
             </LinearLayout>
         </LinearLayout>
 
+        <ImageView
+            style="@style/iv"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp" />
+
 
         <TextView
             android:layout_width="match_parent"
@@ -156,6 +161,7 @@
         <LinearLayout
             style="@style/iv_horizontal"
             android:background="@color/white"
+            android:paddingBottom="@dimen/serall_marginbottom"
             android:paddingTop="@dimen/serall_margin">
 
             <LinearLayout style="@style/iv_vertical">
@@ -170,16 +176,6 @@
                     android:text="场地预定" />
             </LinearLayout>
 
-            <LinearLayout style="@style/iv_vertical">
-
-                <ImageView
-                    style="@style/iv_iv"
-                    android:background="@mipmap/ic_launcher" />
-
-                <TextView
-                    style="@style/iv_tv"
-                    android:text="企业信息化" />
-            </LinearLayout>
 
             <LinearLayout style="@style/iv_vertical">
 
@@ -200,11 +196,22 @@
 
                 <TextView
                     style="@style/iv_tv"
+                    android:text="企业集市" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/iv_vertical">
+
+                <ImageView
+                    style="@style/iv_iv"
+                    android:background="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/iv_tv"
                     android:text="需求发布" />
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
+        <!--<LinearLayout
             style="@style/iv_horizontal"
             android:background="@color/white"
             android:paddingBottom="@dimen/serall_marginbottom"
@@ -253,8 +260,11 @@
                     style="@style/iv_tv"
                     android:text="法务咨询" />
             </LinearLayout>
-        </LinearLayout>
-
+        </LinearLayout>-->
+        <ImageView
+            style="@style/iv"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp" />
 
         <TextView
             android:layout_width="match_parent"

@@ -24,7 +24,7 @@
             android:id="@+id/apply_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="11dp"
             android:text="xxxx/xx/xx xx:xx"
             android:textSize="16sp" />
 
