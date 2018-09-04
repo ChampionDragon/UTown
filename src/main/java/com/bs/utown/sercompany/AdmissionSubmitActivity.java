@@ -84,7 +84,7 @@ public class AdmissionSubmitActivity extends BaseActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.back_admissionsubmit:
-                baseapp.TemfinishActivity(this);
+                baseapp.TemfinishActivity();
                 break;
             case R.id.admissionsubmit_submit:
                 Submit();
@@ -104,7 +104,8 @@ public class AdmissionSubmitActivity extends BaseActivity implements View.OnClic
     private Runnable SubmitRunnable = new Runnable() {
         @Override
         public void run() {
-            String url = Constant.Apply + HttpByGet.get("g", "Api", "m", "Wechat", "a", "apply_info", "company_name", getEncoder(bean.getName()), "enter_date", bean.getTime(), "username", getEncoder(bean.getUser()), "phone", bean.getPhone(), "email", bean.getEmail());
+            String url = Constant.Apply + HttpByGet.get("g", "Api", "m", "Wechat", "a", "apply_info", "company_name", getEncoder(bean.getName()),
+                    "enter_date", bean.getTime(), "username", getEncoder(bean.getUser()), "phone", bean.getPhone(), "email", bean.getEmail());
             String result = HttpByGet.executeHttpGet(url);
             if (result.equals(HttpByGet.error)) {
                 handler.sendEmptyMessage(ERROR);

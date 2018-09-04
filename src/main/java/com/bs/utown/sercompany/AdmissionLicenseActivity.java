@@ -139,7 +139,7 @@ public class AdmissionLicenseActivity extends BaseActivity implements View.OnCli
                 popWindow();
                 break;
             case R.id.back_admissionlicense:
-                baseapp.TemfinishActivity(this);
+                baseapp.TemfinishActivity();
                 break;
             case R.id.btn_cancle:
                 popupWindow.dismiss();// popwindow消失
@@ -171,7 +171,7 @@ public class AdmissionLicenseActivity extends BaseActivity implements View.OnCli
     private void next() {
         Bundle bundle = getIntent().getExtras();
         AdmissionBean bean = (AdmissionBean) bundle.getSerializable(SpKey.admissionBean);
-//        Logs.e(bean.getTime() + "  " + bean.getBussiness());
+//        Logs.e(bean.getOrderTime() + "  " + bean.getBussiness());
         SmallUtil.getActivity(AdmissionLicenseActivity.this, AdmissionSubmitActivity.class, bundle);
     }
 

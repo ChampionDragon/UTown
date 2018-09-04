@@ -93,7 +93,7 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
 //        if (date == null)
 //            calendar.setTimeInMillis(System.currentTimeMillis());
 //        else
-//            calendar.setTime(date);
+//            calendar.setOrderTime(date);
 //        int year = calendar.get(Calendar.YEAR);
 //        int month = calendar.get(Calendar.MONTH);
 //        int day = calendar.get(Calendar.DAY_OF_MONTH);

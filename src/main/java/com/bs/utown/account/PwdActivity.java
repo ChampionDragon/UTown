@@ -44,7 +44,7 @@ public class PwdActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.pwd_back:
-                baseapp.TemfinishActivity(this);
+                baseapp.TemfinishActivity();
                 break;
             case R.id.pwd_confirm:
                 confirmCheck();

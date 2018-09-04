@@ -59,7 +59,7 @@ public class UserresnAdapter extends BaseAdapter{
 
         final ResnBean resnBean = list.get(position);
         name.setText(resnBean.getName());
-        time.setText(resnBean.getTime());
+        time.setText(resnBean.getOrderTime());
 
         ViewHolderUtil.get(convertView,R.id.userresn_detail).setOnClickListener(new View.OnClickListener() {
             @Override

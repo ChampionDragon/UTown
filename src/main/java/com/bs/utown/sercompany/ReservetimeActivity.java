@@ -7,11 +7,12 @@ import android.widget.TextView;
 import com.bs.utown.R;
 import com.bs.utown.base.BaseActivity;
 import com.bs.utown.constant.Constant;
-import com.bs.utown.constant.SpKey;
 import com.bs.utown.pickerview.other.pickerViewUtil;
 import com.bs.utown.util.TimeUtil;
 
 import java.util.ArrayList;
+
+import static com.bs.utown.constant.Constant.formatbusinesstime;
 
 /**
  * Description:预定的选择时间
@@ -57,8 +58,13 @@ public class ReservetimeActivity extends BaseActivity implements View.OnClickLis
                 end();
                 break;
             case R.id.resntime_confirm:
-                String time = day.getText().toString() + "  " + start.getText().toString() + "-" + end.getText().toString();
-                setResult(ReservedetailActivity.Resntime, getIntent().putExtra(SpKey.resnTime, time));
+                long dayLong = TimeUtil.time2long(day.getText().toString(), Constant.formatresn);
+                String dayStr=TimeUtil.long2time(dayLong,formatbusinesstime);
+                Bundle bundle=new Bundle();
+                bundle.putString("day",dayStr);
+                bundle.putString("start",start.getText().toString() );
+                bundle.putString("end",end.getText().toString());
+                setResult(ReservedetailActivity.Resntime, getIntent().putExtras(bundle));
                 finish();
                 break;
         }

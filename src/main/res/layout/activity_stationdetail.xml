@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tt_height">
+
+            <ImageView
+                android:id="@+id/back_stationdetail"
+                style="@style/tt_iv" />
+
+            <TextView
+                style="@style/tt_tv"
+                android:layout_toRightOf="@id/back_stationdetail"
+                android:text="工位详情" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/stationdetail_iv"
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:orientation="vertical"
+            android:paddingLeft="22dp"
+            android:paddingTop="22dp">
+
+            <TextView
+                android:id="@+id/stationtail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="工位名"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+
+            <LinearLayout style="@style/resn_l">
+
+                <TextView
+                    android:id="@+id/stationtail_numunit"
+                    style="@style/resn_tvt"
+                    android:text="可容纳人数：" />
+
+                <TextView
+                    android:id="@+id/stationtail_num"
+                    style="@style/resn_tv"
+                    android:text="xx" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/resn_l">
+
+                <TextView
+                    style="@style/resn_tvt"
+                    android:text="地点：" />
+
+                <TextView
+                    android:id="@+id/stationtail_place"
+                    style="@style/resn_tv"
+                    android:text="x栋x楼xxx" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/stationtail_remark"
+                style="@style/resn_tvt"
+                android:layout_marginTop="15dp"
+                android:text="备注说明" />
+
+
+        </LinearLayout>
+
+        <ImageView style="@style/iv" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="22dp"
+            android:paddingTop="22dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.按月缴纳费用"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+
+            <LinearLayout
+                style="@style/resn_l"
+                android:layout_gravity="center_vertical">
+
+                <CheckBox
+                    android:id="@+id/stationtail_checkmonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null" />
+
+                <TextView
+                    android:id="@+id/stationtail_monthfee"
+                    style="@style/resn_tvt"
+                    android:text="xx" />
+
+                <TextView
+                    style="@style/resn_tvt"
+                    android:text="元/月" />
+
+                <TextView
+                    style="@style/resn_tvt"
+                    android:layout_marginLeft="5dp"
+                    android:text="押金" />
+
+                <TextView
+                    android:id="@+id/stationtail_monthdeposit"
+                    style="@style/resn_tvt"
+                    android:text="yy" />
+
+                <TextView
+                    style="@style/resn_tvt"
+                    android:text="元" />
+
+                <TextView
+                    style="@style/resn_tvt"
+                    android:layout_marginLeft="5dp"
+                    android:text="共计" />
+
+                <TextView
+                    android:id="@+id/stationtail_monthtotal"
+                    style="@style/resn_tvt"
+                    android:layout_marginLeft="5dp"
+                    android:text="yy" />
+
+                <TextView
+                    style="@style/resn_tvt"
+                    android:text="元" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/stationtail_monthremark"
+                style="@style/resn_tvt"
+                android:text="月租说明" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="2.按年缴纳费用"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+
+            <LinearLayout
+                style="@style/resn_l"
+                android:layout_gravity="center_vertical">
+
+                <CheckBox
+                    android:id="@+id/stationtail_checkyear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null" />
+
+                <TextView
+                    android:id="@+id/stationtail_yearfee"
+                    style="@style/resn_tvt"
+                    android:text="xx" />
+
+                <TextView
+                    style="@style/resn_tvt"
+                    android:text="元/年" />
+
+                <TextView
+                    style="@style/resn_tvt"
+                    android:layout_marginLeft="5dp"
+                    android:text="押金" />
+
+                <TextView
+                    android:id="@+id/stationtail_yeardeposit"
+                    style="@style/resn_tvt"
+                    android:text="yy" />
+
+                <TextView
+                    style="@style/resn_tvt"
+                    android:text="元" />
+
+                <TextView
+                    style="@style/resn_tvt"
+                    android:layout_marginLeft="5dp"
+                    android:text="共计" />
+
+                <TextView
+                    android:id="@+id/stationtail_yeartotal"
+                    style="@style/resn_tvt"
+                    android:layout_marginLeft="5dp"
+                    android:text="yy" />
+
+                <TextView
+                    style="@style/resn_tvt"
+                    android:text="元" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/stationtail_yearremark"
+                style="@style/resn_tvt"
+                android:text="年租说明" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/stationtail_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="33dp"
+            android:background="@drawable/login_btn_bg"
+            android:text="立即支付"
+            android:textColor="@drawable/login_btn_text"
+            android:textSize="18sp" />
+    </LinearLayout>
+</ScrollView>

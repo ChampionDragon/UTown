@@ -10,7 +10,11 @@ import com.bs.utown.constant.Constant;
 import com.bs.utown.user.UserApplyActivity;
 import com.bs.utown.util.SmallUtil;
 import com.squareup.picasso.Picasso;
-
+/**
+ * Description: 扩租申请
+ * AUTHOR: Champion Dragon
+ * created at 2018/8/29
+ **/
 public class ExpansionActivity extends BaseActivity implements View.OnClickListener {
     private ImageView apply, past;
 

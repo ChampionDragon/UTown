@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.bs.utown.R;
 import com.bs.utown.account.LoginActivity;
@@ -25,6 +26,7 @@ import java.io.File;
 public class UserActivity extends BaseActivity implements View.OnClickListener {
     private RoundImageView head;
     private Dialog dialog;
+    private TextView userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +42,14 @@ public class UserActivity extends BaseActivity implements View.OnClickListener {
         /*初始化头像*/
         UserInfo userInfo = ObjectSave.getUserInfo();
         String headPath = userInfo.getHeadpath();
+        String names = userInfo.getName();
         if (headPath != null && !headPath.isEmpty()) {
             File filehead = new File(headPath);
             Uri uri = Uri.fromFile(filehead);
             head.setImageURI(uri);
+        }
+        if (names != null && !names.isEmpty()) {
+            userName.setText(names);
         }
     }
 
@@ -56,6 +62,7 @@ public class UserActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.user_act).setOnClickListener(this);
         findViewById(R.id.user_reservation).setOnClickListener(this);
         findViewById(R.id.user_car).setOnClickListener(this);
+        userName = (TextView) findViewById(R.id.user_name);
     }
 
     @Override

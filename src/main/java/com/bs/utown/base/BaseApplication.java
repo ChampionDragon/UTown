@@ -7,7 +7,6 @@ import android.net.wifi.WifiManager;
 
 import com.bs.utown.constant.Constant;
 import com.bs.utown.constant.SpKey;
-import com.bs.utown.util.Logs;
 import com.bs.utown.util.SpUtil;
 import com.bs.utown.util.ToastUtil;
 
@@ -180,12 +179,12 @@ public class BaseApplication extends Application {
     }
 
     //结束临时堆栈指定的Activity
-    public void TemfinishActivity(Activity activity) {
+    public void TemfinishActivity() {
+        Activity activity = activityStackTem.lastElement();
         if (activity != null) {
             activityStackTem.remove(activity);
             activity.finish();
             activity = null;
-//            Logs.e("168当前activity数量：" + activityStackTem.size());
         }
     }
 }

@@ -49,7 +49,7 @@ public class ExpansionApplyActivity extends BaseActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.back_expansionapply:
-                baseapp.TemfinishActivity(this);
+                baseapp.TemfinishActivity();
                 break;
             case R.id.expansion_time:
                 Time();

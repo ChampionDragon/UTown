@@ -56,7 +56,7 @@ public class pickerViewUtil<T> {
         pvTime.setOnTimeSelectListener(new TimePickerView.OnTimeSelectListener() {
             @Override
             public void onTimeSelect(Date date) {
-//                        tvTime.setText(getTime(date));
+//                        tvTime.setText(getOrderTime(date));
                 SimpleDateFormat sdf = new SimpleDateFormat(format);
                 callBack.onTimeSelect(sdf.format(date));
             }

@@ -39,7 +39,7 @@ public class ReservemeetingActivity extends BaseActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        baseapp.addActivity(this);
+        baseapp.TemaddActivity(this);
         setContentView(R.layout.activity_resnmeeting);
         initView();
     }
@@ -108,6 +108,7 @@ public class ReservemeetingActivity extends BaseActivity implements View.OnClick
             resnBean.setPrice(jsonObject.getString("price"));
             resnBean.setPriceUnit("元/小时");
             resnBean.setNumUnit("可容纳人数：");
+            resnBean.setId(jsonObject.getString("id"));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -157,7 +158,7 @@ public class ReservemeetingActivity extends BaseActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.back_resnmeeting:
-                baseapp.finishActivity();
+                baseapp.TemfinishActivity();
                 break;
         }
     }

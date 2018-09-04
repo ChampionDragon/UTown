@@ -9,6 +9,7 @@ import com.bs.utown.R;
 import com.bs.utown.base.BaseActivity;
 import com.bs.utown.bean.ApplyBean;
 import com.bs.utown.constant.SpKey;
+import com.bs.utown.util.SmallUtil;
 
 /**
  * Description: 申请入驻详情
@@ -45,6 +46,7 @@ public class AdmissionDetailActivity extends BaseActivity implements View.OnClic
 
     private void initView() {
         findViewById(R.id.back_admissiondetail).setOnClickListener(this);
+        findViewById(R.id.admissiondetail_choice).setOnClickListener(this);
         name = (TextView) findViewById(R.id.admissiondetail_name);
         time = (TextView) findViewById(R.id.admissiondetail_time);
         user = (TextView) findViewById(R.id.admissiondetail_user);
@@ -57,7 +59,10 @@ public class AdmissionDetailActivity extends BaseActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.back_admissiondetail:
-                baseapp.TemfinishActivity(this);
+                baseapp.TemfinishActivity();
+                break;
+            case R.id.admissiondetail_choice:
+                SmallUtil.getActivity(AdmissionDetailActivity.this,StationActivity.class);
                 break;
         }
     }

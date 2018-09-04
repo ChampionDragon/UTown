@@ -11,19 +11,27 @@ import android.widget.TextView;
 import com.bs.utown.R;
 import com.bs.utown.base.BaseActivity;
 import com.bs.utown.bean.ResnBean;
-import com.bs.utown.constant.SpKey;
+import com.bs.utown.constant.Constant;
 import com.bs.utown.pickerview.other.pickerViewUtil;
 import com.bs.utown.sercompany.ReservetimeActivity;
 import com.bs.utown.util.Logs;
 import com.bs.utown.util.ToastUtil;
+import com.bs.utown.view.DialogNoticeUtil;
 import com.squareup.picasso.Picasso;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+
+import okhttp3.Call;
 
 import static com.bs.utown.constant.SpKey.resnBean;
 
 /**
- * Description:我的预定详情
+ * Description:会议室预定详情
  * AUTHOR: Champion Dragon
  * created at 2018/6/20
  **/
@@ -36,6 +44,7 @@ public class UserResndetailActivity extends BaseActivity implements View.OnClick
     private CheckBox msg, app;
     private Button confirm;
     private boolean isModify;
+    private String day, begin, over;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,12 +81,34 @@ public class UserResndetailActivity extends BaseActivity implements View.OnClick
         if (extras != null) {
             ResnBean bean = (ResnBean) extras.getSerializable(resnBean);
             name.setText(bean.getName());
-            equipment.setText(bean.getEquipment());
-            place.setText(bean.getPlace());
-            price.setText(bean.getPrice());
-            num.setText(bean.getNum());
-            area.setText(bean.getArea());
+            price.setText(bean.getPrice() + bean.getPriceUnit());
+            time.setText(bean.getReserveTime());
             Picasso.with(this).load(bean.getUrl()).placeholder(R.mipmap.logo).error(R.mipmap.logo).into(iv);
+            String cid = bean.getId();//获取订单ID
+            String url = Constant.Ordermeetingdetail + cid;
+            OkHttpUtils.get().url(url).build().execute(new StringCallback() {
+                @Override
+                public void onError(Call call, Exception e, int i) {
+                    Logs.e(tag + " 92 " + e + "\n" + i);
+                    DialogNoticeUtil.show(UserResndetailActivity.this, "访问接口失败");
+                }
+
+                @Override
+                public void onResponse(String s, int i) {
+                    Logs.d(tag + "102\n" + s);
+                    try {
+                        JSONObject jsonObject = new JSONObject(s);
+                        equipment.setText(jsonObject.getString("equipments"));
+                        place.setText(jsonObject.getString("position"));
+                        num.setText(jsonObject.getString("contain") + "人");
+                        area.setText(jsonObject.getString("area") + "㎡");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+
+
         }
     }
 
@@ -85,7 +116,7 @@ public class UserResndetailActivity extends BaseActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.back_userresndetail:
-                baseapp.TemfinishActivity(this);
+                baseapp.finishActivity();
                 break;
             case R.id.userresndetail_modify:
                 Logs.d(tag + " 91 " + isModify);
@@ -150,7 +181,11 @@ public class UserResndetailActivity extends BaseActivity implements View.OnClick
         Logs.d(requestCode + " " + resultCode + " " + data);
         switch (resultCode) {
             case Resntime:
-                time.setText(data.getStringExtra(SpKey.resnTime));
+                Bundle extras = data.getExtras();
+                day = extras.getString("day");
+                begin = extras.getString("start");
+                over = extras.getString("end");
+                time.setText(day + "   " + begin + "--" + over);
                 break;
         }
     }

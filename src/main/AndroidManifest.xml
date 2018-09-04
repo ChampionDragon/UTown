@@ -105,7 +105,9 @@
         <activity android:name=".UtActivity" />
         <activity android:name=".sercompany.TermsActivity" />
         <activity android:name=".sercompany.ReserveconferenceActivity" />
-        <activity android:name=".sercompany.AdmissionDetailActivity"></activity>
+        <activity android:name=".sercompany.AdmissionDetailActivity" />
+        <activity android:name=".sercompany.StationActivity" />
+        <activity android:name=".sercompany.StationdetailActivity"></activity>
     </application>
 
 </manifest>

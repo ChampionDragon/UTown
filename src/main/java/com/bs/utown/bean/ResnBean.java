@@ -14,9 +14,29 @@ public class ResnBean implements Serializable {
     private String priceUnit;//价格单位    0:元/月   1:元/年
     private String equipment;//设备
     private String place;//地点
-    private String time;//时间
+    private String orderTime;//订单生成时间
+    private String reserveTime;//预定时间
+
+    public String getReserveTime() {
+        return reserveTime;
+    }
+
+    public void setReserveTime(String reserveTime) {
+        this.reserveTime = reserveTime;
+    }
+
     private String url;//图片地址
     private String num;//人数
+    private String id;//房间的ID号
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getNumUnit() {
         return numUnit;
@@ -53,12 +73,12 @@ public class ResnBean implements Serializable {
         this.area = area;
     }
 
-    public String getTime() {
-        return time;
+    public String getOrderTime() {
+        return orderTime;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setOrderTime(String orderTime) {
+        this.orderTime = orderTime;
     }
 
 

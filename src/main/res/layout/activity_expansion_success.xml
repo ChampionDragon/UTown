@@ -31,7 +31,7 @@
         android:layout_below="@+id/admissionsuccess_tv"
         android:layout_margin="55dp"
         android:background="@drawable/login_btn_bg"
-        android:padding="11sp"
+        android:padding="22sp"
         android:text="查看审核状态"
         android:textColor="@drawable/login_btn_text"
         android:textSize="20sp" />

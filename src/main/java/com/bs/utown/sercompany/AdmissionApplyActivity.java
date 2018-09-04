@@ -70,7 +70,7 @@ public class AdmissionApplyActivity extends BaseActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.back_admissionapply:
-                baseapp.TemfinishActivity(this);
+                baseapp.TemfinishActivity();
                 break;
             case R.id.admissionapply_explanation:
                 OpenDialog();
