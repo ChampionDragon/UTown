@@ -28,7 +28,14 @@ public class UtActivity extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_ut);
         baseapp.addActivity(this);
         initView();
+        test();//测试
     }
+
+
+    private void test() {
+
+    }
+
 
     @Override
     protected void onResume() {

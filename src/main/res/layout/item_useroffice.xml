@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="11dp">
+
+
+    <com.bs.utown.view.RoundRectImageView
+        android:id="@+id/officeadapter_iv"
+        android:layout_width="0dp"
+        android:layout_height="99dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@mipmap/logo" />
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/officeadapter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="办公室名"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/officeadapter_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="预定日期"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/officeadapter_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="66dp"
+            android:text="费用金额"
+            android:textColor="@color/tv"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

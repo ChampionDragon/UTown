@@ -36,6 +36,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         initView();
     }
 
+
+
     @Override
     protected void onResume() {
         super.onResume();

@@ -150,7 +150,9 @@ public class ReservedetailActivity extends BaseActivity implements View.OnClickL
                     JSONObject jsonObject = new JSONObject(s);
                     if (jsonObject.getString("result").equals("ok")) {
                         ToastUtil.showLong("预定成功");
-                        SmallUtil.getActivity(ReservedetailActivity.this, ReservesuccessActivity.class);
+                        Bundle bundle=new Bundle();
+                        bundle.putString(ReservesuccessActivity.classname,ReservedetailActivity.class.getSimpleName());
+                        SmallUtil.getActivity(ReservedetailActivity.this, ReservesuccessActivity.class,bundle);
                     } else if (jsonObject.getString("result").equals("false")) {
 //                        handler.obtainMessage().sendToTarget();
                         DialogNoticeUtil.show(ReservedetailActivity.this, jsonObject.getString("info"));

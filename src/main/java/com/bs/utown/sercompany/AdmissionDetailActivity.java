@@ -9,6 +9,7 @@ import com.bs.utown.R;
 import com.bs.utown.base.BaseActivity;
 import com.bs.utown.bean.ApplyBean;
 import com.bs.utown.constant.SpKey;
+import com.bs.utown.util.Logs;
 import com.bs.utown.util.SmallUtil;
 
 /**
@@ -17,8 +18,9 @@ import com.bs.utown.util.SmallUtil;
  * created at 2018/8/14
  **/
 public class AdmissionDetailActivity extends BaseActivity implements View.OnClickListener {
-    private TextView name, time, user, phone, email;
+    private TextView name, time, user, phone, enternum, desc;//, email
     private Button button;
+    private String tag = "AdmissionDetailActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +39,10 @@ public class AdmissionDetailActivity extends BaseActivity implements View.OnClic
             time.setText(applyBean.getApplyTime());
             user.setText(applyBean.getUser());
             phone.setText(applyBean.getPhone());
-            email.setText(applyBean.getEmail());
+            desc.setText(applyBean.getDesc());
+            enternum.setText(applyBean.getEnterNum());
+//            email.setText(applyBean.getEmail());
+            Logs.v(tag + "42:" + applyBean.getApplyRs());
             if (!"通过".equals(applyBean.getApplyRs())) {
                 button.setVisibility(View.GONE);
             }
@@ -51,8 +56,10 @@ public class AdmissionDetailActivity extends BaseActivity implements View.OnClic
         time = (TextView) findViewById(R.id.admissiondetail_time);
         user = (TextView) findViewById(R.id.admissiondetail_user);
         phone = (TextView) findViewById(R.id.admissiondetail_phone);
-        email = (TextView) findViewById(R.id.admissiondetail_email);
+//        email = (TextView) findViewById(R.id.admissiondetail_email);
         button = (Button) findViewById(R.id.admissiondetail_choice);
+        enternum = (TextView) findViewById(R.id.admissiondetail_enternum);
+        desc = (TextView) findViewById(R.id.admissiondetail_desc);
     }
 
     @Override
@@ -62,7 +69,7 @@ public class AdmissionDetailActivity extends BaseActivity implements View.OnClic
                 baseapp.TemfinishActivity();
                 break;
             case R.id.admissiondetail_choice:
-                SmallUtil.getActivity(AdmissionDetailActivity.this,StationActivity.class);
+                SmallUtil.getActivity(AdmissionDetailActivity.this, StationActivity.class);
                 break;
         }
     }

@@ -70,7 +70,7 @@
 
 
 
-##  企业入驻
+##  企业入驻和查询入驻记录
 ![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/39.png)
 ![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/40.png)
 ![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/41.png)
@@ -81,12 +81,30 @@
 ![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/46.png)
 ![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/47.png)
 ![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/48.png)
+![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/53.png)
 
 ##  扩租申请
 ![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/49.png)
 ![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/50.png)
 ![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/51.png)
 ![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/52.png)
+
+
+
+##  工位预定和查询记录
+![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/54.png)
+![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/55.png)
+![程序的演示图片](https://github.com/ChampionDragon/UTown/blob/master/UI/56.png)
+
+
+
+
+
+
+
+
+
+
 
 
 

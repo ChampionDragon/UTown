@@ -22,7 +22,7 @@ public class HttpByGet {
     private static String tag = "HttpByGet";
 
     public static String executeHttpGet(String urlStr) {
-        Logs.w(tag+" 21   "+urlStr);
+        Logs.w(tag + " 21   " + urlStr);
         URL url = null;
         HttpURLConnection connection = null;
         InputStreamReader in = null;
@@ -54,10 +54,10 @@ public class HttpByGet {
                 strBuffer.append(line);
             }
             result = strBuffer.toString();
-            Logs.v(tag+"52   "+result);
+            Logs.v(tag + "52   " + result);
         } catch (Exception e) {
             result = error;
-            Logs.d(tag+"55   " + e);
+            Logs.d(tag + "55   " + e);
         } finally {
             if (connection != null) {
                 connection.disconnect();
@@ -116,6 +116,5 @@ public class HttpByGet {
         }
         urlstr = url + "?" + buffer;
         return urlstr;
-
     }
 }

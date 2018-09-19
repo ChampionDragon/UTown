@@ -15,6 +15,7 @@ import com.bs.utown.constant.SpKey;
 import com.bs.utown.util.HttpByGet;
 import com.bs.utown.util.Logs;
 import com.bs.utown.util.ObjectSave;
+import com.bs.utown.util.SmallUtil;
 import com.bs.utown.util.ToastUtil;
 import com.bs.utown.view.DialogNoticeUtil;
 import com.squareup.picasso.Picasso;
@@ -198,7 +199,9 @@ public class StationdetailActivity extends BaseActivity implements View.OnClickL
                     JSONObject js = new JSONObject(s);
                     if (js.getString("result").equals("ok")) {
                         ToastUtil.showLong("预定成功 ");
-                        baseapp.TemfinishAllActivity();
+                        Bundle bundle=new Bundle();
+                        bundle.putString(ReservesuccessActivity.classname,StationdetailActivity.class.getSimpleName());
+                        SmallUtil.getActivity(StationdetailActivity.this, ReservesuccessActivity.class,bundle);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

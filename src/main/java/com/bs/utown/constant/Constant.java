@@ -32,6 +32,7 @@ public class Constant {
    public final static String Utownoffice = "http://www.bsznyun.com/interface/office_app.php";//共享办公
    public final static String Utownofficedetail = "http://www.bsznyun.com/interface/officedetail_app.php?id=";//共享办公详情
    public final static String Utownmeeting = "http://www.bsznyun.com/interface/meeting_app.php";//会议室
+   public final static String Orderoffice = "http://www.bsznyun.com/interface/officeorder.php";//共享办公订单
    public final static String Ordermeeting = "http://www.bsznyun.com/interface/order.php";//会议室订单
    public final static String Ordermeetingdetail = "http://www.bsznyun.com/index.php?g=Api&m=Wechat&a=detail&id=";//会议室订单详情
    public final static String Apply = "http://www.bsznyun.com/index.php";//入驻申请

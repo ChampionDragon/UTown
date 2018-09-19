@@ -61,6 +61,7 @@ public class UserActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.user_apply).setOnClickListener(this);
         findViewById(R.id.user_act).setOnClickListener(this);
         findViewById(R.id.user_reservation).setOnClickListener(this);
+        findViewById(R.id.user_office).setOnClickListener(this);
         findViewById(R.id.user_car).setOnClickListener(this);
         userName = (TextView) findViewById(R.id.user_name);
     }
@@ -82,6 +83,9 @@ public class UserActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.user_reservation:
                 SmallUtil.getActivity(UserActivity.this, UserResnActivity.class);
+                break;
+            case R.id.user_office:
+                SmallUtil.getActivity(UserActivity.this, UserOfficeActivity.class);
                 break;
             case R.id.user_back:
                 baseapp.finishActivity();

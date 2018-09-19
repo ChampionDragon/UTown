@@ -47,7 +47,7 @@ public class ReserveActivity extends BaseActivity implements View.OnClickListene
                 SmallUtil.getActivity(ReserveActivity.this,ReservemeetingActivity.class);
                 break;
             case R.id.resnsite_conference:
-                SmallUtil.getActivity(ReserveActivity.this,ReserveconferenceActivity.class);
+                SmallUtil.getActivity(ReserveActivity.this,StationActivity.class);
                 break;
         }
     }

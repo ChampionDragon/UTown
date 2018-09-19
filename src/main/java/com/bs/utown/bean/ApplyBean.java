@@ -9,7 +9,31 @@ import java.io.Serializable;
  **/
 
 public class ApplyBean implements Serializable {
-    String applyStr, applyRs, applyTime, name,user, phone, email;
+    private String applyStr;
+    private String applyRs;
+    private String applyTime;
+    private String name;
+    private String user;
+    private String phone;
+    private String desc;//备注描述
+    private String email;
+    private String enterNum;//入驻人数
+
+    public String getEnterNum() {
+        return enterNum;
+    }
+
+    public void setEnterNum(String enterNum) {
+        this.enterNum = enterNum;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
 
     public String getName() {
         return name;

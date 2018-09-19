@@ -87,7 +87,7 @@ public class ApplyAdmissionFragment extends Fragment {
                 if (result.equals(HttpByGet.error)) {
                     handler.sendEmptyMessage(ERROR);
                     return;
-                } else if (result.equals("[]")) {
+                } else if (result.equals(" []")) {
                     handler.sendEmptyMessage(FAIL);
                 } else {
                     try {
@@ -119,18 +119,21 @@ public class ApplyAdmissionFragment extends Fragment {
             bean.setName(jsonObject.getString("company_name"));
             bean.setUser(jsonObject.getString("username"));
             bean.setPhone(jsonObject.getString("phone"));
-            bean.setEmail(jsonObject.getString("email"));
-            String str = jsonObject.getString("status");
-            if (str.equals("0")) {
-                bean.setApplyRs("待审核");
-            } else if (str.equals("1")) {
-                bean.setApplyRs("通过");
-            } else {
-                bean.setApplyRs("拒绝");
-            }
+//            bean.setEmail(jsonObject.getString("email"));
+            bean.setDesc(jsonObject.getString("desc"));
+            bean.setEnterNum(jsonObject.getString("enter_number"));
+            bean.setApplyRs("通过");
+//            String str = jsonObject.getString("status");
+//            if (str.equals("0")) {
+//                bean.setApplyRs("待审核");
+//            } else if (str.equals("1")) {
+//                bean.setApplyRs("通过");
+//            } else {
+//                bean.setApplyRs("拒绝");
+//            }
 
         } catch (JSONException e) {
-            e.printStackTrace();
+            Logs.e(tag + "136:" + e);
         }
         return bean;
     }

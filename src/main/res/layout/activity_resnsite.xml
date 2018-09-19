@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_margin="22dp"
-            android:text="洽谈室"
+            android:text="共享办公"
             android:textColor="@color/white"
             android:textSize="18sp" />
     </RelativeLayout>

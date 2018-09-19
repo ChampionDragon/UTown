@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.bs.utown.R;
-import com.bs.utown.adapter.UserresnAdapter;
+import com.bs.utown.adapter.UserofficeAdapter;
 import com.bs.utown.base.BaseActivity;
 import com.bs.utown.bean.ResnBean;
 import com.bs.utown.constant.Constant;
@@ -25,61 +25,49 @@ import java.util.List;
 import okhttp3.Call;
 
 /**
- * Description:会议室预定记录
+ * Description:办公室预定记录
  * AUTHOR: Champion Dragon
- * created at 2018/6/20
+ * created at 2018/9/13
  **/
-public class UserResnActivity extends BaseActivity implements View.OnClickListener {
-    private String tag = "UserResnActivity";
+public class UserOfficeActivity extends BaseActivity implements View.OnClickListener {
+    private String tag = "UserOfficeActivity";
     private ListView lv;
     private List<ResnBean> list;
-    private UserresnAdapter adapter;
+    private UserofficeAdapter adapter;
     private String openId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_resn);
+        setContentView(R.layout.activity_user_office);
         baseapp.addActivity(this);
         initView();
     }
 
     private void initView() {
-        findViewById(R.id.back_userresn).setOnClickListener(this);
-        lv = (ListView) findViewById(R.id.userresn_lv);
+        findViewById(R.id.back_useroffice).setOnClickListener(this);
+        lv = (ListView) findViewById(R.id.useroffice_lv);
         initData();
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.back_userresn:
-                baseapp.finishActivity();
-                break;
-        }
-    }
-
-
-    /*初始化数据*/
     private void initData() {
-          /*由于openID是唯一值,所以我们将用户手机号作为openId*/
         openId = baseapp.sp.getString(SpKey.UserPhone);
         list = new ArrayList<>();
-        String url = Constant.Ordermeeting + "?openId=" + openId;
+        String url = Constant.Orderoffice + "?openId=" + openId;
         Logs.i("url:\n" + url);
         OkHttpUtils.get().url(url).build().execute(new StringCallback() {
             @Override
             public void onError(Call call, Exception e, int i) {
-                Logs.w(e + tag + "74  " + i);
-                DialogNoticeUtil.show(UserResnActivity.this, "访问接口失败");
+                Logs.w(e + tag + "61  " + i);
+                DialogNoticeUtil.show(UserOfficeActivity.this, "访问接口失败");
             }
 
             @Override
             public void onResponse(String s, int i) {
                 try {
-                    Logs.v(tag + "81\n" + s);
+                    Logs.v(tag + "68\n" + s);
                     if (s.equals(" []")) {
-                        DialogNoticeUtil.show(UserResnActivity.this, "未查询到用户会议室的订单");
+                        DialogNoticeUtil.show(UserOfficeActivity.this, "未查询到用户共享办公的订单");
                         return;
                     }
                     JSONArray jsonArray = new JSONArray(s);
@@ -99,24 +87,16 @@ public class UserResnActivity extends BaseActivity implements View.OnClickListen
     }
 
 
-    /*解析JsonObject的数据*/
     private ResnBean parseJson(JSONObject jsonObject) {
         ResnBean resnBean = new ResnBean();
         try {
-//            resnBean.setArea(jsonObject.getString("area") + "㎡");
-//            resnBean.setNum(jsonObject.getString("contain") + "人");
-            resnBean.setName(jsonObject.getString("name"));
-//            resnBean.setPlace(jsonObject.getString("position"));
+            resnBean.setName(jsonObject.getString("office_name"));
             resnBean.setUrl("http://www.bsznyun.com" + jsonObject.getString("thumb"));
-//            resnBean.setEquipment(jsonObject.getString("equipments"));
-            resnBean.setPrice(jsonObject.getString("fee"));
-            resnBean.setPriceUnit("元/小时");
-            resnBean.setNumUnit("可容纳人数：");
-            resnBean.setId(jsonObject.getString("cid"));
-            resnBean.setOrderTime(jsonObject.getString("order_date"));
-            resnBean.setReserveTime(jsonObject.getString("date") + "  " + jsonObject.getString("containid"));
+            resnBean.setPrice("金额：" + jsonObject.getString("fee") + "元");
+            resnBean.setReserveTime("预定日期：" + jsonObject.getString("order_date"));
+            Logs.w("1111111111111111");
         } catch (JSONException e) {
-            e.printStackTrace();
+            Logs.e(tag + "99:" + e);
         }
         return resnBean;
     }
@@ -124,13 +104,23 @@ public class UserResnActivity extends BaseActivity implements View.OnClickListen
 
     /*初始化listView*/
     private void initLv(ListView lv, List<ResnBean> loginList) {
-        adapter = (UserresnAdapter) lv.getAdapter();
+        adapter = (UserofficeAdapter) lv.getAdapter();
         if (adapter == null) {
-            adapter = new UserresnAdapter(list, this);
+            adapter = new UserofficeAdapter(list, this);
             lv.setAdapter(adapter);
         } else {
             adapter.setData(loginList);
             adapter.notifyDataSetChanged();
+        }
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.back_useroffice:
+                baseapp.finishActivity();
+                break;
         }
     }
 

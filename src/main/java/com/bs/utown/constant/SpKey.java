@@ -8,8 +8,7 @@ package com.bs.utown.constant;
 
 public class SpKey {
     /*sharedpreferences表名*/
-    public static final String SP_name = "utown";//整个APP其余的SP
-    public static final String SP_user = "user";//关于用户的SP
+    public static final String SP_name = "utown";//整个APP的SP
 
     /*欢迎界面的sp*/
     public static final String isFirst = "isFirst";

@@ -57,9 +57,33 @@
         <TextView
             android:id="@+id/admissiondetail_email"
             style="@style/admissionsubmit_tv"
-            android:hint="邮箱" />
+            android:hint="邮箱"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/admissiondetail_enternum"
+            style="@style/admissionsubmit_tv"
+            android:hint="入驻人数" />
 
         <ImageView style="@style/admissionapply_iv" />
+
+        <TextView
+            style="@style/admissionapply_tv"
+            android:layout_marginTop="9dp"
+            android:text="备注" />
+
+
+        <TextView
+            android:id="@+id/admissiondetail_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:background="@drawable/apply_et_bg"
+            android:hint="备注说明"
+            android:padding="18dp"
+            android:textColor="@color/black" />
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -67,7 +91,8 @@
             android:layout_margin="22dp"
             android:layout_weight="3"
             android:background="@color/white"
-            android:padding="22dp">
+            android:padding="22dp"
+            android:visibility="gone">
 
 
             <ImageView

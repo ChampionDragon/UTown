@@ -227,7 +227,7 @@ public class AdmissionLicenseActivity extends BaseActivity implements View.OnCli
         File file = PhotoUtil.SavePhoto(bitmap, fileLicense.getAbsolutePath(), "license");
         Logs.d(file.getAbsolutePath());
         baseapp.sp.putString(SpKey.licensePath, file.toString());
-        Logs.w(baseapp.sp.getString(SpKey.licensePath));
+//        Logs.w(baseapp.sp.getString(SpKey.licensePath));
     }
 
 

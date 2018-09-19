@@ -27,7 +27,7 @@ public class BaseActivity extends AppCompatActivity {
         SmallUtil.setScreen(this);
         executor = AsyncTaskExecutor.getinstance();
         baseapp = BaseApplication.getInstance();
-        spUser = SpUtil.getInstance(SpKey.SP_user, MODE_PRIVATE);
+        spUser = baseapp.sp;
 //        managerDb=baseapp.managerDb;
     }
 

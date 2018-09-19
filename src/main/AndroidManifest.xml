@@ -107,7 +107,8 @@
         <activity android:name=".sercompany.ReserveconferenceActivity" />
         <activity android:name=".sercompany.AdmissionDetailActivity" />
         <activity android:name=".sercompany.StationActivity" />
-        <activity android:name=".sercompany.StationdetailActivity"></activity>
+        <activity android:name=".sercompany.StationdetailActivity" />
+        <activity android:name=".user.UserOfficeActivity"></activity>
     </application>
 
 </manifest>

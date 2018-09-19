@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.bs.utown.R;
 import com.bs.utown.base.BaseActivity;
+import com.bs.utown.user.UserOfficeActivity;
 import com.bs.utown.user.UserResnActivity;
 import com.bs.utown.util.SmallUtil;
 
@@ -14,12 +15,18 @@ import com.bs.utown.util.SmallUtil;
  * created at 2018/6/15
  **/
 public class ReservesuccessActivity extends BaseActivity {
+    public static String classname = "classname";
+    private String activity = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         baseapp.TemaddActivity(this);
         setContentView(R.layout.activity_resnsuccess);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            activity = extras.getString(classname);
+        }
         findViewById(R.id.resnsuccess_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,7 +37,11 @@ public class ReservesuccessActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 baseapp.TemfinishAllActivity();
-                SmallUtil.getActivity(ReservesuccessActivity.this, UserResnActivity.class);
+                if (activity.equals("ReservedetailActivity")) {
+                    SmallUtil.getActivity(ReservesuccessActivity.this, UserResnActivity.class);
+                } else if (activity.equals("StationdetailActivity")) {
+                    SmallUtil.getActivity(ReservesuccessActivity.this, UserOfficeActivity.class);
+                }
             }
         });
     }

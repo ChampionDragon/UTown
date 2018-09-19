@@ -96,7 +96,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="11dp"
-        android:layout_weight="2.5"
+        android:layout_weight="3"
         android:background="@color/white"
         android:orientation="vertical">
 
@@ -121,6 +121,19 @@
             android:gravity="center_vertical"
             android:paddingLeft="@dimen/user_padding"
             android:text="会议室预定记录"
+            android:textColor="@color/black"
+            android:textSize="@dimen/user_tvl" />
+
+        <ImageView style="@style/iv" />
+
+        <TextView
+            android:id="@+id/user_office"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/user_padding"
+            android:text="共享办公预定记录"
             android:textColor="@color/black"
             android:textSize="@dimen/user_tvl" />
 

@@ -43,7 +43,6 @@ public class BaseApplication extends Application {
         if (activityStackTem == null) {
             activityStackTem = new Stack<>();
         }
-
         mInstance = this;
         context = getApplicationContext();
         sp = SpUtil.getInstance(SpKey.SP_name, MODE_PRIVATE);

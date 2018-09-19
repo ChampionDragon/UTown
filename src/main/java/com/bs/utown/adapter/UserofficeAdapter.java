@@ -1,34 +1,30 @@
 package com.bs.utown.adapter;
 
-import android.app.Activity;
 import android.content.Context;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bs.utown.R;
 import com.bs.utown.bean.ResnBean;
-import com.bs.utown.constant.SpKey;
-import com.bs.utown.user.UserResndetailActivity;
-import com.bs.utown.util.SmallUtil;
 import com.bs.utown.util.ViewHolderUtil;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 /**
- * Description: 会议室预定记录适配器
+ * Description: 共享办公预定适配器
  * AUTHOR: Champion Dragon
- * created at 2018/6/19
+ * created at 2018/9/14
  **/
-
-public class UserresnAdapter extends BaseAdapter{
+public class UserofficeAdapter extends BaseAdapter {
     private List<ResnBean> list;
     private Context context;
 
-    public UserresnAdapter(List<ResnBean> list, Context context) {
+    public UserofficeAdapter(List<ResnBean> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -51,24 +47,19 @@ public class UserresnAdapter extends BaseAdapter{
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.item_userresn, null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_useroffice, null);
         }
 
-        TextView name = ViewHolderUtil.get(convertView, R.id.userresn_name);
-        TextView time = ViewHolderUtil.get(convertView, R.id.userresn_time);
+        TextView fee = ViewHolderUtil.get(convertView, R.id.officeadapter_fee);
+        TextView name = ViewHolderUtil.get(convertView, R.id.officeadapter_name);
+        ImageView iv = ViewHolderUtil.get(convertView, R.id.officeadapter_iv);
+        TextView date = ViewHolderUtil.get(convertView, R.id.officeadapter_date);
 
-        final ResnBean resnBean = list.get(position);
+        ResnBean resnBean = list.get(position);
+        fee.setText(resnBean.getPrice());
         name.setText(resnBean.getName());
-        time.setText(resnBean.getOrderTime());
-
-        ViewHolderUtil.get(convertView,R.id.userresn_detail).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Bundle bundle = new Bundle();
-                bundle.putSerializable(SpKey.resnBean, resnBean);
-                SmallUtil.getActivity((Activity) context, UserResndetailActivity.class, bundle);
-            }
-        });
+        date.setText(resnBean.getReserveTime());
+        Picasso.with(context).load(resnBean.getUrl()).placeholder(R.mipmap.logo).error(R.mipmap.logo).into(iv);
 
         return convertView;
     }
